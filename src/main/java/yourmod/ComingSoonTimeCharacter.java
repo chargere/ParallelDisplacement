@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import yourmod.cards.comingsoon.TimeDefend;
 import yourmod.cards.comingsoon.TimeStrike;
-import yourmod.relics.TimeGlassAlbum;
+import yourmod.relics.WindHueMeteorFall;
 
 import java.util.ArrayList;
 
@@ -78,7 +78,7 @@ public class ComingSoonTimeCharacter extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(TimeGlassAlbum.ID);
+        retVal.add(WindHueMeteorFall.ID);
         return retVal;
     }
 
