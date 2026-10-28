@@ -1,0 +1,42 @@
+package yourmod.powers;
+
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static yourmod.ModFile.makeID;
+
+/** 雷网覆盖：每回合首次攻击施加 1 层静电印记 */
+public class FirstAttackStaticPower extends AbstractEasyPower {
+    public static final String POWER_ID = makeID("FirstAttackStatic");
+    private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    private boolean usedThisTurn = false;
+
+    public FirstAttackStaticPower(AbstractCreature owner) {
+        super(POWER_ID, strings.NAME, PowerType.BUFF, false, owner, -1);
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        usedThisTurn = false;
+    }
+
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (!usedThisTurn && card.type == AbstractCard.CardType.ATTACK && action.target instanceof AbstractMonster) {
+            usedThisTurn = true;
+            flash();
+            AbstractMonster m = (AbstractMonster) action.target;
+            addToBot(new ApplyPowerAction(m, owner, new StaticMarkPower(m, 1), 1));
+        }
+    }
+
+    @Override
+    public void updateDescription() {
+        description = strings.DESCRIPTIONS[0];
+    }
+}

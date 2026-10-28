@@ -1,0 +1,41 @@
+package yourmod.powers;
+
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+
+import static yourmod.ModFile.makeID;
+
+public class DamuhouLowProfilePower extends AbstractEasyPower {
+    public static final String POWER_ID = makeID("DamuhouLowProfile");
+    private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    private int gained;
+
+    public DamuhouLowProfilePower(AbstractCreature owner, int amount) {
+        super(POWER_ID, strings.NAME, PowerType.BUFF, false, owner, amount);
+        useVanillaIcon("dexterity");
+        gained = 0;
+    }
+
+    @Override
+    public void onAfterUseCard(AbstractCard card, com.megacrit.cardcrawl.actions.utility.UseCardAction action) {
+        if (card.type == AbstractCard.CardType.ATTACK && gained < amount) {
+            flash();
+            gained++;
+            addToBot(new GainBlockAction(owner, owner, 1));
+        }
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
+    }
+
+    @Override
+    public void updateDescription() {
+        description = strings.DESCRIPTIONS[0] + amount + strings.DESCRIPTIONS[1];
+    }
+}

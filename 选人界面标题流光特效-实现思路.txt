@@ -1,0 +1,115 @@
+选人界面标题流光特效 — 实现思路备忘
+================================
+
+相关代码
+--------
+  src/main/java/yourmod/util/HongwenNameFx.java
+  src/main/java/yourmod/patches/CharSelectNameGradientPatch.java   （主标题：替换 bannerNameFont 绘制）
+  src/main/java/yourmod/patches/CharSelectSubtitlePatch.java       （副标题：凯文·齐亚腾）
+
+目标效果
+--------
+  主标题「鸿文君主」：底色黄，红色灯带从左往右连续流动
+  副标题「凯文·齐亚腾」：底色白，红色灯带从左往右连续流动
+  关键是「一整段字上有一道光带在扫」，而不是「一个字一个字闪」
+
+
+一、错误思路（会像逐字闪烁）
+----------------------------
+按「字」上色：
+
+  1. 把字符串拆成一个个 code point
+  2. 用字的序号 idx / (总字数-1) 得到 0~1 位置
+  3. 若该字靠近灯带中心，整字设为红色，否则整字设为底色
+  4. font.draw(sb, 单字, x, y)
+
+问题：
+  - 每个字只有一种颜色，灯带经过时整字突然变红再变回
+  - 视觉上就是「一个字一个字闪」，不连贯
+  - 字宽不同时，按序号算位置还会忽快忽慢
+
+
+二、正确思路（连贯流动）
+------------------------
+按「像素 / 顶点」上色：
+
+  BitmapFont 画字时，每个字形是一个四边形（4 个顶点）。
+  LibGDX 的 BitmapFontCache 把这些顶点放在 float[] 里，格式为：
+
+      x, y, colorPacked, u, v
+      （每顶点 5 个 float，一字通常 20 个 float）
+
+  做法：
+  1. font.getCache().clear()
+  2. cache.setText(text, x, y)  —— 生成整段文字的顶点
+  3. 读 layout.width 得到文字总宽度 totalW
+  4. 用时间算出灯带中心 bandCenter（相对文字左端的像素位置）
+  5. 遍历每个 page 的顶点：
+        localX = 顶点.x - 文字起点.x
+        dist   = |localX - bandCenter|
+        t      = clamp(1 - dist / bandHalf, 0, 1)
+        t      = smoothstep(t)          // t*t*(3-2*t)，边缘更柔
+        color  = lerp(底色, 红色, t)
+        写回顶点的 colorPacked
+  6. cache.draw(sb)
+
+这样同一字的左侧和右侧可以是不同颜色，灯带扫过时颜色在字内部平滑过渡，
+看起来就是一道连续的红光从左滑到右。
+
+
+三、灯带位置怎么算
+------------------
+  周期：约 2.8 秒扫完一轮（BAND_PERIOD_MS）
+
+  半宽：
+    bandHalf = max(36px, totalW * 0.32)
+    （相对文字宽度，短字串有像素下限，避免灯带太细）
+
+  中心移动范围略超出文字左右，进出边缘更自然：
+    span       = totalW + bandHalf * 2
+    bandCenter = (time % period) / period * span - bandHalf
+    // bandCenter 从 -bandHalf 走到 totalW+bandHalf，再循环
+
+
+四、API 要点（Slay the Spire / LibGDX）
+--------------------------------------
+  BitmapFontCache cache = font.getCache();
+  GlyphLayout layout = cache.setText(text, x, y);
+  float[] vertices = cache.getVertices(page);
+  int n = cache.getVertexCount(page);
+  // 顶点色：vertices[i + 2] = color.toFloatBits();
+  cache.draw(sb);
+
+  注意：
+  - 改 font.getData().setScale(...) 后要在 finally 里还原
+  - 中文字体可能多 page，要按 font.getRegions().size 循环
+  - getCache() 是字体共享的，STS 单线程渲染一般没问题；
+    若别处同时用同一 font 的 cache，需自行 new BitmapFontCache(font)
+
+
+五、和「呼吸渐变」的区别
+------------------------
+  早期版本：整段字做红→黄（或红→白）横向渐变，再乘 sin 呼吸亮度。
+  那是「固定渐变 + 整体明暗」，不是「灯带扫过」。
+
+  当前版本：底色固定（黄或白），只有一条红色高亮带沿 X 轴移动。
+
+
+六、可调参数（都在 HongwenNameFx）
+----------------------------------
+  BAND_PERIOD_MS     扫光速度（越大越慢）
+  BAND_HALF_RATIO    灯带相对文字宽度
+  BAND_HALF_MIN_PX   灯带最窄像素半宽
+  TITLE_YELLOW / TITLE_RED
+  SUB_WHITE / SUB_RED
+  smoothstep 公式    可改成 t*t 让高亮核更尖
+
+
+七、以后若要增强
+----------------
+  - 主副标题相位错开：副标题 bandCenter 加一个固定偏移
+  - 扫完停顿再扫：period 里留一段 band 在屏外的时间
+  - 更亮的「核」：t 再用 pow，或叠加一层更窄的高亮色
+  - 若要用 Shader：片元里按 screen/uv.x 做同样的 falloff，效果类似但更自由
+
+记录日期：2026-07-31

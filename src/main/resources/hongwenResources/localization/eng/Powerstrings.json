@@ -1,0 +1,976 @@
+{
+  "${ModID}:EmberFire": {
+    "NAME": "烬火",
+    "DESCRIPTIONS": [
+      "受到单体攻击时，若层数足够触发 #y燎原猛攻，会被消耗。当前层数： #b",
+      "。"
+    ]
+  },
+  "${ModID}:StaticMark": {
+    "NAME": "静电印记",
+    "DESCRIPTIONS": [
+      "受到单体伤害时，该伤害会全额传导给其他带有静电印记的敌人。被传导的目标各消耗 #b1 层。当前层数： #b",
+      "。"
+    ]
+  },
+  "${ModID}:ScorchingAssault": {
+    "NAME": "燎原猛攻",
+    "DESCRIPTIONS": [
+      "你打出单体攻击牌时，若目标烬火层数不少于 #b",
+      "，则消耗等量烬火，并使本次攻击伤害提升 #b",
+      "。触发后计数递增，上限 #b6 后回到 #b1。层数不足则不触发、计数不前进。"
+    ]
+  },
+  "${ModID}:CannotGainBlock": {
+    "NAME": "无法格挡",
+    "DESCRIPTIONS": [
+      "本回合无法获得格挡。",
+      "在 #b",
+      " 回合内无法获得格挡。"
+    ]
+  },
+  "${ModID}:ChargeStance": {
+    "NAME": "蓄雷",
+    "DESCRIPTIONS": [
+      "下回合开始时，对所有敌人施加 #b",
+      " 层静电印记。"
+    ]
+  },
+  "${ModID}:BurnHeaven": {
+    "NAME": "焚天",
+    "DESCRIPTIONS": [
+      "每当你施加 #y烬火，额外施加 #b3 层。每当你施加 #y静电印记，额外施加 #b2 层 #y烬火。"
+    ]
+  },
+  "${ModID}:StaticResonance": {
+    "NAME": "静电共鸣",
+    "DESCRIPTIONS": [
+      "每当你施加 #y静电印记，额外施加 #b5 层 #y烬火。"
+    ]
+  },
+  "${ModID}:ThunderScarMark": {
+    "NAME": "雷痕",
+    "DESCRIPTIONS": [
+      "受到来自你的攻击伤害时，额外受到 #b3 点伤害。"
+    ]
+  },
+  "${ModID}:DefyFate": {
+    "NAME": "逆命",
+    "DESCRIPTIONS": [
+      "本回合首次受到怪物伤害时，对攻击者造成等量伤害并施加等量 #y烬火，然后移除。"
+    ]
+  },
+  "${ModID}:DualGuard": {
+    "NAME": "双御",
+    "DESCRIPTIONS": [
+      "本回合每当你打出一张非攻击牌，获得 #b4 点格挡并抽 #b1 张牌。回合结束时移除。"
+    ]
+  },
+  "${ModID}:VeilStatic": {
+    "NAME": "帷幕",
+    "DESCRIPTIONS": [
+      "每当你受到怪物伤害，对攻击者施加 #b",
+      " 层 #y静电印记。"
+    ]
+  },
+  "${ModID}:FirstAttackEmber": {
+    "NAME": "燎原战纹",
+    "DESCRIPTIONS": [
+      "每回合你打出的第一张攻击牌对目标施加 #b2 层 #y烬火。"
+    ]
+  },
+  "${ModID}:FirstAttackStatic": {
+    "NAME": "雷网覆盖",
+    "DESCRIPTIONS": [
+      "每回合你打出的第一张攻击牌对目标施加 #b1 层 #y静电印记。"
+    ]
+  },
+  "${ModID}:UnyieldingEmber": {
+    "NAME": "不屈余烬",
+    "DESCRIPTIONS": [
+      "每当你失去生命，对随机敌人施加 #b5 层 #y烬火。"
+    ]
+  },
+  "${ModID}:EmberThunderOrders": {
+    "NAME": "焚雷军令",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，预见 #b",
+      "。每弃置一张攻击牌，获得 #b1 点临时力量；每弃置一张技能牌，获得 #b3 点格挡。"
+    ]
+  },
+  "${ModID}:UndyingWall": {
+    "NAME": "不灭之壁",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，获得 #b3 点格挡。"
+    ]
+  },
+  "${ModID}:WarIntent": {
+    "NAME": "焚雷战意",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，获得 #b1 点临时力量。"
+    ]
+  },
+  "${ModID}:EchoEnergy": {
+    "NAME": "烬雷回响",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，获得 #b1 点能量。剩余次数： #b",
+      "。"
+    ]
+  },
+  "${ModID}:NextTurnEnergy": {
+    "NAME": "下回合能量",
+    "DESCRIPTIONS": [
+      "下回合开始时，获得 #b",
+      " 点能量。"
+    ]
+  },
+  "${ModID}:NextTurnTempStr": {
+    "NAME": "下回合力量",
+    "DESCRIPTIONS": [
+      "下回合开始时，获得 #b",
+      " 点临时力量。"
+    ]
+  },
+  "${ModID}:RageForm": {
+    "NAME": "牢郑形态",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将 #b",
+      " 张 #y愤怒愤怒愤怒 加入手牌。层数每回合递增，上限 #b5。（该牌：0 费，获得 1 能量并抽 1 张牌）",
+      " 张 #y愤怒愤怒愤怒+ 加入手牌。层数每回合递增，上限 #b5。（该牌：0 费，获得 1 能量并抽 2 张牌）"
+    ]
+  },
+  "${ModID}:ThunderNetEffect": {
+    "NAME": "雷网效应",
+    "DESCRIPTIONS": [
+      "对带有 #y静电印记 的敌人造成单体伤害时，传导改为再对该敌人造成等量伤害（自己电自己）。作为源目标不消耗印记，作为被传导目标仍消耗 #b1 层。不再扩散到其他敌人。"
+    ]
+  },
+  "${ModID}:HeavenFireDestiny": {
+    "NAME": "天火·命定",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，对所有敌人造成 #b8 点伤害。每有一个带 #y烬火 的敌人，伤害 #b+2 ；每有一个带 #y静电印记 的敌人，伤害 #b+1 。"
+    ]
+  },
+  "${ModID}:EmberThunderEternal": {
+    "NAME": "烬雷·永恒",
+    "DESCRIPTIONS": [
+      "每回合你打出的第一张攻击牌：将一张其 #b0 费、#y虚无、#y消耗 的复制加入手牌。"
+    ]
+  },
+  "${ModID}:RedHeatExtreme": {
+    "NAME": "红温·极意",
+    "DESCRIPTIONS": [
+      "你无法恢复生命。每当你本应恢复生命时，对所有敌人造成恢复量 × #b3 点失去生命伤害。"
+    ]
+  },
+  "${ModID}:EternalBurn": {
+    "NAME": "焚天·永燃",
+    "DESCRIPTIONS": [
+      "燎原猛攻计数为 #b4 / #b5 / #b6 时，无视敌人 #y烬火 层数，无条件获得加伤与计数推进，且不消耗 #y烬火。"
+    ]
+  },
+  "${ModID}:HealHalve": {
+    "NAME": "命火契约",
+    "DESCRIPTIONS": [
+      "受到的回复减半。"
+    ]
+  },
+  "${ModID}:Silence": {
+    "NAME": "静默",
+    "DESCRIPTIONS": [
+      "你的下一张攻击额外造成 #b",
+      " 点伤害（#b",
+      " 层 × #b",
+      "），然后移除所有静默。"
+    ]
+  },
+  "${ModID}:SilentVigil": {
+    "NAME": "沉默的守望",
+    "DESCRIPTIONS": [
+      "若本回合未造成伤害，回合结束时获得 #b3 层 #y静默（上限 #b",
+      "）。静默倍率 × #b",
+      "。"
+    ]
+  },
+  "${ModID}:HeavenFireUndying": {
+    "NAME": "天火·不灭",
+    "DESCRIPTIONS": [
+      "受到致命伤害时，改为将生命降至 #b10，移除所有负面，并对所有敌人施加 #b8 层 #y烬火 与 #b4 层 #y静电印记。每场限 #b1 次。",
+      "本场已触发。"
+    ]
+  },
+  "${ModID}:ConductAmp": {
+    "NAME": "万军之敕",
+    "DESCRIPTIONS": [
+      "本回合 #y静电印记 传导伤害 #g+",
+      "%（向上取整）。"
+    ]
+  },
+  "${ModID}:FavorMark": {
+    "NAME": "眷顾",
+    "DESCRIPTIONS": [
+      "受到来自拥有 #y未送出的花 的角色的伤害时额外受到 #b3 点伤害。"
+    ]
+  },
+  "${ModID}:EternalStormAnchorPower": {
+    "NAME": "风暴锚点",
+    "DESCRIPTIONS": [
+      "回合结束时可选择任意张手牌保留。每保留 #b2 张失去 #b1 点生命。"
+    ]
+  },
+  "${ModID}:MagneticBomb": {
+    "NAME": "磁吸炸弹",
+    "DESCRIPTIONS": [
+      "#b",
+      " 回合后受到 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:TigerCrouchCannon": {
+    "NAME": "虎蹲炮",
+    "DESCRIPTIONS": [
+      "#b",
+      " 回合后眩晕 #b",
+      " 回合。"
+    ]
+  },
+  "${ModID}:NextTurnWeak": {
+    "NAME": "动力过载",
+    "DESCRIPTIONS": [
+      "下回合开始时获得 #b",
+      " 层虚弱与 #b",
+      " 层易伤。"
+    ]
+  },
+  "${ModID}:FrostCold": {
+    "NAME": "霜寒",
+    "DESCRIPTIONS": [
+      "回合开始时，获得等量临时力量，以及一半（向下取整）临时敏捷，然后将层数减半。上限 #b10 。溢出转化为冰尘伤害。当前层数： #b",
+      "。"
+    ]
+  },
+  "${ModID}:StarMark": {
+    "NAME": "星痕",
+    "DESCRIPTIONS": [
+      "下一次受到的攻击伤害 #b+",
+      "。可叠加，每层独立触发并消耗。当前层数： #b",
+      "。"
+    ]
+  },
+  "${ModID}:DelayTax": {
+    "NAME": "迟滞",
+    "DESCRIPTIONS": [
+      "本回合邻牌费用各 +1。"
+    ]
+  },
+  "${ModID}:StarExtinguish": {
+    "NAME": "星灭",
+    "DESCRIPTIONS": [
+      "本回合不能再打出攻击牌。",
+      "本回合星灭：无法打出攻击牌。"
+    ]
+  },
+  "${ModID}:ReturnToVoid": {
+    "NAME": "归墟",
+    "DESCRIPTIONS": [
+      "本回合接下来 #b",
+      " 张打出的牌将被消耗。"
+    ]
+  },
+  "${ModID}:FreezeCrack": {
+    "NAME": "冻裂",
+    "DESCRIPTIONS": [
+      "本回合失去 #b",
+      " 点敏捷。回合结束时恢复。"
+    ]
+  },
+  "${ModID}:FrostRidge": {
+    "NAME": "霜脊",
+    "DESCRIPTIONS": [
+      "每当你取消霜偿时，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:StarMarkSense": {
+    "NAME": "星痕感应",
+    "DESCRIPTIONS": [
+      "每当星痕因攻击被消耗时，获得 #b",
+      " 点临时力量。"
+    ]
+  },
+  "${ModID}:BladeReady": {
+    "NAME": "开刃预备",
+    "DESCRIPTIONS": [
+      "每回合第一张带星灭霜偿的攻击伤害 #b+",
+      "。"
+    ]
+  },
+  "${ModID}:ThinFrostDiscipline": {
+    "NAME": "薄霜纪律",
+    "DESCRIPTIONS": [
+      "回合结束时，若本回合未获得过霜寒，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:DebtLedger": {
+    "NAME": "债册",
+    "DESCRIPTIONS": [
+      "承受霜偿代价后，下回合开始时抽 #b",
+      " 张牌。每回合最多触发 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:IceDustEcho": {
+    "NAME": "冰尘回响",
+    "DESCRIPTIONS": [
+      "每当冰尘造成伤害时，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:AfterSheatheWarmth": {
+    "NAME": "余温",
+    "DESCRIPTIONS": [
+      "每当你触发星灭时，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:FrostPayDiscount": {
+    "NAME": "偿金优惠",
+    "DESCRIPTIONS": [
+      "每回合第一次取消霜偿时，霜寒消耗 -#b",
+      "（最低1）。"
+    ]
+  },
+  "${ModID}:QuietStargaze": {
+    "NAME": "静观星象",
+    "DESCRIPTIONS": [
+      "霜寒减半后，若霜寒不多于3，抽 #b",
+      " 张牌。"
+    ]
+  },
+  "${ModID}:FrostBiteMark": {
+    "NAME": "霜噬印记",
+    "DESCRIPTIONS": [
+      "主动消耗霜寒时，对随机敌人施加1层星痕。每回合最多 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:NextTurnFrost": {
+    "NAME": "待至之霜",
+    "DESCRIPTIONS": [
+      "下回合开始时获得 #b",
+      " 层霜寒。"
+    ]
+  },
+  "${ModID}:Creditor": {
+    "NAME": "债主",
+    "DESCRIPTIONS": [
+      "承受霜偿代价时获得 #b",
+      " 点临时力量。取消霜偿时获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:StardustSettle": {
+    "NAME": "星尘沉淀",
+    "DESCRIPTIONS": [
+      "冰尘造成伤害时，对所有敌人施加 #b",
+      " 层星痕。每回合最多 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:FrostCapRift": {
+    "NAME": "霜裂",
+    "DESCRIPTIONS": [
+      "霜寒上限为15。每回合首次叠至上限时，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:BladeDoctrine": {
+    "NAME": "开刃宗法",
+    "DESCRIPTIONS": [
+      "带星灭霜偿的攻击伤害 #b+",
+      "。触发星灭时，下回合开始获得1点能量。"
+    ]
+  },
+  "${ModID}:SwordAlongTheWay": {
+    "NAME": "顺路一剑",
+    "DESCRIPTIONS": [
+      "每回合第一张攻击额外 #b+",
+      "。若该攻击带霜偿且承受代价，再 #b+",
+      "。"
+    ]
+  },
+  "${ModID}:EternalAurora": {
+    "NAME": "永夜极光",
+    "DESCRIPTIONS": [
+      "回合开始霜寒转化后，改为固定失去2层霜寒（不再减半）。"
+    ]
+  },
+  "${ModID}:RefinedAsh": {
+    "NAME": "精灰",
+    "DESCRIPTIONS": [
+      "攻击伤害 #b+",
+      "。（上限10）"
+    ]
+  },
+  "${ModID}:RefinedAshForm": {
+    "NAME": "精灰形态",
+    "DESCRIPTIONS": [
+      "霜寒减半失去的层数变为精灰；消耗牌获得精灰；满10层将「星灰绽放」加入手牌（绽放伤害 #b",
+      "）。"
+    ]
+  },
+  "${ModID}:MemoryBurnout": {
+    "NAME": "记忆燃尽",
+    "DESCRIPTIONS": [
+      "本回合因归墟消耗的牌进入星灰。下回合开始以0费、虚无、消耗的复制加入手牌。"
+    ]
+  },
+  "${ModID}:AuroraCommand": {
+    "NAME": "极光帷幄",
+    "DESCRIPTIONS": [
+      "本回合接下来 #b",
+      " 次取消霜偿时，霜寒消耗 -1（最低1）。"
+    ]
+  },
+  "${ModID}:NextSkillDiscount": {
+    "NAME": "霜路余韵",
+    "DESCRIPTIONS": [
+      "本回合下一张技能牌费用 -",
+      "（最低0）。"
+    ]
+  },
+  "${ModID}:SharedWarmth": {
+    "NAME": "同路余温",
+    "DESCRIPTIONS": [
+      "本回合每打出一张带霜偿的牌，获得 ",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:HowDoYouKnow": {
+    "NAME": "你怎么知道赢不了",
+    "DESCRIPTIONS": [
+      "首次降至半血以下：获得 ",
+      " 层霜寒，抽2张，获得 ",
+      " 点格挡（每场限1次）。"
+    ]
+  },
+  "${ModID}:LastLineOfChart": {
+    "NAME": "星图最后一行",
+    "DESCRIPTIONS": [
+      "归墟改为进弃牌堆（仍算被归墟），剩余 ",
+      " 次。"
+    ]
+  },
+  "${ModID}:UnfinishedStarforge": {
+    "NAME": "星锻未完成稿",
+    "DESCRIPTIONS": [
+      "带星灭霜偿的攻击伤害 +",
+      "。"
+    ]
+  },
+"${ModID}:Useless": {
+    "NAME": "没用",
+    "DESCRIPTIONS": [
+      "你有 ",
+      " 层 没用。每层使下回合开始时暂时失去 1 点力量与 1 点敏捷，回合结束归还。战斗结束清空。"
+    ]
+  },
+  "${ModID}:LateAwareness": {
+    "NAME": "迟到觉悟",
+    "DESCRIPTIONS": [
+      "回合结束时，若本回合未造成伤害，获得 ",
+      " 层 没用。"
+    ]
+  },
+  "${ModID}:AdmitCommittee": {
+    "NAME": "承认委员",
+    "DESCRIPTIONS": [
+      "每当获得 没用，获得 1 点力量（每回合最多 ",
+      " 次）。"
+    ]
+  },
+  "${ModID}:PassiveAggression": {
+    "NAME": "被动攻击",
+    "DESCRIPTIONS": [
+      "弃牌时有 50% 概率获得 1 层 没用（每回合最多 ",
+      " 次）。"
+    ]
+  },
+  "${ModID}:Afk": {
+    "NAME": "挂机",
+    "DESCRIPTIONS": [
+      "连续 2 个回合每回合打牌不超过 ",
+      " 张：下一回合开始获得 2 能量与 3 层 没用。"
+    ]
+  },
+  "${ModID}:ChatMute": {
+    "NAME": "群聊屏蔽",
+    "DESCRIPTIONS": [
+      "本回合受到的攻击伤害减少 ",
+      " 点。"
+    ]
+  },
+  "${ModID}:UselessEconomy": {
+    "NAME": "废物经济",
+    "DESCRIPTIONS": [
+      "每层 没用 使打击类攻击伤害 +1（不消耗）。",
+      "每层 没用 使所有攻击伤害 +1（不消耗）。"
+    ]
+  },
+  "${ModID}:JustLikeThis": {
+    "NAME": "我就这样",
+    "DESCRIPTIONS": [
+      "回合开始时获得 ",
+      " 层 没用。每回合第一张牌费用 -1。"
+    ]
+  },
+  "${ModID}:BornWithIt": {
+    "NAME": "胎里带来",
+    "DESCRIPTIONS": [
+      "无「胎没用了呀」时开战获得 5 层 没用。有该遗物时，每回合一次可将获得 没用 改为抽 1。"
+    ]
+  },
+  "${ModID}:WasteCrown": {
+    "NAME": "废物王冠",
+    "DESCRIPTIONS": [
+      "没用 结算时有效下限按至少 10。回合结束若 没用 ≥ 5：抽 1 并获得 5 点格挡。"
+    ]
+  },
+  "${ModID}:FamousEffect": {
+    "NAME": "名人效应",
+    "DESCRIPTIONS": [
+      "打出名称含「废 / 没用 / 毛」的牌时抽 1（每回合限 ",
+      " 次）。"
+    ]
+  },
+  "${ModID}:FetalFail": {
+    "NAME": "胎教失败",
+    "DESCRIPTIONS": [
+      "每回合第一次获得 没用 时额外 +",
+      "。每回合第一次失去生命时获得 1 层 没用。"
+    ]
+  },
+  "${ModID}:UselessAscend": {
+    "NAME": "毛用飞升",
+    "DESCRIPTIONS": [
+      "剩余 ",
+      " 回合：打牌费用 -1。回合结束清空 没用 并抽 2。"
+    ]
+  },
+  "${ModID}:NoSkills": {
+    "NAME": "已读不回",
+    "DESCRIPTIONS": [
+      "本回合不能再打出技能牌。",
+      "本回合不能打出技能牌。"
+    ]
+  },
+  "${ModID}:NextTurnEnergyLoss": {
+    "NAME": "能量透支",
+    "DESCRIPTIONS": [
+      "下回合开始时失去 ",
+      " 点能量。"
+    ]
+  },
+  "${ModID}:EnergyFraudDebt": {
+    "NAME": "诈骗账单",
+    "DESCRIPTIONS": [
+      "下回合开始时失去 ",
+      " 点能量。"
+    ]
+  },
+  "${ModID}:NextCardBoost": {
+    "NAME": "今日停更",
+    "DESCRIPTIONS": [
+      "下一张牌的伤害与格挡 +50%。",
+      "本回合牌的伤害与格挡 +50%。"
+    ]
+  },
+  "${ModID}:BalanceHeal": {
+    "NAME": "平衡调整",
+    "DESCRIPTIONS": [
+      "本场战斗中，你对自己造成的生命损失改为回复等量生命。"
+    ]
+  },
+  "${ModID}:IAmEgg": {
+    "NAME": "我是蛋蛋",
+    "DESCRIPTIONS": [
+      "每回合第一张费用 ≥ 2 的牌退回 1 点能量，并获得 1 层 没用。"
+    ]
+  },
+  "${ModID}:SkipNextTurn": {
+    "NAME": "跳过回合",
+    "DESCRIPTIONS": [
+      "下回合开始时立刻结束你的回合。"
+    ]
+  },
+  "${ModID}:SkipNextDraw": {
+    "NAME": "跳过抽牌",
+    "DESCRIPTIONS": [
+      "跳过下一次抽牌。"
+    ]
+  },
+  "${ModID}:NextTurnDrawUseless": {
+    "NAME": "说明书收益",
+    "DESCRIPTIONS": [
+      "下回合开始时抽 ",
+      " 张牌，并获得等量 没用。"
+    ]
+  },
+  "${ModID}:Breach": {
+    "NAME": "破绽",
+    "DESCRIPTIONS": [
+      "本回合每层使受到的伤害 +10%。当前 #b",
+      " 层，合计 #b+",
+      "% 。你的回合结束时消失。"
+    ]
+  },
+  "${ModID}:PrismAmp": {
+    "NAME": "×1.5",
+    "DESCRIPTIONS": [
+      "受到来自你的伤害变为 1.5 倍。"
+    ]
+  },
+  "${ModID}:PrismDamp": {
+    "NAME": "×0.75",
+    "DESCRIPTIONS": [
+      "受到来自你的伤害变为 0.75 倍。"
+    ]
+  },
+  "${ModID}:DamuhouSpiteCombo": {
+    "NAME": "恼羞成怒",
+    "DESCRIPTIONS": [
+      "本回合下一张攻击牌额外攻击 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:DamuhouSmoke": {
+    "NAME": "烟幕",
+    "DESCRIPTIONS": [
+      "本回合你下一次受到伤害时，攻击你的敌人失去 #b",
+      " 点力量。"
+    ]
+  },
+  "${ModID}:DamuhouLowProfile": {
+    "NAME": "低姿",
+    "DESCRIPTIONS": [
+      "本回合每打出一张攻击牌，获得 1 点格挡，最多 #b",
+      " 点。"
+    ]
+  },
+  "${ModID}:DamuhouAmmoRation": {
+    "NAME": "弹药配给",
+    "DESCRIPTIONS": [
+      "本回合每打出一张攻击牌，失去 1 点生命。"
+    ]
+  },
+  "${ModID}:DamuhouMuscleMemory": {
+    "NAME": "肌肉记忆",
+    "DESCRIPTIONS": [
+      "每回合第一张攻击牌：半自动获得 #b",
+      " 点格挡，全自动抽 #b",
+      " 张牌。"
+    ]
+  },
+  "${ModID}:DamuhouAmmoCycle": {
+    "NAME": "弹药循环",
+    "DESCRIPTIONS": [
+      "打出攻击次数不超过 #b",
+      " 的攻击牌时，获得 [E] 。"
+    ]
+  },
+  "${ModID}:DamuhouTacticalBreath": {
+    "NAME": "战术呼吸",
+    "DESCRIPTIONS": [
+      "每回合第一张技能牌获得 #b",
+      " 点能量。"
+    ]
+  },
+  "${ModID}:DamuhouBeltFeed": {
+    "NAME": "弹链",
+    "DESCRIPTIONS": [
+      "全自动时，每次攻击额外造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:DamuhouGunFu": {
+    "NAME": "枪斗术",
+    "DESCRIPTIONS": [
+      "打出攻击次数不少于 3 的攻击牌时，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:DamuhouPremonition": {
+    "NAME": "预判",
+    "DESCRIPTIONS": [
+      "每回合开始时预见 #b",
+      " 。若牌库顶是攻击牌，本回合第一张攻击牌额外攻击 1 次。"
+    ]
+  },
+  "${ModID}:DamuhouSlowDraw": {
+    "NAME": "慢拔out",
+    "DESCRIPTIONS": [
+      "每回合第一张牌费用减少 1。若为攻击牌，额外攻击 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:DamuhouCalmAim": {
+    "NAME": "冷静瞄准",
+    "DESCRIPTIONS": [
+      "若本回合未打出攻击牌，回合结束时获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:DamuhouWeakSpot": {
+    "NAME": "弱点洞悉",
+    "DESCRIPTIONS": [
+      "每回合首次对一名敌人造成伤害时，额外施加 #b",
+      " 层破绽。"
+    ]
+  },
+  "${ModID}:DamuhouBattlefieldRhythm": {
+    "NAME": "战场节奏",
+    "DESCRIPTIONS": [
+      "每回合第 #b",
+      " 张牌费用减少 1。若为攻击牌，额外攻击 1 次。"
+    ]
+  },
+  "${ModID}:DamuhouCombatFatigue": {
+    "NAME": "战斗疲劳",
+    "DESCRIPTIONS": [
+      "每回合每打出 3 张攻击牌，回复 #b",
+      " 点生命。每场战斗最多回复 #b",
+      " 点。"
+    ]
+  },
+  "${ModID}:DamuhouFocus": {
+    "NAME": "专注",
+    "DESCRIPTIONS": [
+      "每回合第一张攻击牌额外攻击 #b",
+      " 次。若击杀，获得 [E] 。"
+    ]
+  },
+  "${ModID}:DamuhouVioletGlow": {
+    "NAME": "紫光扫射",
+    "DESCRIPTIONS": [
+      "攻击牌每次命中时，额外施加 #b",
+      " 层破绽。"
+    ]
+  },
+  "${ModID}:DamuhouKeepMoving": {
+    "NAME": "大步流星",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，抽 1 张牌。",
+      "每当你打出一张攻击牌，抽 1 张牌。若该攻击不少于 3 次，改为抽 2 张牌。"
+    ]
+  },
+  "${ModID}:DamuhouMiddleCounts": {
+    "NAME": "无处可逃",
+    "DESCRIPTIONS": [
+      "棱镜伤害加成对中间的敌人同样生效。"
+    ]
+  },
+  "${ModID}:DamuhouLeftover": {
+    "NAME": "余弹装填",
+    "DESCRIPTIONS": [
+      "半自动：未命中的攻击每次获得 #b",
+      " 点格挡。全自动：转移到下一名敌人时，第一次攻击额外施加 #b",
+      " 层破绽。"
+    ]
+  },
+  "${ModID}:DamuhouStepOff": {
+    "NAME": "步出线",
+    "DESCRIPTIONS": [
+      "本回合每打出一张攻击牌，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${ModID}:DamuhouSpareMag": {
+    "NAME": "备用弹匣",
+    "DESCRIPTIONS": [
+      "你的攻击牌额外攻击 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:DamuhouHowlForm": {
+    "NAME": "啸罗形态",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，抽 #b",
+      " 张牌。手中所有攻击牌本回合费用减少 1。"
+    ]
+  },
+  "${ModID}:DamuhouMysterious": {
+    "NAME": "我很神秘",
+    "DESCRIPTIONS": [
+      "每消耗 #b",
+      " 点能量，获得 #b",
+      " 层无实体。已消耗 #b",
+      " 点。"
+    ]
+  },
+  "${ModID}:JjHourglass": {
+    "NAME": "沙漏",
+    "DESCRIPTIONS": [
+      "时间储备 #b",
+      " 层。上限 #b",
+      " 。不随回合减少。处决时获得 1 层。"
+    ]
+  },
+  "${ModID}:JjTimeDilation": {
+    "NAME": "时滞",
+    "DESCRIPTIONS": [
+      "下一张费用不少于 1 的牌费用减少 1 ，然后失去 1 层。剩余 #b",
+      " 层。 0 费牌不消耗。每回合最多节省 3 点能量。"
+    ]
+  },
+  "${ModID}:JjImaginary": {
+    "NAME": "虚数",
+    "DESCRIPTIONS": [
+      "层数 #b",
+      " 。本回合普通敌人不执行意图，被跳过的意图转为 时空乱流 。受到的伤害增加 25% 。回合结束时全部消散。",
+      " 。本回合受到的伤害增加 25% 。造成的伤害每层减少 25% ，最多 75% 。不跳过意图，不会产生 时空乱流 。回合结束时全部消散。"
+    ]
+  },
+  "${ModID}:JjTimeTurbulence": {
+    "NAME": "时空乱流",
+    "DESCRIPTIONS": [
+      "被 虚数 延后的意图。倒计时结束时集中释放。"
+    ]
+  },
+  "${ModID}:JjEyeMark": {
+    "NAME": "眼印",
+    "DESCRIPTIONS": [
+      "提高处决线。当前 #b",
+      " 层。每回合结束减少 1 层。处决线 = 最大生命 ×（ 5% + 5% × 层数），上限 65% 。"
+    ]
+  },
+  "${ModID}:JjImmolate": {
+    "NAME": "业火",
+    "DESCRIPTIONS": [
+      "回合结束时受到 #b",
+      " 点伤害，然后减少 1 层。"
+    ]
+  },
+  "${ModID}:JjDapuForm": {
+    "NAME": "达普形态",
+    "DESCRIPTIONS": [
+      "业火形态：溅射伤害增加 50 % 。",
+      "寒冰形态：溅射命中时给予 1 层虚弱。"
+    ]
+  },
+  "${ModID}:JjHunt": {
+    "NAME": "时空追猎",
+    "DESCRIPTIONS": [
+      "每当你处决一名敌人，抽 1 张牌并获得 1 沙漏。"
+    ]
+  },
+  "${ModID}:JjWorldlyPearl": {
+    "NAME": "雮尘珠·现世",
+    "DESCRIPTIONS": [
+      "处决线增加 #b",
+      "% 。处决时回复 #b",
+      " 点生命，并对其余敌人造成目标最大生命 20% 的伤害。"
+    ]
+  },
+  "${ModID}:JjSnakeBone": {
+    "NAME": "蛇神之骨",
+    "DESCRIPTIONS": [
+      "敌人死于处决时，将其最大生命 #b",
+      "% 均分给其他敌人。溅射可以触发处决。"
+    ]
+  },
+  "${ModID}:JjSkirmishStone": {
+    "NAME": "斯格明石",
+    "DESCRIPTIONS": [
+      "沙漏上限增加 #b",
+      " 。每回合首次获得沙漏时额外获得 1。"
+    ]
+  },
+  "${ModID}:JjSerpentForce": {
+    "NAME": "蛇骨之力",
+    "DESCRIPTIONS": [
+      "每当你一次溅射命中不少于 3 名敌人，获得 1 沙漏。每回合最多 5 次。"
+    ]
+  },
+  "${ModID}:JjCorridor": {
+    "NAME": "虚数回廊",
+    "DESCRIPTIONS": [
+      "每当你施加虚数时获得 1 沙漏。每回合最多 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:JjWalkingIllusion": {
+    "NAME": "行境幻化",
+    "DESCRIPTIONS": [
+      "每回合开始时给予所有敌人 #b",
+      " 层虚数。"
+    ]
+  },
+  "${ModID}:JjAltarHourglass": {
+    "NAME": "祭坛沙漏",
+    "DESCRIPTIONS": [
+      "每回合结束时获得 #b",
+      " 沙漏。"
+    ]
+  },
+  "${ModID}:JjTimeField": {
+    "NAME": "时滞场",
+    "DESCRIPTIONS": [
+      "每回合开始时获得 #b",
+      " 层时滞。"
+    ]
+  },
+  "${ModID}:JjReverseWalker": {
+    "NAME": "逆行者之证",
+    "DESCRIPTIONS": [
+      "每回合开始时获得 #b",
+      " 沙漏，失去 1 点生命。"
+    ]
+  },
+  "${ModID}:JjBoundlessEye": {
+    "NAME": "无界妖瞳",
+    "DESCRIPTIONS": [
+      "每回合开始时给予所有敌人 1 层虚数，上限 3。"
+    ]
+  },
+  "${ModID}:JjBlackFace": {
+    "NAME": "念凶黑颜",
+    "DESCRIPTIONS": [
+      "每回合开始获得 #b",
+      " 沙漏并失去 2 点生命。施加时移除虚弱与易伤。"
+    ]
+  },
+  "${ModID}:JjZagrammaEye": {
+    "NAME": "扎格拉玛之瞳",
+    "DESCRIPTIONS": [
+      "眼印不再衰减。每层提供的处决线由 5% 改为 7%。"
+    ]
+  },
+  "${ModID}:JjDantianAltar": {
+    "NAME": "龙丹祭坛",
+    "DESCRIPTIONS": [
+      "回合结束时，将当前沙漏一半 × #b",
+      " 作为伤害打向所有敌人，然后清空沙漏。"
+    ]
+  },
+  "${ModID}:JjDreadForm": {
+    "NAME": "惧魇形态",
+    "DESCRIPTIONS": [
+      "每回合开始时 消耗 抽牌堆顶 1 张牌。攻击则打出其伤害，技能则获得其格挡，能力则立刻获得该能力。被烧掉的牌会将 1 张同类型随机牌放入弃牌堆。每当一张牌被 消耗 ：获得 1 沙漏 ，给予所有敌人 1 层 眼印 。"
+    ]
+  },
+  "${ModID}:JjExecuteForce": {
+    "NAME": "处决之力",
+    "DESCRIPTIONS": [
+      "敌人身上的 侵蚀度 即其 处决线 比例，对应血条上的黑色区段。 NL 你的攻击结算后，若目标仍存活且当前生命不高于最大生命的 侵蚀度 ，即触发 处决 。 NL 普通敌人立即死亡；精英与首领不会被斩杀，改为受到真实伤害。 NL 溅射 默认不触发 处决 。每层 眼印 会提高该目标的 侵蚀度 。"
+    ]
+  },
+  "${ModID}:JjErosion": {
+    "NAME": "侵蚀度",
+    "DESCRIPTIONS": [
+      "侵蚀度 ： #b",
+      "% 。你的攻击使目标当前生命不高于其最大生命的此比例时，触发 处决 。目标的 眼印 会进一步提高其 侵蚀度 。",
+      "% 。受到攻击后，若当前生命不高于最大生命的此比例，将触发 处决 。"
+    ]
+  }
+}

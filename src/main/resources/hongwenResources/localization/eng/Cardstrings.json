@@ -1,0 +1,1427 @@
+{
+  "${ModID}:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:Defend": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:StarfireCrossbow": {
+    "NAME": "流星火弩",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 施加 !M! 层 烬火。"
+  },
+  "${ModID}:ThunderEdge": {
+    "NAME": "雷鸣虹锋",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 施加 !M! 层 静电印记。"
+  },
+  "${ModID}:BurnPainStrike": {
+    "NAME": "焚灼痛击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 若目标带有 烬火，再施加 1 层虚弱。"
+  },
+  "${ModID}:ThunderTremor": {
+    "NAME": "雷颤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 !M! 层虚弱。 NL 若目标带有 静电印记，再施加 1 层易伤。"
+  },
+  "${ModID}:ThunderShock": {
+    "NAME": "雷霆震慑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标虚弱，消耗 1 层虚弱，使其 !M! 回合无法获得格挡。"
+  },
+  "${ModID}:FlameSmash": {
+    "NAME": "烈焰猛击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标易伤，消耗 1 层易伤，再造成 !hongwen:sd! 点伤害。"
+  },
+  "${ModID}:TwinThunder": {
+    "NAME": "双雷贯耳",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:EmberCoercion": {
+    "NAME": "烬火胁迫",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 !M! 层虚弱。 NL 若目标带有 烬火，再施加 1 层易伤。"
+  },
+  "${ModID}:ShockPierce": {
+    "NAME": "电击穿刺",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标没有 静电印记，施加 !M! 层 静电印记。"
+  },
+  "${ModID}:CurrentStimulus": {
+    "NAME": "电流刺激",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 1 张牌。 NL 若目标带有 静电印记，再抽 2 张牌。"
+  },
+  "${ModID}:ChainDrawStrike": {
+    "NAME": "连续抽击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 抽 1 张牌。"
+  },
+  "${ModID}:ElectricSpark": {
+    "NAME": "电能火花",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本次攻击每传导命中一个敌人，获得 1 点能量。"
+  },
+  "${ModID}:UncontrollableRage": {
+    "NAME": "怒不可遏",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *愤怒 洗入抽牌堆。"
+  },
+  "${ModID}:AngerStatus": {
+    "NAME": "愤怒",
+    "DESCRIPTION": "保留。 NL 若回合结束时仍在手中，受到 3 点伤害。"
+  },
+  "${ModID}:TripleAngerStatus": {
+    "NAME": "愤怒愤怒愤怒",
+    "DESCRIPTION": "获得 1 点能量。 NL 抽 !M! 张牌。 NL 消耗。"
+  },
+  "${ModID}:EmberShield": {
+    "NAME": "余烬护盾",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 对所有敌人施加 !M! 层 烬火。"
+  },
+  "${ModID}:StaticBarrier": {
+    "NAME": "静电屏障",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 对所有敌人施加 !M! 层 静电印记。"
+  },
+  "${ModID}:Fuse": {
+    "NAME": "导火索",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若任一敌人带有 烬火，抽 !M! 张牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 若任一敌人带有 烬火，抽 !M! 张牌。"
+  },
+  "${ModID}:IonDeflect": {
+    "NAME": "电离偏转",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若任一敌人带有 静电印记，额外获得 !M! 点格挡。"
+  },
+  "${ModID}:EmberRecycle": {
+    "NAME": "余烬回收",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 消耗目标全部 烬火，每层额外获得 !M! 点格挡。"
+  },
+  "${ModID}:ThunderSpread": {
+    "NAME": "雷纹传导",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 将目标身上最多 !M! 层 静电印记 复制给其他敌人。"
+  },
+  "${ModID}:ScorchingBreath": {
+    "NAME": "炽热呼吸",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 对所有敌人施加 !M! 层 烬火。 NL 若此牌被消耗，恢复 !hongwen:m2! 点生命。"
+  },
+  "${ModID}:ChargeStance": {
+    "NAME": "蓄雷姿态",
+    "DESCRIPTION": "保留。 NL 获得 !B! 点格挡。 NL 下回合开始时，对所有敌人施加 !M! 层 静电印记。"
+  },
+  "${ModID}:EndlessRageFire": {
+    "NAME": "不息怒火",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一张攻击牌，此牌多造成 3 点伤害。 NL 消耗。 NL 将一张此牌的复制洗入抽牌堆。"
+  },
+  "${ModID}:EntropySurge": {
+    "NAME": "熵增",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 额外打击次数等于目标 静电印记 层数（最多 4）。"
+  },
+  "${ModID}:BetrayalFlame": {
+    "NAME": "背叛之焰",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若此牌被消耗，对随机敌人施加 !M! 层 烬火 与 !hongwen:m2! 层 静电印记。"
+  },
+  "${ModID}:Resonance": {
+    "NAME": "共振",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 伤害增加目标 烬火 与 静电印记 的层数之和。"
+  },
+  "${ModID}:EmberThunderSwap": {
+    "NAME": "焚雷换位",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 交换目标身上的 烬火 与 静电印记 层数。"
+  },
+  "${ModID}:ScaryThunder": {
+    "NAME": "天雷滚滚我好怕",
+    "DESCRIPTION": "造成 !D! 点 失去生命 伤害。 NL 打出后，此牌的伤害永久提高 1 点。"
+  },
+  "${ModID}:ScorchSoul": {
+    "NAME": "灼魂",
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 失去生命，数量为 max(1, X - 全体烬火层数 - 全体静电层数)。"
+  },
+  "${ModID}:TimeLag": {
+    "NAME": "时差",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 此牌每在手中多停留 1 个你的回合，伤害 +3。 NL 打出后重置。"
+  },
+  "${ModID}:ReverseFlame": {
+    "NAME": "逆火",
+    "DESCRIPTION": "若当前没有能量：造成 !hongwen:sd! 点伤害并施加 !M! 层 烬火。 NL 否则：造成 !D! 点伤害。 NL 消耗。"
+  },
+  "${ModID}:ThunderScar": {
+    "NAME": "雷痕",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 雷痕：该敌人受到你的攻击时额外受到 3 点伤害。 NL 消耗。"
+  },
+  "${ModID}:EmberThunderTwin": {
+    "NAME": "烬雷双生",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 此牌不在手中时：每施加 1 层 烬火，伤害 +1；每施加 1 层 静电印记，费用 -1（最低 0）。 NL 打出后重置。"
+  },
+  "${ModID}:DefyFate": {
+    "NAME": "逆命",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 逆命：本回合首次受到怪物伤害时，对攻击者造成等量伤害并施加等量 烬火，然后移除。"
+  },
+  "${ModID}:EmberThunderCollapse": {
+    "NAME": "烬雷坍缩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 费用等于本回合已打出的非攻击牌数量（打出越多越贵）。"
+  },
+  "${ModID}:RiftStrike": {
+    "NAME": "裂隙打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合获得临时力量，数量为 2×本回合攻击牌数（含此牌）。"
+  },
+  "${ModID}:EmberBurnBook": {
+    "NAME": "烬火焚书",
+    "DESCRIPTION": "抽 4 张牌。 NL 本次抽牌中每抽到一张攻击牌，对所有敌人施加 !M! 层 烬火。 NL 消耗。"
+  },
+  "${ModID}:ThunderFilter": {
+    "NAME": "雷纹滤网",
+    "DESCRIPTION": "预见 !M!。 NL 之后被弃掉的每张牌，对随机敌人施加 1 层 静电印记。 NL 消耗。"
+  },
+  "${ModID}:Furnace": {
+    "NAME": "熔炉",
+    "DESCRIPTION": "消耗手中所有非攻击牌。 NL 每消耗一张，获得 !B! 点格挡并抽 1 张牌。"
+  },
+  "${ModID}:TemporalEcho": {
+    "NAME": "时序残响",
+    "DESCRIPTION": "保留。 NL 将本回合第一张被消耗的牌移回手牌（可再次打出）。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 将本回合第一张被消耗的牌移回手牌（可再次打出）。"
+  },
+  "${ModID}:EmberThunderBulwark": {
+    "NAME": "焚雷壁垒",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 弃置 1 张牌：若为攻击，对所有敌人施加 2 层 烬火；若为技能，对所有敌人施加 1 层 静电印记；否则获得 1 点能量并抽 1 张牌。"
+  },
+  "${ModID}:Veil": {
+    "NAME": "帷幕",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 弃置任意张牌（至少 1）。 NL 每弃 1 张获得 1 层 帷幕：每当你受到怪物伤害，对攻击者施加等量层数的 静电印记。"
+  },
+  "${ModID}:Judgment": {
+    "NAME": "裁断",
+    "DESCRIPTION": "弃置所有手牌。 NL 每弃一张获得 !B! 点格挡。 NL 抽 3 张牌。 NL 若弃过攻击牌，获得 2 点能量并再抽 3 张牌。 NL 消耗。"
+  },
+  "${ModID}:ThunderShieldSkill": {
+    "NAME": "雷纹护盾",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若此牌被弃置，获得 !M! 点格挡，并对所有敌人施加 1 层 静电印记。 NL 消耗。"
+  },
+  "${ModID}:FurnaceCore": {
+    "NAME": "炉心",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 消耗。"
+  },
+  "${ModID}:MandateOfHeaven": {
+    "NAME": "天命",
+    "DESCRIPTION": "保留。 NL 获得 !B! 点格挡。 NL 若本场战斗尚未受到过攻击伤害，再获得 !M! 点格挡。"
+  },
+  "${ModID}:LifeFireRenew": {
+    "NAME": "命火续燃",
+    "DESCRIPTION": "恢复 !M! 点生命。 NL 若回合结束时仍在手中，再恢复 !hongwen:m2! 点生命。 NL 虚无。 NL 消耗。"
+  },
+  "${ModID}:EmberThunderWill": {
+    "NAME": "焚雷战意",
+    "DESCRIPTION": "本场战斗中，每当你打出一张攻击牌，获得 1 点临时力量。 NL 消耗。"
+  },
+  "${ModID}:BalanceCard": {
+    "NAME": "平衡",
+    "DESCRIPTION": "本回合每当你打出一张非攻击牌，获得 4 点格挡并抽 1 张牌。 NL 消耗。"
+  },
+  "${ModID}:EmberThunderEcho": {
+    "NAME": "烬雷回响",
+    "DESCRIPTION": "接下来你打出的 !M! 张攻击牌各获得 1 点能量。 NL 消耗。"
+  },
+  "${ModID}:UndyingWarMark": {
+    "NAME": "不灭战纹",
+    "DESCRIPTION": "保留。 NL 获得 !M! 点临时力量。 NL 若本回合已打出非攻击牌，再获得 !hongwen:m2! 点。"
+  },
+  "${ModID}:EmberThunderTurbo": {
+    "NAME": "烬雷涡轮",
+    "DESCRIPTION": "保留。 NL 获得 !M! 点能量。 NL 若本回合已打出非攻击牌，再获得 1 点能量。"
+  },
+  "${ModID}:ThunderFeedback": {
+    "NAME": "雷纹回馈",
+    "DESCRIPTION": "获得 !M! 点能量。 NL 下回合开始时再获得 !M! 点能量。"
+  },
+  "${ModID}:StaticDivert": {
+    "NAME": "静电导流",
+    "DESCRIPTION": "获得 2 点能量，抽 1 张牌。 NL 若场上任一敌人带有 静电印记，再获得 1 点能量并抽 2 张牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得 2 点能量，抽 1 张牌。 NL 若场上任一敌人带有 静电印记，再获得 1 点能量并抽 2 张牌。"
+  },
+  "${ModID}:ScorchingWarMark": {
+    "NAME": "燎原战纹",
+    "DESCRIPTION": "每回合你打出的第一张攻击牌，对目标施加 2 层 烬火。"
+  },
+  "${ModID}:ThunderNetCover": {
+    "NAME": "雷网覆盖",
+    "DESCRIPTION": "每回合你打出的第一张攻击牌，对目标施加 1 层 静电印记。"
+  },
+  "${ModID}:BurnHeaven": {
+    "NAME": "焚天",
+    "DESCRIPTION": "每当你施加 烬火，额外再施加 3 层。 NL 每当你施加 静电印记，额外施加 2 层 烬火。"
+  },
+  "${ModID}:UnyieldingEmber": {
+    "NAME": "不屈余烬",
+    "DESCRIPTION": "每当你失去生命，对随机敌人施加 5 层 烬火。"
+  },
+  "${ModID}:StaticResonance": {
+    "NAME": "静电共鸣",
+    "DESCRIPTION": "每当你施加 静电印记，额外施加 5 层 烬火。"
+  },
+  "${ModID}:EmberThunderOrders": {
+    "NAME": "焚雷军令",
+    "DESCRIPTION": "在你的回合开始时，预见 3。 NL 本场战斗中：每弃置一张攻击牌，获得 1 点临时力量；每弃置一张技能牌，获得 3 点格挡。"
+  },
+  "${ModID}:UndyingWall": {
+    "NAME": "不灭之壁",
+    "DESCRIPTION": "本场战斗中，每当你打出一张攻击牌，获得 3 点格挡。"
+  },
+  "${ModID}:MyriadThunder": {
+    "NAME": "万雷归宗",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本回合每发生过一次 静电印记 传导，此牌伤害 +7。"
+  },
+  "${ModID}:EmberAnnihilation": {
+    "NAME": "烬灭裁决",
+    "DESCRIPTION": "消耗目标全部 烬火。 NL 造成 !D! 点伤害，每消耗 1 层额外造成 5 点伤害。"
+  },
+  "${ModID}:HongwenFinale": {
+    "NAME": "鸿文终焉",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗每失去 5 点生命，此牌多造成 3 点伤害。"
+  },
+  "${ModID}:HeavenlySilence": {
+    "NAME": "天雷寂灭",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本次攻击的 静电印记 传导可以继续传导给其他敌人（默认可连锁多次）。"
+  },
+  "${ModID}:HiddenEdge": {
+    "NAME": "藏器于身",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一张非攻击牌，此牌伤害 +5。"
+  },
+  "${ModID}:LifeFireFinale": {
+    "NAME": "命火终章",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若击杀敌人，获得 3 点能量、3 点力量、3 点敏捷并抽 3 张牌。 NL 消耗。"
+  },
+  "${ModID}:HeavenFire": {
+    "NAME": "天火！",
+    "DESCRIPTION": "对所有敌人造成 !M! 点伤害 X 次。 NL 若目标带有 烬火，每次额外造成 !hongwen:m2! 点伤害。 NL 若目标带有 静电印记，每次先施加 1 层虚弱与易伤，且这次攻击无视格挡。"
+  },
+  "${ModID}:Pardon": {
+    "NAME": "赦免",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 恢复 !M! 点生命。 NL 若本回合已受过伤害，改为恢复 !hongwen:m2! 点生命。 NL 消耗。"
+  },
+  "${ModID}:ThunderFireCycle": {
+    "NAME": "雷火轮回",
+    "DESCRIPTION": "交换你的当前生命与格挡。 NL 交换后生命不低于 10。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "交换你的当前生命与格挡。 NL 交换后生命不低于 10。"
+  },
+  "${ModID}:EmberThunderNirvana": {
+    "NAME": "烬雷涅槃",
+    "DESCRIPTION": "移除你的全部减益。 NL 恢复 !M! 点生命。 NL 获得 !B! 点格挡。 NL 消耗。"
+  },
+  "${ModID}:MyriadStillness": {
+    "NAME": "万象·静止",
+    "DESCRIPTION": "保留。 NL 使所有敌人本回合眩晕（跳过其行动）。 NL 消耗。"
+  },
+  "${ModID}:LifeFirePact": {
+    "NAME": "命火·契约",
+    "DESCRIPTION": "保留。 NL 将生命降至 1，获得等量格挡。 NL 获得 壁垒。 NL 此后受到的回复减半。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 将生命降至 1，获得等量格挡。 NL 再获得 !B! 点格挡。 NL 获得 壁垒。 NL 此后受到的回复减半。"
+  },
+  "${ModID}:WeatherSense": {
+    "NAME": "气象感应",
+    "DESCRIPTION": "保留。 NL 按场上印记总层数触发（可同时满足多条）： NL 烬火总层数≥5：所有带烬火的敌人各失去 12 点生命。 NL 静电总层数≥3：获得 2 点能量。 NL 同时存在烬火与静电：抽 2 张牌。 NL 烬火+静电总层数≥8：获得 12 点格挡。 NL 没有任何印记：恢复 !M! 点生命。"
+  },
+  "${ModID}:RageForm": {
+    "NAME": "牢郑形态",
+    "DESCRIPTION": "在你的回合开始时，将 愤怒愤怒愤怒 加入手牌（0 费：获得 1 能量并抽牌；层数每回合 +1，上限 5）。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将 愤怒愤怒愤怒+ 加入手牌（0 费：获得 1 能量并抽更多牌；层数每回合 +1，上限 5）。"
+  },
+  "${ModID}:ThunderNetEffect": {
+    "NAME": "雷网效应",
+    "DESCRIPTION": "虚无。 NL 对带有 静电印记 的敌人造成单体伤害时，传导改为再打该敌人一次（自己电自己）。源目标不耗印记，被传导仍耗 1 层。不再扩散到其他敌人。",
+    "UPGRADE_DESCRIPTION": "对带有 静电印记 的敌人造成单体伤害时，传导改为再打该敌人一次（自己电自己）。源目标不耗印记，被传导仍耗 1 层。不再扩散到其他敌人。"
+  },
+  "${ModID}:HeavenFireDestiny": {
+    "NAME": "天火·命定",
+    "DESCRIPTION": "在你的回合结束时，对所有敌人造成 8 点伤害。 NL 场上每有一个带 烬火 的敌人，伤害 +2。 NL 每有一个带 静电印记 的敌人，伤害 +1。"
+  },
+  "${ModID}:EmberThunderEternal": {
+    "NAME": "烬雷·永恒",
+    "DESCRIPTION": "每回合你打出的第一张攻击牌：将一张其 0 费、虚无、消耗 的复制加入手牌。"
+  },
+  "${ModID}:RedHeatExtreme": {
+    "NAME": "红温·极意",
+    "DESCRIPTION": "你无法恢复生命。 NL 每当你本应恢复生命时，改为对所有敌人造成「恢复量×3」点失去生命伤害。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 你无法恢复生命。 NL 每当你本应恢复生命时，改为对所有敌人造成「恢复量×3」点失去生命伤害。"
+  },
+  "${ModID}:EternalBurn": {
+    "NAME": "焚天·永燃",
+    "DESCRIPTION": "燎原猛攻计数为 4/5/6 时：无视敌人 烬火 层数，无条件获得加伤与计数推进，且不消耗 烬火。"
+  },
+  "${ModID}:RitualOffering": {
+    "NAME": "祭礼",
+    "DESCRIPTION": "弃掉 1 张牌。 NL 若为攻击：对所有敌人施加 !M! 层 烬火。 NL 若为技能：对所有敌人施加 !hongwen:m2! 层 静电印记。 NL 若为状态或诅咒：抽 2 张牌。"
+  },
+  "${ModID}:ThunderForgeShard": {
+    "NAME": "雷铸残片",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标带有 静电印记：再造成 !hongwen:sd! 点伤害并施加 !M! 层 烬火。 NL 若目标带有 烬火：此牌 消耗。"
+  },
+  "${ModID}:EmberThunderDuet": {
+    "NAME": "雷烬双咏",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 烬火，再造成 !D! 点伤害。 NL 若目标有 静电印记，再造成 !D! 点伤害。（双印记最多三段）"
+  },
+  "${ModID}:UnfinishedBlueprint": {
+    "NAME": "未竟的工图",
+    "DESCRIPTION": "保留。 NL 选择一张手牌（非状态/诅咒），将其复制加入手牌。复制品本回合费用 -!M! （最低 0）。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 选择一张手牌（非状态/诅咒），将其复制加入手牌。复制品本回合费用 -!M! （最低 0）。 NL 消耗。"
+  },
+  "${ModID}:LaoZhengFled": {
+    "NAME": "牢郑跑路了",
+    "DESCRIPTION": "消耗。 NL 移除一名敌人身上的所有 烬火 与 静电印记。每移除 1 层，获得 !B! 点格挡，并抽 1 张牌（抽牌最多 !M! 张）。"
+  },
+  "${ModID}:ArmyEdict": {
+    "NAME": "万军之敕",
+    "DESCRIPTION": "消耗。 NL 对所有敌人施加 !M! 层 静电印记。 NL 本回合传导伤害 +!hongwen:m2!%。 NL 若本场已传导至少 3 次，此牌费用为 0。"
+  },
+  "${ModID}:FormerName": {
+    "NAME": "旧日之名",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本场战斗尚未打出过能力牌，再造成 !D! 点伤害并回复 !M! 点生命。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 造成 !D! 点伤害。 NL 若本场战斗尚未打出过能力牌，再造成 !D! 点伤害并回复 !M! 点生命。 NL 消耗。"
+  },
+  "${ModID}:SilentVigil": {
+    "NAME": "沉默的守望",
+    "DESCRIPTION": "若本回合未造成伤害，回合结束时获得 3 层 静默（上限 !M!）。 NL 静默：下一张攻击额外造成「静默层数×!hongwen:m2!」点伤害，然后移除所有静默。"
+  },
+  "${ModID}:HeavenFireUndying": {
+    "NAME": "天火·不灭",
+    "DESCRIPTION": "虚无。 NL 受到致命伤害时：生命改为降至 10，移除所有负面，并对所有敌人施加 8 层 烬火 与 4 层 静电印记。每场战斗限 1 次。",
+    "UPGRADE_DESCRIPTION": "受到致命伤害时：生命改为降至 10，移除所有负面，并对所有敌人施加 8 层 烬火 与 4 层 静电印记。每场战斗限 1 次。"
+  },
+  "${ModID}:RainSound": {
+    "NAME": "雨声",
+    "DESCRIPTION": "虚无。 NL 回复 !M! 点生命。 NL 抽 1 张牌。 NL 消耗。"
+  },
+  "${ModID}:MagneticBomb": {
+    "NAME": "磁吸炸弹",
+    "DESCRIPTION": "指定一名敌人，为其装上倒计时。 NL 3 回合后对其造成 !M! 点伤害。 NL 重复施加会叠加伤害，并取更短的倒计时。"
+  },
+  "${ModID}:TigerCrouchCannon": {
+    "NAME": "虎蹲炮",
+    "DESCRIPTION": "指定一名敌人，为其装上倒计时。 NL 3 回合后使其眩晕 !M! 回合。 NL 重复施加会叠加眩晕回合，并取更短的倒计时。"
+  },
+  "${ModID}:PowerPropulsion": {
+    "NAME": "动力推进",
+    "DESCRIPTION": "获得 !M! 层无实体。 NL 下回合开始时，你获得 !hongwen:m2! 层虚弱与 !hongwen:m2! 层易伤。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层无实体。 NL 下回合开始时，你获得 !hongwen:m2! 层虚弱与 !hongwen:m2! 层易伤。"
+  },
+  "${ModID}:DominicStrike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DominicDefend": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:WindStrike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:WindDefend": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:TimeStrike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:TimeDefend": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:FvvStrike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:FvvDefend": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:DamuhouStrike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouTestBurst": {
+    "NAME": "测试3x10",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouDefend": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:DamuhouRapidFire": {
+    "NAME": "快速射击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouQuickAim": {
+    "NAME": "快速瞄准",
+    "DESCRIPTION": "本回合下一张攻击牌额外攻击 !M! 次。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "本回合下一张攻击牌额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouTwinShot": {
+    "NAME": "双发点射",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouCloseSuppress": {
+    "NAME": "抵近压制",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标当前生命大于一半，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouHipFire": {
+    "NAME": "腰射",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouBurstShot": {
+    "NAME": "连续射击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouQuickShot": {
+    "NAME": "速射",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouSideShot": {
+    "NAME": "侧射",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 若目标位于中间，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouAssault": {
+    "NAME": "强袭",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouBarrage": {
+    "NAME": "弹幕压制",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouHoldDown": {
+    "NAME": "压枪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若未击杀，给予目标 !M! 层虚弱。"
+  },
+  "${ModID}:DamuhouCounterShot": {
+    "NAME": "反击射击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合你受到过伤害，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouPunishGap": {
+    "NAME": "趁隙",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标带有 #y破绽 ，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouFastEject": {
+    "NAME": "快速退膛",
+    "DESCRIPTION": "抽 !M! 张牌。本回合下一张攻击牌额外攻击 1 次。"
+  },
+  "${ModID}:DamuhouTacticalLean": {
+    "NAME": "战术侧身",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若本回合已打出过攻击牌，再获得 !M! 点格挡。"
+  },
+  "${ModID}:DamuhouPressUp": {
+    "NAME": "前压",
+    "DESCRIPTION": "获得 !B! 点格挡。抽 !M! 张牌。 NL 消耗。"
+  },
+  "${ModID}:DamuhouSteadyStance": {
+    "NAME": "稳固姿态",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若本回合尚未打出攻击牌，再获得 !M! 点格挡。"
+  },
+  "${ModID}:DamuhouTacticalRoll": {
+    "NAME": "战术翻滚",
+    "DESCRIPTION": "获得 !B! 点格挡。抽 !M! 张牌。"
+  },
+  "${ModID}:DamuhouEmergencyDodge": {
+    "NAME": "紧急回避",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 保留。消耗。"
+  },
+  "${ModID}:DamuhouReload": {
+    "NAME": "装填",
+    "DESCRIPTION": "抽 2 张牌。本回合下一张攻击牌额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouBackstep": {
+    "NAME": "后撤步",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 固有。"
+  },
+  "${ModID}:DamuhouCalm": {
+    "NAME": "冷静",
+    "DESCRIPTION": "抽 !M! 张牌。获得 !B! 点格挡。"
+  },
+  "${ModID}:DamuhouLeftOrRight": {
+    "NAME": "左右为难",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 选择：对最左额外攻击 !M! 次，或对最右伤害增加 !hongwen:m2! 点。"
+  },
+  "${ModID}:DamuhouCockyKill": {
+    "NAME": "自信颗秒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若未击杀，本回合下一张攻击牌额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouDoubleEdge": {
+    "NAME": "双面刃",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 若本回合已打出过攻击牌，额外攻击 !M! 次；否则获得 1 层脆弱。"
+  },
+  "${ModID}:DamuhouShortBurst": {
+    "NAME": "短点射",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 若本回合已打出过技能牌，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouPierceShot": {
+    "NAME": "子弹穿透",
+    "DESCRIPTION": "造成 !D! 点伤害。对身后相邻的敌人造成 !hongwen:sd! 点伤害。"
+  },
+  "${ModID}:DamuhouGunFuMelee": {
+    "NAME": "近身搏击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择：肘击获得 !B! 点格挡并攻击 !M! 次，或枪托攻击 !hongwen:m2! 次。"
+  },
+  "${ModID}:DamuhouFireScout": {
+    "NAME": "火力侦察",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 查看牌库顶 !M! 张牌，你可以弃置其中的攻击牌。"
+  },
+  "${ModID}:DamuhouChainShot": {
+    "NAME": "连环射击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 若击杀，将本次攻击次数传给下一张攻击牌。"
+  },
+  "${ModID}:DamuhouFlankFire": {
+    "NAME": "侧翼夹击",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 若敌人不少于 3 名，再对所有敌人造成 !hongwen:sd! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouFatalPrecision": {
+    "NAME": "致命精度",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标当前生命低于 !M!%，伤害翻倍，并额外攻击 2 次。"
+  },
+  "${ModID}:DamuhouCoverShot": {
+    "NAME": "掩护射击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合你未受到伤害，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouRicochet": {
+    "NAME": "弹射",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 若击杀，对相邻敌人造成 !M! 点伤害。"
+  },
+  "${ModID}:DamuhouBurstStream": {
+    "NAME": "连射",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouMarkedClear": {
+    "NAME": "定点清除",
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 若目标带有 #y破绽 ，每次攻击额外造成 !M! 点伤害。"
+  },
+  "${ModID}:DamuhouAimFocus": {
+    "NAME": "瞄准聚焦",
+    "DESCRIPTION": "本回合对其攻击时额外攻击 1 次。目标每有 3 层 #y破绽 ，再额外攻击 1 次。",
+    "UPGRADE_DESCRIPTION": "本回合对其攻击时额外攻击 1 次。目标每有 3 层 #y破绽 ，再额外攻击 1 次。 NL 抽 !M! 张牌。"
+  },
+  "${ModID}:DamuhouHardStop": {
+    "NAME": "急停",
+    "DESCRIPTION": "获得 !B! 点格挡。弃置 1 张牌。 NL 若弃置的是攻击牌，本回合下一张攻击牌额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouTacticalShift": {
+    "NAME": "战术转移",
+    "DESCRIPTION": "将目标的全部 #y破绽 转移给一名相邻敌人。抽 !M! 张牌。"
+  },
+  "${ModID}:DamuhouSmokeThrow": {
+    "NAME": "烟幕投出",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 本回合你下一次受到伤害时，攻击你的敌人失去 !M! 点力量。"
+  },
+  "${ModID}:DamuhouWipeDown": {
+    "NAME": "擦拭",
+    "DESCRIPTION": "抽 2 张牌，弃置 1 张牌。 NL 若弃置攻击牌，下一张攻击牌额外攻击 !M! 次；若弃置技能牌，下一张技能牌费用减少 !hongwen:m2! 。"
+  },
+  "${ModID}:DamuhouStressReact": {
+    "NAME": "应激反应",
+    "DESCRIPTION": "查看牌库顶 !M! 张牌。攻击牌加入手牌，本回合费用减少 1；其余放回牌库。"
+  },
+  "${ModID}:DamuhouQuickReact": {
+    "NAME": "快速反应",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若下一张牌是攻击牌，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouSwivel": {
+    "NAME": "回旋",
+    "DESCRIPTION": "对调瞄准方向。抽 !M! 张牌。"
+  },
+  "${ModID}:DamuhouRetune": {
+    "NAME": "改瞄",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 选择：对调瞄准方向，切换为红点，或切换为倍镜。"
+  },
+  "${ModID}:DamuhouSwapShot": {
+    "NAME": "换边点射",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 选择：先攻击再对调瞄准方向，或先对调瞄准方向再攻击。"
+  },
+  "${ModID}:DamuhouDodgeShot": {
+    "NAME": "闪避射击",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 下一张半自动攻击额外造成 !M! 点伤害。"
+  },
+  "${ModID}:DamuhouGetToWork": {
+    "NAME": "动手！",
+    "DESCRIPTION": "本回合下一张攻击牌额外攻击 !M! 次。若击杀，回复 !hongwen:m2! 点生命。"
+  },
+  "${ModID}:DamuhouLowProfile": {
+    "NAME": "低姿躲避",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 本回合每打出 1 张攻击牌，再获得 1 点格挡，最多 !M! 点。"
+  },
+  "${ModID}:DamuhouFeint": {
+    "NAME": "假动作",
+    "DESCRIPTION": "获得 !B! 点格挡。下一张技能牌费用减少 !M! 。"
+  },
+  "${ModID}:DamuhouSpeedLoad": {
+    "NAME": "快速装弹",
+    "DESCRIPTION": "从弃牌堆将 1 张攻击牌加入手牌。若其攻击次数不少于 3，本回合费用减少 !M! 。"
+  },
+  "${ModID}:DamuhouReallocate": {
+    "NAME": "战术再分配",
+    "DESCRIPTION": "获得 [E] [E] 。本回合下一张攻击牌攻击次数减少 !M! 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。"
+  },
+  "${ModID}:DamuhouQuickDraw": {
+    "NAME": "快速拔枪",
+    "DESCRIPTION": "抽 !M! 张牌。若抽到攻击牌，获得 !hongwen:m2! 点能量。"
+  },
+  "${ModID}:DamuhouBreachSiphon": {
+    "NAME": "破绽回收",
+    "DESCRIPTION": "移除目标的全部 #y破绽 。每 !M! 层获得 1 点能量。"
+  },
+  "${ModID}:DamuhouAmmoRation": {
+    "NAME": "弹药配给",
+    "DESCRIPTION": "获得 !M! 点能量。 NL 本回合每打出一张攻击牌，失去 1 点生命。"
+  },
+  "${ModID}:DamuhouFieldSalvage": {
+    "NAME": "战场回收",
+    "DESCRIPTION": "从弃牌堆将 1 张费用不少于 2 的牌加入手牌。若为攻击牌，本回合费用减少 1。",
+    "UPGRADE_DESCRIPTION": "从弃牌堆将 1 张牌加入手牌。本回合费用减少 1。"
+  },
+  "${ModID}:DamuhouFireOrder": {
+    "NAME": "开火令",
+    "DESCRIPTION": "获得 [E] 。 NL 消耗。固有。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 固有。"
+  },
+  "${ModID}:DamuhouMuscleMemory": {
+    "NAME": "肌肉记忆",
+    "DESCRIPTION": "每回合第一张攻击牌：半自动获得 !hongwen:m2! 点格挡，全自动抽 !M! 张牌。"
+  },
+  "${ModID}:DamuhouAmmoCycle": {
+    "NAME": "弹药循环",
+    "DESCRIPTION": "每当你打出攻击次数不超过 !M! 的攻击牌，获得 [E] 。"
+  },
+  "${ModID}:DamuhouTacticalBreath": {
+    "NAME": "战术呼吸",
+    "DESCRIPTION": "每回合第一张技能牌获得 !M! 点能量。"
+  },
+  "${ModID}:DamuhouBeltFeed": {
+    "NAME": "弹链",
+    "DESCRIPTION": "全自动时，每次攻击额外造成 !M! 点伤害。"
+  },
+  "${ModID}:DamuhouGunFu": {
+    "NAME": "枪斗术",
+    "DESCRIPTION": "每当你打出攻击次数不少于 3 的攻击牌，获得 !M! 点格挡。"
+  },
+  "${ModID}:DamuhouPremonition": {
+    "NAME": "预判",
+    "DESCRIPTION": "每回合开始时预见 !M! 。若牌库顶是攻击牌，本回合第一张攻击牌额外攻击 1 次。"
+  },
+  "${ModID}:DamuhouSlowDraw": {
+    "NAME": "慢拔out",
+    "DESCRIPTION": "每回合第一张牌费用减少 1。若为攻击牌，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouCalmAim": {
+    "NAME": "冷静瞄准",
+    "DESCRIPTION": "若本回合未打出攻击牌，回合结束时获得 !M! 点格挡。"
+  },
+  "${ModID}:DamuhouWeakSpot": {
+    "NAME": "弱点洞悉",
+    "DESCRIPTION": "每回合首次对一名敌人造成伤害时，额外施加 !M! 层 #y破绽 。"
+  },
+  "${ModID}:DamuhouBattlefieldRhythm": {
+    "NAME": "战场节奏",
+    "DESCRIPTION": "每回合第 !M! 张牌费用减少 1。若为攻击牌，额外攻击 1 次。"
+  },
+  "${ModID}:DamuhouCombatFatigue": {
+    "NAME": "战斗疲劳",
+    "DESCRIPTION": "每回合每打出 3 张攻击牌，回复 !M! 点生命。每场战斗最多回复 !hongwen:m2! 点。"
+  },
+  "${ModID}:DamuhouFocus": {
+    "NAME": "专注",
+    "DESCRIPTION": "每回合第一张攻击牌额外攻击 !M! 次。若击杀，获得 [E] 。"
+  },
+  "${ModID}:DamuhouEmptyMagSweep": {
+    "NAME": "空仓扫射",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouNamedShot": {
+    "NAME": "点名收束",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标处于当前伤害加成的一端，额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouVioletCover": {
+    "NAME": "紫焰覆盖",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouCloseOpen": {
+    "NAME": "近程搏击",
+    "DESCRIPTION": "获得 !B! 点格挡。造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouBreachRounds": {
+    "NAME": "破绽当弹",
+    "DESCRIPTION": "造成 !D! 点伤害。目标每有 !M! 层 #y破绽 ，额外攻击 1 次。"
+  },
+  "${ModID}:DamuhouOverShoulder": {
+    "NAME": "过肩摔",
+    "DESCRIPTION": "对当前伤害加成的一端造成 !D! 点伤害 !M! 次。然后对调瞄准方向。"
+  },
+  "${ModID}:DamuhouRefocus": {
+    "NAME": "重新对焦",
+    "DESCRIPTION": "立即再次选择红点或倍镜。持续 2 回合，计时重新开始。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "立即再次选择红点或倍镜。持续 2 回合，计时重新开始。"
+  },
+  "${ModID}:DamuhouEmptyMag": {
+    "NAME": "空仓",
+    "DESCRIPTION": "弃置手牌中的所有攻击牌。每弃置 1 张，获得 [E] ，本回合下一张攻击牌额外攻击 1 次。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "弃置手牌中的所有攻击牌。每弃置 1 张，获得 [E] ，本回合下一张攻击牌额外攻击 1 次。"
+  },
+  "${ModID}:DamuhouBreachDetonate": {
+    "NAME": "破绽引爆",
+    "DESCRIPTION": "移除目标的全部 #y破绽 。每层造成 !M! 点伤害。"
+  },
+  "${ModID}:DamuhouStepOff": {
+    "NAME": "步出线",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 本回合每打出一张攻击牌，再获得 !M! 点格挡。"
+  },
+  "${ModID}:DamuhouStillInHand": {
+    "NAME": "还在手上",
+    "DESCRIPTION": "保留。本回合下一张攻击牌额外攻击 !M! 次。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "保留。本回合下一张攻击牌额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouVioletGlow": {
+    "NAME": "紫光扫射",
+    "DESCRIPTION": "攻击牌每次命中时，额外施加 !M! 层 #y破绽 。"
+  },
+  "${ModID}:DamuhouKeepMoving": {
+    "NAME": "大步流星",
+    "DESCRIPTION": "每当你打出一张攻击牌，抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "每当你打出一张攻击牌，抽 1 张牌。若该攻击不少于 3 次，改为抽 2 张牌。"
+  },
+  "${ModID}:DamuhouMiddleCounts": {
+    "NAME": "无处可逃",
+    "DESCRIPTION": "棱镜伤害加成对中间的敌人同样生效。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 棱镜伤害加成对中间的敌人同样生效。"
+  },
+  "${ModID}:DamuhouLeftover": {
+    "NAME": "余弹装填",
+    "DESCRIPTION": "半自动：未命中的攻击每次获得 !M! 点格挡。 NL 全自动：转移到下一名敌人时，第一次攻击额外施加 !hongwen:m2! 层 #y破绽 。"
+  },
+  "${ModID}:DamuhouSpareMag": {
+    "NAME": "备用弹匣",
+    "DESCRIPTION": "本场战斗中，你的攻击牌额外攻击 !M! 次。"
+  },
+  "${ModID}:DamuhouDoorSmash": {
+    "NAME": "砸门",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouFinishDraw": {
+    "NAME": "极光连击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。若击杀，抽 !hongwen:m2! 张牌。"
+  },
+  "${ModID}:DamuhouBothEnds": {
+    "NAME": "两端点射",
+    "DESCRIPTION": "对最左和最右的敌人各造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouShoulderSwap": {
+    "NAME": "换肩",
+    "DESCRIPTION": "获得 !B! 点格挡。对调瞄准方向。"
+  },
+  "${ModID}:DamuhouLayBreach": {
+    "NAME": "铺场",
+    "DESCRIPTION": "对所有敌人施加 !M! 层 #y破绽 。 NL 消耗。"
+  },
+  "${ModID}:DamuhouHowlForm": {
+    "NAME": "啸罗形态",
+    "DESCRIPTION": "每当你打出一张攻击牌，抽 !M! 张牌。手中所有攻击牌本回合费用减少 1。"
+  },
+  "${ModID}:DamuhouMysterious": {
+    "NAME": "我很神秘",
+    "DESCRIPTION": "每消耗 13 点能量，获得 !M! 层无实体。"
+  },
+  "${ModID}:打最左": {
+    "NAME": "打最左",
+    "DESCRIPTION": "额外攻击数次。"
+  },
+  "${ModID}:打最右": {
+    "NAME": "打最右",
+    "DESCRIPTION": "伤害提高。"
+  },
+  "${ModID}:最左": {
+    "NAME": "最左",
+    "DESCRIPTION": "额外攻击数次。"
+  },
+  "${ModID}:最右": {
+    "NAME": "最右",
+    "DESCRIPTION": "伤害提高。"
+  },
+  "${ModID}:肘击": {
+    "NAME": "肘击",
+    "DESCRIPTION": "获得格挡，并攻击。"
+  },
+  "${ModID}:枪托": {
+    "NAME": "枪托",
+    "DESCRIPTION": "攻击更多次。"
+  },
+  "${ModID}:先打再翻": {
+    "NAME": "先打再翻",
+    "DESCRIPTION": "攻击后对调瞄准方向。"
+  },
+  "${ModID}:先翻再打": {
+    "NAME": "先翻再打",
+    "DESCRIPTION": "先对调瞄准方向，再攻击。"
+  },
+  "${ModID}:对调": {
+    "NAME": "对调",
+    "DESCRIPTION": "红点与倍镜互换。"
+  },
+  "${ModID}:红点": {
+    "NAME": "红点",
+    "DESCRIPTION": "切换为红点。"
+  },
+  "${ModID}:倍镜": {
+    "NAME": "倍镜",
+    "DESCRIPTION": "切换为倍镜。"
+  },
+  "${ModID}:PrismRedDot": {
+    "NAME": "红点",
+    "DESCRIPTION": "最左的敌人受到的伤害变为 1.5 倍。 NL 最右的敌人受到的伤害变为 0.75 倍。"
+  },
+  "${ModID}:PrismScope": {
+    "NAME": "倍镜",
+    "DESCRIPTION": "最右的敌人受到的伤害变为 1.5 倍。 NL 最左的敌人受到的伤害变为 0.75 倍。"
+  },
+  "${ModID}:DamuhouCloseShot": {
+    "NAME": "近射",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouSidestep": {
+    "NAME": "侧步",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:DamuhouDoubleTap": {
+    "NAME": "连扣",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouGunbutt": {
+    "NAME": "枪托",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouCoverFire": {
+    "NAME": "扫射",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+  },
+  "${ModID}:DamuhouProbeShot": {
+    "NAME": "试探",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 #y破绽 。"
+  },
+  "${ModID}:DamuhouPointBlank": {
+    "NAME": "贴脸",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗。"
+  },
+  "${ModID}:DamuhouBurstFire": {
+    "NAME": "点射",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:DamuhouAuroraRound": {
+    "NAME": "紫焰",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+  },
+  "${ModID}:FrostStrike": {
+    "NAME": "霜击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 霜偿2：迟滞。"
+  },
+  "${ModID}:WinterCurtain": {
+    "NAME": "冬幕",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 对一名敌人施加 !M! 层虚弱。 NL 霜偿2：迟滞。"
+  },
+  "${ModID}:Stargaze": {
+    "NAME": "观星",
+    "DESCRIPTION": "获得 !M! 层霜寒。 NL 抽2张牌。 NL 获得2点能量。 NL 霜偿4：归墟2。"
+  },
+  "${ModID}:StarTrackPierce": {
+    "NAME": "星轨穿刺",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 霜偿1：迟滞。"
+  },
+  "${ModID}:TwinStars": {
+    "NAME": "双星",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:IceShardScatter": {
+    "NAME": "冰棱散射",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !M! 层霜寒。"
+  },
+  "${ModID}:FrostMark": {
+    "NAME": "寒霜标记",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 获得1层霜寒。"
+  },
+  "${ModID}:AuroraCleave": {
+    "NAME": "极光裂斩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层霜寒。 NL 霜偿3：迟滞。"
+  },
+  "${ModID}:AuroraResonance": {
+    "NAME": "极光共振",
+    "DESCRIPTION": "保留。 NL 造成 !D! 点伤害。 NL 本回合每打出过1张牌，伤害 +!M!。 NL 消耗。 NL 霜偿2：冻裂3。"
+  },
+  "${ModID}:FrostHarvest": {
+    "NAME": "冰霜收割",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人生命低于50%，再造成 !hongwen:sd! 点伤害。"
+  },
+  "${ModID}:StardustImpact": {
+    "NAME": "星尘冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过1张非攻击牌，伤害 +!M!。 NL 霜偿2：冻裂2。"
+  },
+  "${ModID}:IceBreakSlash": {
+    "NAME": "碎冰斩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合受到过伤害，再造成 !hongwen:sd! 点伤害。"
+  },
+  "${ModID}:MeteorShatter": {
+    "NAME": "流星碎空",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 每有一名敌人，获得1层霜寒。 NL 消耗。"
+  },
+  "${ModID}:StarGlassShards": {
+    "NAME": "星璃碎屑",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 !M! 次。 NL 每段获得1层霜寒。"
+  },
+  "${ModID}:WorseFrost": {
+    "NAME": "雪上加霜",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标带有虚弱，再造成 !hongwen:sd! 点伤害。 NL 霜偿2：冻裂1。"
+  },
+  "${ModID}:IceWall": {
+    "NAME": "冰壁",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若霜寒不少于2，额外获得 !M! 点格挡。"
+  },
+  "${ModID}:FrostSurge": {
+    "NAME": "霜寒涌动",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若霜寒不少于4，获得2点能量。"
+  },
+  "${ModID}:AuroraVeil": {
+    "NAME": "极光帷幕",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 本回合每获得1层霜寒，额外获得 !M! 点格挡。"
+  },
+  "${ModID}:FrostWind": {
+    "NAME": "霜风",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 施加 !M! 层虚弱。 NL 获得1层霜寒。"
+  },
+  "${ModID}:MeltSnow": {
+    "NAME": "融雪",
+    "DESCRIPTION": "消耗3层霜寒，回复 !M! 点生命。 NL 若霜寒不足，改为失去3点生命。 NL 消耗。"
+  },
+  "${ModID}:FrostNova": {
+    "NAME": "冰霜新星",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 霜偿2：冻裂2。"
+  },
+  "${ModID}:FrostPuppet": {
+    "NAME": "寒影傀儡",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 点临时力量。 NL 霜偿2：归墟3。"
+  },
+  "${ModID}:StarMarkBarrage": {
+    "NAME": "星痕连珠",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标带有星痕：再造成 !D! 点伤害（不吃星痕加成）。 NL 霜偿2：冻裂2。"
+  },
+  "${ModID}:ShatteredStarRain": {
+    "NAME": "碎星雨",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一名带有星痕的敌人，抽1张牌。"
+  },
+  "${ModID}:Unsharpened": {
+    "NAME": "未开刃",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 霜偿4：星灭。"
+  },
+  "${ModID}:FrostBladeGlissade": {
+    "NAME": "霜刃偏斜",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合若已承受过霜偿代价：再造成 !hongwen:sd! 点伤害，并获得2层霜寒。"
+  },
+  "${ModID}:StarTrackStomp": {
+    "NAME": "星轨重踏",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得1层霜寒（本回合由此最多1次）。 NL 若霜寒已满：改为施加1层星痕。"
+  },
+  "${ModID}:RiftPierce": {
+    "NAME": "裂空一刺",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 霜偿2：迟滞。"
+  },
+  "${ModID}:AuroraSever": {
+    "NAME": "极光断锋",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合取消过霜偿：伤害 +!M!。 NL 霜偿2：冻裂1。"
+  },
+  "${ModID}:FrostBiteStrike": {
+    "NAME": "霜噬",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 可消耗最多3层霜寒：每层再造成 !hongwen:sd! 点伤害。"
+  },
+  "${ModID}:TwinStarDust": {
+    "NAME": "双生星屑",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 每段若目标有星痕：该段额外 +3（不消耗星痕）。 NL 霜偿1：迟滞。"
+  },
+  "${ModID}:SheatheForm": {
+    "NAME": "收剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 霜偿5：星灭。"
+  },
+  "${ModID}:AuroraEcho": {
+    "NAME": "极光回声",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本回合每成功取消1次霜偿，再抽1张牌。"
+  },
+  "${ModID}:FrostDebtSettle": {
+    "NAME": "霜债清算",
+    "DESCRIPTION": "选择一项： NL · 失去 !M! 层霜寒，清除手牌因迟滞增加的费用； NL · 获得 !hongwen:m2! 层霜寒。 NL 消耗。"
+  },
+  "${ModID}:HalfFrostArmor": {
+    "NAME": "半霜护甲",
+    "DESCRIPTION": "获得格挡 = 当前霜寒 ×!M!。 NL 霜偿2：冻裂2。"
+  },
+  "${ModID}:StarChartFragment": {
+    "NAME": "星图残页",
+    "DESCRIPTION": "保留。 NL 预见 !M!。 NL 本牌弃掉的每张攻击：获得1层霜寒。 NL 霜偿3：归墟2。"
+  },
+  "${ModID}:RefrozenVeil": {
+    "NAME": "冻幕重张",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若本回合曾失去过敏捷，再获得 !hongwen:m2! 点格挡。 NL 霜偿2：迟滞2。"
+  },
+  "${ModID}:TravelerChronicle": {
+    "NAME": "旅者记事",
+    "DESCRIPTION": "将一张本回合进入消耗堆的牌返回手牌，本回合费用 -!M!。 NL 霜偿3：归墟1。 NL 消耗。"
+  },
+  "${ModID}:FrostBreath": {
+    "NAME": "霜息",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 对所有敌人施加1层虚弱。 NL 若霜寒不少于6：再获得 !M! 点格挡。"
+  },
+  "${ModID}:StarAshSieve": {
+    "NAME": "星灰筛",
+    "DESCRIPTION": "弃1张牌。 NL 若弃掉的是攻击：获得 !M! 点能量。 NL 若弃掉的是技能：获得 !M! 层霜寒（本回合由此最多 !M!）。 NL 霜偿2：归墟1。"
+  },
+  "${ModID}:ColdCore": {
+    "NAME": "冷核",
+    "DESCRIPTION": "保留。 NL 获得 !B! 点格挡。 NL 下回合开始时获得 !M! 层霜寒。 NL 霜偿2：冻裂2。"
+  },
+  "${ModID}:MakeWay": {
+    "NAME": "让路",
+    "DESCRIPTION": "获得1点能量，抽1张牌。 NL 霜偿2：迟滞。 NL 若你取消了霜偿：再抽1张牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得1点能量，抽1张牌。 NL 霜偿2：迟滞。 NL 若你取消了霜偿：再抽1张牌。"
+  },
+  "${ModID}:FrostRidge": {
+    "NAME": "霜脊",
+    "DESCRIPTION": "每当你因取消霜偿而消耗霜寒时，获得 !M! 点格挡。"
+  },
+  "${ModID}:StarMarkSense": {
+    "NAME": "星痕感应",
+    "DESCRIPTION": "每当星痕因攻击被消耗时，获得 !M! 点临时力量。"
+  },
+  "${ModID}:BladeReady": {
+    "NAME": "开刃预备",
+    "DESCRIPTION": "每回合你打出的第一张带星灭霜偿的攻击牌，伤害 +!M!。"
+  },
+  "${ModID}:ThinFrostDiscipline": {
+    "NAME": "薄霜纪律",
+    "DESCRIPTION": "在你的回合结束时：若本回合未获得过霜寒，获得 !M! 点格挡。"
+  },
+  "${ModID}:DebtLedger": {
+    "NAME": "债册",
+    "DESCRIPTION": "每当你承受霜偿代价，在下回合开始时抽 !M! 张牌（每回合最多触发 !hongwen:m2! 次）。"
+  },
+  "${ModID}:IceDustEcho": {
+    "NAME": "冰尘回响",
+    "DESCRIPTION": "每当冰尘造成伤害时，获得 !M! 点格挡。"
+  },
+  "${ModID}:AfterSheatheWarmth": {
+    "NAME": "余温",
+    "DESCRIPTION": "每当你触发星灭时，获得 !M! 点格挡。"
+  },
+  "${ModID}:FrostPayDiscount": {
+    "NAME": "偿金优惠",
+    "DESCRIPTION": "每回合第一次取消霜偿时，霜寒消耗 -!M!（最低消耗1）。"
+  },
+  "${ModID}:QuietStargaze": {
+    "NAME": "静观星象",
+    "DESCRIPTION": "回合开始霜寒转化并减半之后：若霜寒不多于3，抽 !M! 张牌。"
+  },
+  "${ModID}:FrostBiteMark": {
+    "NAME": "霜噬印记",
+    "DESCRIPTION": "每当你主动消耗霜寒时，对随机敌人施加1层星痕。 NL 每回合最多触发 !M! 次。"
+  },
+  "${ModID}:StarforgeFirstToll": {
+    "NAME": "星锻·初鸣",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 霜偿5：星灭。 NL 若你取消了本次霜偿：再造成 !hongwen:sd! 点伤害，并施加2层星痕。"
+  },
+  "${ModID}:StarShardCascade": {
+    "NAME": "星瀑",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 每段命中带星痕的敌人时，该段伤害 +4（不消耗星痕）。 NL 霜偿3：冻裂2。"
+  },
+  "${ModID}:DebtCleaver": {
+    "NAME": "偿债斩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每承受过1次霜偿代价，再造成 !hongwen:sd! 点伤害一次（最多3次）。"
+  },
+  "${ModID}:StarFall": {
+    "NAME": "星陨",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一名带星痕的敌人，再对生命最低的敌人造成 !hongwen:sd! 点伤害。 NL 霜偿3：迟滞。"
+  },
+  "${ModID}:EmptyString": {
+    "NAME": "空弦",
+    "DESCRIPTION": "保留。 NL 造成 !D! 点伤害。 NL 本回合每取消过1次霜偿，再造成 !M! 点伤害一次。"
+  },
+  "${ModID}:FinalCut": {
+    "NAME": "终焉·灭星斩",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。若击败任何敌人，则再次释放，以此类推。 NL 霜偿6：星灭。 NL 打出后：若手牌中没有攻击牌，获得 !B! 点格挡。 NL 消耗。"
+  },
+  "${ModID}:IceDustDetonate": {
+    "NAME": "冰尘引爆",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标带有星痕：消耗其全部星痕，每层再造成 !M! 点伤害。 NL 霜偿2：归墟2。"
+  },
+  "${ModID}:CounterJourney": {
+    "NAME": "逆旅",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合若你已失去过敏捷，改为造成 !hongwen:sd! 点伤害。 NL 霜偿3：冻裂3。"
+  },
+  "${ModID}:IceDustStorm": {
+    "NAME": "冰尘风暴",
+    "DESCRIPTION": "本回合：冰尘倍率变为 ×!M!，且冰尘改为指定一名敌人。 NL 霜偿3：冻裂3。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "本回合：冰尘倍率变为 ×!M!，且冰尘改为指定一名敌人。 NL 霜偿3：冻裂3。"
+  },
+  "${ModID}:CloseStarChart": {
+    "NAME": "星图合上",
+    "DESCRIPTION": "消耗全部霜寒。 NL 每消耗1层：对目标造成 !M! 点伤害，获得 !B! 点格挡。 NL 消耗。"
+  },
+  "${ModID}:MyriadFrostStillness": {
+    "NAME": "万象霜寂",
+    "DESCRIPTION": "保留。 NL 获得 !B! 点格挡。对所有敌人施加 !M! 层虚弱。 NL 霜偿4：星灭。 NL 若你承受了霜偿代价：再获得冻裂2。"
+  },
+  "${ModID}:MemoryBurnout": {
+    "NAME": "记忆燃尽",
+    "DESCRIPTION": "固有。 NL 本回合因归墟消耗的牌进入星灰。 NL 下回合开始：星灰中的牌以0费、虚无、消耗的复制加入手牌。 NL 霜偿2：归墟2。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 本回合因归墟消耗的牌进入星灰。 NL 下回合开始：星灰中的牌以0费、虚无、消耗的复制加入手牌。 NL 霜偿2：归墟2。"
+  },
+  "${ModID}:AuroraCommand": {
+    "NAME": "极光帷幄",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本回合你的霜偿取消消耗 -1（最低1），可触发最多 !hongwen:m2! 次。 NL 霜偿3：归墟2。"
+  },
+  "${ModID}:FrostSeaSink": {
+    "NAME": "霜海沉",
+    "DESCRIPTION": "获得格挡 = 10 + 当前霜寒 ×!M!。 NL 然后失去一半霜寒（向下取整，主动耗霜）。"
+  },
+  "${ModID}:RefinedAshForm": {
+    "NAME": "精灰形态",
+    "DESCRIPTION": "进入精灰形态。获得 !M! 精灰（上限10）。 NL 霜寒减半时，失去的层数变为精灰。攻击伤害 +精灰。牌被消耗时获得1精灰（每回合最多3）。 NL 精灰达到10：将「星灰绽放」加入手牌（每场一张，造成 !hongwen:m2! 点全体伤害）。"
+  },
+  "${ModID}:StarAshBloom": {
+    "NAME": "星灰绽放",
+    "DESCRIPTION": "清空精灰并离开精灰形态。 NL 对所有敌人造成 !D! 点伤害并各施加 !M! 层星痕。 NL 获得 !B! 点格挡。 NL 消耗。"
+  },
+  "${ModID}:EternalAurora": {
+    "NAME": "永夜极光",
+    "DESCRIPTION": "若霜寒少于6，获得归墟 !M!（强制）。 NL 此后：回合开始转化后，霜寒改为固定失去2层（不再减半）。"
+  },
+  "${ModID}:SwordAlongTheWay": {
+    "NAME": "顺路一剑",
+    "DESCRIPTION": "每回合第一张攻击额外 +!M!。 NL 若该攻击带霜偿且你承受代价：再 +!M!。"
+  },
+  "${ModID}:FrostCapRift": {
+    "NAME": "霜裂",
+    "DESCRIPTION": "霜寒上限变为15。 NL 每回合首次叠至上限时，对所有敌人造成 !M! 点伤害。"
+  },
+  "${ModID}:BladeDoctrine": {
+    "NAME": "开刃宗法",
+    "DESCRIPTION": "带星灭霜偿的攻击牌伤害 +!M!。 NL 每当你触发星灭：下回合开始时获得1点能量。"
+  },
+  "${ModID}:Creditor": {
+    "NAME": "债主",
+    "DESCRIPTION": "每当你承受霜偿代价：获得 !M! 点临时力量。 NL 每当你取消霜偿：获得 !hongwen:m2! 点格挡。"
+  },
+  "${ModID}:StardustSettle": {
+    "NAME": "星尘沉淀",
+    "DESCRIPTION": "虚无。 NL 每当冰尘造成伤害：对所有敌人施加 !M! 层星痕（每回合最多 !hongwen:m2! 次）。",
+    "UPGRADE_DESCRIPTION": "每当冰尘造成伤害：对所有敌人施加 !M! 层星痕（每回合最多 !hongwen:m2! 次）。"
+  },
+  "${ModID}:StarAshScavenge": {
+    "NAME": "星屑拾遗",
+    "DESCRIPTION": "保留。 NL 获得 !M! 层霜寒。 NL 若本回合已成功取消过霜偿，抽 1 张牌。"
+  },
+  "${ModID}:FrostPath": {
+    "NAME": "霜路",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出后：本回合下一张技能牌费用 -1（最低0）。 NL 霜偿1：迟滞。"
+  },
+  "${ModID}:SharedWarmth": {
+    "NAME": "同路余温",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 本回合每打出 1 张带霜偿的牌，再获得 !M! 点格挡。"
+  },
+  "${ModID}:AbandonedQuill": {
+    "NAME": "弃笔",
+    "DESCRIPTION": "预见 !M!。 NL 本牌因预见弃掉的牌中，每有 1 张带霜偿的牌，获得 1 层霜寒（本牌最多因此获得 3 层）。 NL 霜偿2：归墟1。 NL 消耗。"
+  },
+  "${ModID}:StillSheathed": {
+    "NAME": "尚未出鞘",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合这是你打出的第一张攻击牌：再造成 !hongwen:sd! 点伤害。 NL 霜偿2：星灭。"
+  },
+  "${ModID}:ClearAPath": {
+    "NAME": "帮一段路",
+    "DESCRIPTION": "获得 !B! 点格挡。对一名敌人施加 !M! 层星痕。 NL 霜偿2：归墟1。"
+  },
+  "${ModID}:HowDoYouKnow": {
+    "NAME": "你怎么知道赢不了",
+    "DESCRIPTION": "每当你首次在本场战斗中降至 50% 最大生命以下：获得 !M! 层霜寒，抽 2 张牌，并获得 !B! 点格挡（每场限 1 次）。"
+  },
+  "${ModID}:FinalSheatheMark": {
+    "NAME": "开刃·终记",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合你未打出过其他攻击牌：再造成 !hongwen:sd! 点伤害，并对目标施加 2 层虚弱。 NL 霜偿5：星灭。 NL 消耗。"
+  },
+  "${ModID}:LastLineOfChart": {
+    "NAME": "星图最后一行",
+    "DESCRIPTION": "虚无。 NL 本场战斗中，归墟改为：被消耗的牌进入弃牌堆而非消耗堆（仍算「被归墟」，最多 !M! 次）。",
+    "UPGRADE_DESCRIPTION": "本场战斗中，归墟改为：被消耗的牌进入弃牌堆而非消耗堆（仍算「被归墟」，最多 !M! 次）。"
+  },
+"${ModID}:AdmitUseless": { "NAME": "承认很废", "DESCRIPTION": "获得 !M! 层 没用。 NL 抽 1 张牌。" },
+  "${ModID}:UsefulPunch": { "NAME": "有用一拳", "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 没用。" },
+  "${ModID}:ReallyHurts": { "NAME": "真的会疼", "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点生命。" },
+  "${ModID}:ThinkLife": { "NAME": "思考人生", "DESCRIPTION": "抽 !M! 张牌，弃 1 张牌。 NL 若本回合未造成伤害，获得 !hongwen:m2! 层 没用。" },
+  "${ModID}:UselessStrike": { "NAME": "毛用打击", "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 没用。" },
+  "${ModID}:UselessDefend": { "NAME": "废物格挡", "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 没用。" },
+  "${ModID}:RageStroke": { "NAME": "怒撸一下", "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每层 没用 使伤害 +1（不消耗）。" },
+  "${ModID}:LieFlat": { "NAME": "躺平", "DESCRIPTION": "获得 !M! 层 没用。 NL 结束你的回合。", "UPGRADE_DESCRIPTION": "获得 !M! 层 没用。 NL 获得 !B! 点格挡。 NL 结束你的回合。" },
+  "${ModID}:PickTrash": { "NAME": "捡垃圾", "DESCRIPTION": "弃最多 !M! 张牌。 NL 每弃 1 张：获得 1 层 没用 并抽 1。" },
+  "${ModID}:VerbalPromise": { "NAME": "口头承诺", "DESCRIPTION": "获得 !B! 点格挡。 NL 下回合开始失去 1 点能量。" },
+  "${ModID}:FakeDiligent": { "NAME": "假勤快", "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 层 没用。 NL 消耗。", "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 层 没用。" },
+  "${ModID}:SelfCritique": { "NAME": "自我批判", "DESCRIPTION": "获得 !M! 层虚弱。 NL 获得 !hongwen:m2! 层 没用。" },
+  "${ModID}:PassBuck": { "NAME": "推锅", "DESCRIPTION": "对一名敌人施加 !M! 层虚弱。 NL 获得 1 层 没用。" },
+  "${ModID}:NotBad": { "NAME": "还行吧", "DESCRIPTION": "造成 !D! 点伤害。 NL 若 没用 ≥ !M!，再造成 !D! 点伤害。" },
+  "${ModID}:SlackDefend": { "NAME": "摸鱼防御", "DESCRIPTION": "获得 !B! 点格挡。 NL 将 1 张 *摸鱼* 洗入抽牌堆。" },
+  "${ModID}:LateStrike": { "NAME": "迟到打击", "DESCRIPTION": "造成 !D! 点伤害。 NL 若为本回合第 3 张及以后打出的牌，改为造成 !hongwen:sd! 点伤害。" },
+  "${ModID}:BuckHammer": { "NAME": "甩锅锤", "DESCRIPTION": "造成 !D! 点伤害。 NL 若手牌 ≥ 5，获得 1 层 没用。" },
+  "${ModID}:Insignificant": { "NAME": "微不足道", "DESCRIPTION": "保留。 NL 获得 !M! 层 没用。" },
+  "${ModID}:BatteryDead": { "NAME": "电量耗尽", "DESCRIPTION": "弃光手牌。 NL 每弃 1 张获得 1 层 没用（最多 !M!）。" },
+  "${ModID}:SurfaceWork": { "NAME": "表面功夫", "DESCRIPTION": "造成等同于本回合已获格挡的伤害（上限 !M!）。 NL 获得 1 层 没用。" },
+  "${ModID}:InnerDrain": { "NAME": "内耗", "DESCRIPTION": "失去 1 点能量。 NL 抽 !M! 张牌。 NL 获得 !hongwen:m2! 层 没用。" },
+  "${ModID}:AlmostOk": { "NAME": "差不多了", "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 第二次仅当 没用 ≥ 2。" },
+  "${ModID}:ReadNoReply": { "NAME": "已读不回", "DESCRIPTION": "获得 !B! 点格挡。 NL 本回合不能再打出技能。 NL 获得 1 层 没用。" },
+  "${ModID}:ReplyRead": { "NAME": "已回已读", "DESCRIPTION": "若本回合打过技能：造成 !hongwen:sd! 点伤害。 NL 否则造成 !D! 点伤害并获得 !M! 层 没用。" },
+  "${ModID}:KeyboardWarrior": { "NAME": "键盘侠", "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 获得 1 层 没用。 NL 可再支付 1 层 没用 重复一次。" },
+  "${ModID}:SlackAddiction": { "NAME": "摸鱼成癖", "DESCRIPTION": "将 2 张 *摸鱼* 洗入抽牌堆。 NL 抽 !M! 张牌。" },
+  "${ModID}:OvertimeStrike": { "NAME": "加班打击", "DESCRIPTION": "造成 !D! 点伤害。 NL 若手牌 ≤ 2，再获得 1 层 没用。" },
+  "${ModID}:BuckProduct": { "NAME": "甩锅产品", "DESCRIPTION": "对一名敌人施加 !M! 层脆弱。 NL 获得 !hongwen:m2! 层 没用。" },
+  "${ModID}:CopyPaste": { "NAME": "复制粘贴", "DESCRIPTION": "复制手牌中一张非稀有牌。 NL 复制品费用 +1 且消耗。 NL 获得 1 层 没用。", "UPGRADE_DESCRIPTION": "复制手牌中一张非稀有牌。 NL 复制品消耗。 NL 获得 1 层 没用。" },
+  "${ModID}:NonsenseTalk": { "NAME": "废话连篇", "DESCRIPTION": "抽 3 张牌，弃 !M! 张牌。 NL 获得 1 层 没用。" },
+  "${ModID}:WasteRecycle": { "NAME": "废物利用", "DESCRIPTION": "花光 没用：每层获得 !B! 点格挡并抽 1（最多抽 !M!）。" },
+  "${ModID}:BreakDefense": { "NAME": "破防输出", "DESCRIPTION": "造成 !D! 点伤害。 NL 花光 没用，每层伤害 +!M!。" },
+  "${ModID}:PlayDead": { "NAME": "装死", "DESCRIPTION": "获得 1 层无实体。 NL 获得 !M! 层 没用。 NL 消耗。", "UPGRADE_DESCRIPTION": "获得 1 层无实体。 NL 获得 !M! 层 没用。" },
+  "${ModID}:LateAwareness": { "NAME": "迟到觉悟", "DESCRIPTION": "回合结束时，若本回合未造成伤害，获得 !M! 层 没用。" },
+  "${ModID}:PeerReview": { "NAME": "同行评价", "DESCRIPTION": "保留。 NL 选择：获得 !M! 层 没用；或花 !hongwen:m2! 层 没用 抽牌。" },
+  "${ModID}:JustRun": { "NAME": "直接跑路", "DESCRIPTION": "消耗。 NL 失去全部 没用，每层对随机敌人造成 !D! 点伤害。" },
+  "${ModID}:FakeHustle": { "NAME": "无效内卷", "DESCRIPTION": "造成 !M! × 本回合已打牌数（含此牌）点伤害。 NL 获得 1 层 没用。" },
+  "${ModID}:LeaveNote": { "NAME": "请假条", "DESCRIPTION": "获得 !B! 点格挡。 NL 将 1 张 *摸鱼* 洗入抽牌堆。" },
+  "${ModID}:ArgueLine": { "NAME": "对线", "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人意图攻击：获得 !M! 层 没用；否则获得 !B! 点格挡。" },
+  "${ModID}:AdmitCommittee": { "NAME": "承认委员", "DESCRIPTION": "每当获得 没用，获得 1 点力量（每回合最多 !M! 次）。" },
+  "${ModID}:SlackCombo": { "NAME": "摆烂连招", "DESCRIPTION": "造成 !D! 点伤害。 NL 若上一张是技能，再造成 !D! 点伤害并获得 1 层 没用。" },
+  "${ModID}:ReviewMeeting": { "NAME": "复盘会议", "DESCRIPTION": "从弃牌堆选 1 张入手。 NL 攻击则 获得 1 层 没用；技能则获得 !B! 点格挡。", "UPGRADE_DESCRIPTION": "从弃牌堆选 1 张入手。 NL 攻击则 获得 1 层 没用；技能则获得 !B! 点格挡。 NL 再抽 1。" },
+  "${ModID}:EnergyFraud": { "NAME": "能量诈骗", "DESCRIPTION": "获得 2 点能量。 NL 下回合开始失去 2 点能量。 NL 获得 1 层 没用。 NL 消耗。", "UPGRADE_DESCRIPTION": "获得 2 点能量。 NL 下回合开始失去 2 点能量。 NL 获得 1 层 没用。" },
+  "${ModID}:ControlTest": { "NAME": "对照实验", "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每层 没用 对生命最低的敌人再造成 !M! 点伤害。" },
+  "${ModID}:PassiveAggression": { "NAME": "被动攻击", "DESCRIPTION": "弃牌时 50% 获得 1 层 没用（每回合最多 !M! 次）。" },
+  "${ModID}:UnsubscribeLife": { "NAME": "退订人生", "DESCRIPTION": "消耗。 NL 移除手中所有状态与诅咒；每张获得 !M! 层 没用 并抽 1。" },
+  "${ModID}:OpenBox": { "NAME": "开盒", "DESCRIPTION": "随机：获得 3 层 没用 / 抽 2 / 自损 3 再 获得 5 层 没用 / 洗入 1 *说明书*。", "UPGRADE_DESCRIPTION": "随机：获得 3 层 没用 / 抽 2 / 自损 3 再 获得 5 层 没用。" },
+  "${ModID}:AfkHang": { "NAME": "挂机", "DESCRIPTION": "连续 2 回合每回合打牌 ≤ !M!：第三回合开始获得 2 能量与 3 层 没用。" },
+  "${ModID}:PaidPoop": { "NAME": "带薪拉屎", "DESCRIPTION": "获得 1 点能量。 NL 获得 2 层 没用。 NL 抽 1。 NL 消耗。", "UPGRADE_DESCRIPTION": "获得 1 点能量。 NL 获得 2 层 没用。 NL 抽 1。" },
+  "${ModID}:ChatMute": { "NAME": "群聊屏蔽", "DESCRIPTION": "本回合受到的攻击伤害 -!M!。 NL 获得 2 层 没用。" },
+  "${ModID}:ExamStrike": { "NAME": "考核打击", "DESCRIPTION": "造成等同于本场已获得 没用 总次数的伤害（上限 !M!）。" },
+  "${ModID}:NumberScapegoat": { "NAME": "数值背锅", "DESCRIPTION": "一名敌人力量 -!M!（本场）。 NL 获得 2 层 没用。 NL 消耗。", "UPGRADE_DESCRIPTION": "一名敌人力量 -!M!（本场）。 NL 获得 2 层 没用。" },
+  "${ModID}:WasteEconomy": { "NAME": "废物经济", "DESCRIPTION": "每层 没用 使打击类伤害 +1（不消耗）。", "UPGRADE_DESCRIPTION": "每层 没用 使所有攻击伤害 +1（不消耗）。" },
+  "${ModID}:UltimateUseless": { "NAME": "终极没用", "DESCRIPTION": "造成（没用 × 没用）点伤害（上限 99），清空 没用。 NL 消耗。", "UPGRADE_DESCRIPTION": "造成（没用 × 没用）点伤害（上限 99），清空 没用。" },
+  "${ModID}:JustLikeThis": { "NAME": "我就这样", "DESCRIPTION": "回合开始获得 !M! 层 没用。 NL 每回合第一张牌费用 -1。" },
+  "${ModID}:SocialDeath": { "NAME": "社会死亡", "DESCRIPTION": "施加 !M! 层易伤与虚弱。 NL 获得 !hongwen:m2! 层 没用。 NL 消耗。" },
+  "${ModID}:TheoryCorrect": { "NAME": "理论正确", "DESCRIPTION": "固有。消耗。 NL 抽牌堆与弃牌堆无攻击：获得 !M! 层 没用；否则获得 2 层并抽 1。" },
+  "${ModID}:FillerStrike": { "NAME": "凑数打击", "DESCRIPTION": "消耗。 NL 将 !M! 张 0 费「打击」加入手牌（回合结束消耗）。 NL 获得 1 层 没用。" },
+  "${ModID}:BornWithIt": { "NAME": "胎里带来", "DESCRIPTION": "虚无。 NL 无「胎没用了呀」则开战 获得 5 层 没用；有则每回合一次可将获得 没用 改为抽 1。", "UPGRADE_DESCRIPTION": "无「胎没用了呀」则开战 获得 5 层 没用；有则每回合一次可将获得 没用 改为抽 1。" },
+  "${ModID}:RageFinale": { "NAME": "怒撸终章", "DESCRIPTION": "造成 !D! 点伤害。 NL 本场每获得过 1 次 没用，伤害 +1。 NL 消耗。", "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本场每获得过 1 次 没用，伤害 +1。" },
+  "${ModID}:GroupSlack": { "NAME": "集体摆烂", "DESCRIPTION": "对所有敌人施加 !M! 层虚弱与易伤。 NL 获得 !hongwen:m2! 层 没用。 NL 消耗。", "UPGRADE_DESCRIPTION": "对所有敌人施加 !M! 层虚弱与易伤。 NL 获得 !hongwen:m2! 层 没用。" },
+  "${ModID}:WasteCrown": { "NAME": "废物王冠", "DESCRIPTION": "没用 有效下限按至少 10。 NL 回合结束若 没用 ≥ 5：抽 1 并获得 5 点格挡。" },
+  "${ModID}:OneClickBreak": { "NAME": "一键破防", "DESCRIPTION": "消耗至少 1 层 没用：对所有敌人造成 !D! × 层数 点伤害。" },
+  "${ModID}:ExistCrisis": { "NAME": "存在危机", "DESCRIPTION": "弃光手牌再抽等量。 NL 获得等于弃牌数的 没用。 NL 消耗。", "UPGRADE_DESCRIPTION": "弃光手牌再抽等量。 NL 获得等于弃牌数的 没用。" },
+  "${ModID}:FamousEffect": { "NAME": "名人效应", "DESCRIPTION": "打出名称含「废 / 没用 / 毛」的牌时抽 1（每回合限 !M!）。" },
+  "${ModID}:SelfUltimatum": { "NAME": "自我通牒", "DESCRIPTION": "若 没用 ≥ 8：造成 !D! 点伤害并清空。 NL 否则获得 !M! 层 没用。 NL 消耗。" },
+  "${ModID}:NoWords": { "NAME": "没话说", "DESCRIPTION": "消耗。 NL 获得 !M! 层 没用。 NL 抽 1。" },
+  "${ModID}:CasualHit": { "NAME": "顺手一击", "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合打过 0 费牌，再造成 !D! 点伤害并获得 2 层 没用。" },
+  "${ModID}:FetalFail": { "NAME": "胎教失败", "DESCRIPTION": "每回合第一次获得 没用 时额外 +!M!。 NL 每回合第一次失血时获得 1 层 没用。" },
+  "${ModID}:UselessFly": { "NAME": "毛用飞升", "DESCRIPTION": "消耗。 NL 若 没用 ≥ !M!：下 2 回合费用 -1，回合结束清空并抽 2；否则 没用 翻倍（上限 !hongwen:m2!）。" },
+  "${ModID}:ManualSet": { "NAME": "说明书集", "DESCRIPTION": "将 !M! 张 *说明书* 洗入抽牌堆。 NL 每张使下回合开始抽 1 并 获得 1 层 没用。" },
+  "${ModID}:PlacentaAscend": { "NAME": "胎盘升天", "DESCRIPTION": "消耗全部 没用 与全部摸鱼，每层/张对全体造成 !D! 点伤害，然后跳过下回合。 NL 消耗。", "UPGRADE_DESCRIPTION": "消耗全部 没用 与全部摸鱼，每层/张对全体造成 !D! 点伤害。 NL 消耗。" },
+  "${ModID}:BattleUseless": { "NAME": "开战没用", "DESCRIPTION": "固有。保留。消耗。 NL 获得 !M! 层 没用。" },
+  "${ModID}:TodayOffline": { "NAME": "今日停更", "DESCRIPTION": "下一张牌的数值 +50%。", "UPGRADE_DESCRIPTION": "本回合牌的数值 +50%。" },
+  "${ModID}:BalancePatch": { "NAME": "平衡调整", "DESCRIPTION": "本场自损生命改为回复等量。" },
+  "${ModID}:LeaveReview": { "NAME": "打个好评", "DESCRIPTION": "获得 !B! 点格挡。 NL 将 1 张 *已读回执* 洗入抽牌堆。" },
+  "${ModID}:ReportReward": { "NAME": "举报有奖", "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有虚弱或易伤，获得 3 层 没用。" },
+  "${ModID}:ServerDown": { "NAME": "服务崩了", "DESCRIPTION": "所有敌人本回合力量 -!M!。 NL 跳过下次抽牌。 NL 获得 4 层 没用。" },
+  "${ModID}:IAmEgg": { "NAME": "我是蛋蛋", "DESCRIPTION": "虚无。 NL 每回合第一张费用 ≥ 2 的牌退回 1 能量并获得 1 层 没用。", "UPGRADE_DESCRIPTION": "每回合第一张费用 ≥ 2 的牌退回 1 能量并获得 1 层 没用。" },
+  "${ModID}:RageCert": { "NAME": "怒撸认证", "DESCRIPTION": "消耗。 NL 发现 1 张本角色稀有牌，以 0 费入手（消耗）。 NL 获得 2 层 没用。", "UPGRADE_DESCRIPTION": "发现 1 张本角色稀有牌，以 0 费入手（消耗）。 NL 获得 2 层 没用。" },
+  "${ModID}:SlackOff": { "NAME": "摸鱼", "DESCRIPTION": "抽到时获得 1 层 没用，消耗。" },
+  "${ModID}:SlackOffHard": { "NAME": "更摸", "DESCRIPTION": "抽到时获得 2 层 没用，消耗。" },
+  "${ModID}:ManualBook": { "NAME": "说明书", "DESCRIPTION": "抽到时失去 1 点生命，获得 1 层 没用，消耗。" },
+  "${ModID}:OvertimeMail": { "NAME": "加班邮件", "DESCRIPTION": "抽到时弃 1 张牌，获得 1 层 没用，消耗。" },
+  "${ModID}:ReadReceipt": { "NAME": "已读回执", "DESCRIPTION": "保留。 NL 抽 1 张牌。 NL 获得 1 层 没用。 NL 消耗。" },
+  "${ModID}:PlacentaShard": { "NAME": "胎盘碎片", "DESCRIPTION": "虚无。 NL 造成 !D! 点伤害。 NL 获得 1 层 没用。 NL 消耗。" },
+  "${ModID}:JjSerpentJab": { "NAME": "蛇骨刺", "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标带有 虚数 ，改为造成 10 点伤害，并给予 1 层虚弱。", "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 若目标带有 虚数 ，改为造成 13 点伤害，并给予 1 层虚弱。" },
+  "${ModID}:JjSandWard": { "NAME": "幻沙障", "DESCRIPTION": "获得 !B! 点格挡。 NL 若本回合获得过 沙漏 ，改为获得 9 点格挡。", "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 若本回合获得过 沙漏 ，改为获得 12 点格挡。" },
+  "${ModID}:JjForbiddenEye": { "NAME": "禁忌之瞳", "DESCRIPTION": "给予 !M! 层 眼印 与 1 层易伤。抽 1 张牌。 NL 眼印 提高 处决线 。" },
+  "${ModID}:JjRealmFade": { "NAME": "行境·虚", "DESCRIPTION": "获得 1 沙漏 。将手牌中 1 张牌 虚化 1 回合 。抽 1 张牌。 NL 该牌返回时费用为 0 。", "UPGRADE_DESCRIPTION": "获得 1 沙漏 。将手牌中 1 张牌 虚化 1 回合 。抽 1 张牌。 NL 该牌返回时费用为 0 ，且伤害与格挡增加 50 % 。" },
+  "${ModID}:JjBloodMark": { "NAME": "血印", "DESCRIPTION": "无法打出。回合结束时失去 2 点生命。 NL 弃掉、消耗或 虚化 时获得 1 沙漏 。" },
+  "${ModID}:JjGhostTalisman": { "NAME": "鬼眼符", "DESCRIPTION": "造成 !D! 点伤害。给予 !M! 层 眼印 与 1 层易伤。" },
+  "${ModID}:JjJingjian": { "NAME": "净见阿含", "DESCRIPTION": "造成 !D! 点伤害。给予 !M! 层 虚数 与 1 层易伤。 NL 普通敌人本回合不执行意图。" },
+  "${ModID}:JjSandGain": { "NAME": "沙漏·积", "DESCRIPTION": "获得 !M! 沙漏 。 NL 沙漏 上限 9 ，跨回合保留。" },
+  "${ModID}:JjSlowWalk": { "NAME": "行境·缓", "DESCRIPTION": "给予 !M! 层 虚数 与 1 层虚弱。 NL 普通敌人本回合不执行意图。" },
+  "${ModID}:JjFireSplash": { "NAME": "业火溅", "DESCRIPTION": "造成 !D! 点伤害。给予 1 层虚弱。 NL 溅射 ：对其他敌人造成 30 % 伤害 。", "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。给予 1 层虚弱。 NL 溅射 ：对其他敌人造成 40 % 伤害 。" },
+  "${ModID}:JjIceGuard": { "NAME": "乃穷冰", "DESCRIPTION": "获得 !B! 点格挡。给予 !M! 层虚弱。" },
+  "${ModID}:JjBloodBait": { "NAME": "血饵花", "DESCRIPTION": "失去 3 点生命。抽 !M! 张牌。" },
+  "${ModID}:JjGhostEcho": { "NAME": "鬼洞回响", "DESCRIPTION": "造成 !D! 点伤害。给予 1 层虚弱。" },
+  "${ModID}:JjSandWall": { "NAME": "幻沙壁", "DESCRIPTION": "获得 !B! 点格挡。本回合 处决线 增加 !M! % 。给予所有敌人 1 层虚弱。" },
+  "${ModID}:JjBrand": { "NAME": "祭品烙印", "DESCRIPTION": "给予 !M! 层 眼印 与 !hongwen:m2! 层易伤。" },
+  "${ModID}:JjShed": { "NAME": "蛇蜕", "DESCRIPTION": "获得 !B! 点格挡。抽 1 张牌。 NL 消耗。" },
+  "${ModID}:JjDarkRiver": { "NAME": "兹独暗河", "DESCRIPTION": "将手牌中 1 张牌 虚化 2 回合 。 NL 返回时费用为 0 。", "UPGRADE_DESCRIPTION": "将手牌中 1 张牌 虚化 2 回合 。 NL 返回时费用为 0 ，且伤害与格挡增加 50 % 。" },
+  "${ModID}:JjFireBug": { "NAME": "火瓢虫", "DESCRIPTION": "造成 !D! 点伤害。给予 !M! 层 业火 。 NL 回合结束受到等于层数的伤害。" },
+  "${ModID}:JjReverseStep": { "NAME": "逆行步", "DESCRIPTION": "造成 !D! 点伤害。给予 1 层易伤。若本回合获得过 沙漏 ，伤害增加 !M! 点。" },
+  "${ModID}:JjBloodBlade": { "NAME": "血祭刃", "DESCRIPTION": "失去 2 点生命。造成 !D! 点伤害。给予 1 层易伤。" },
+  "${ModID}:JjCorpseScent": { "NAME": "尸香幻", "DESCRIPTION": "给予 !M! 层 虚数 与 !M! 层虚弱。 NL 普通敌人本回合不执行意图。" },
+  "${ModID}:JjSandstorm": { "NAME": "沙暴", "DESCRIPTION": "对所有敌人造成 !D! 点伤害。给予所有敌人 1 层虚弱。" },
+  "${ModID}:JjJadeEye": { "NAME": "玉石眼", "DESCRIPTION": "获得 1 沙漏 。抽 1 张牌。", "UPGRADE_DESCRIPTION": "获得 1 沙漏 。抽 1 张牌。本回合 处决线 增加 2 % 。" },
+  "${ModID}:JjSandTick": { "NAME": "砂之刻", "DESCRIPTION": "获得 !M! 层 时滞 。抽 1 张牌。 NL 下一张费用不少于 1 的牌费用减少 1 。" },
+  "${ModID}:JjReverseDash": { "NAME": "逆行·疾", "DESCRIPTION": "造成 !D! 点伤害。给予 1 层虚弱。若你持有 时滞 ，获得 [E] 。" },
+  "${ModID}:JjWalkingIllusion": { "NAME": "行境幻化", "DESCRIPTION": "每回合开始时给予所有敌人 1 层 虚数 。 NL 普通敌人本回合不执行意图，被跳过的意图转为 时空乱流 。" },
+  "${ModID}:JjDeepEye": { "NAME": "禁忌之瞳·深", "DESCRIPTION": "给予 !M! 层 眼印 与 1 层易伤。若目标带有 虚数 ，抽 1 张牌。" },
+  "${ModID}:JjTimeAnchor": { "NAME": "时间锚", "DESCRIPTION": "回复你本回合已受到伤害的一半。 NL 消耗。" },
+  "${ModID}:JjRewind": { "NAME": "回溯", "DESCRIPTION": "消耗 !M! 沙漏 ：抽 2 张牌，将 1 张手牌放到抽牌堆顶。" },
+  "${ModID}:JjCorridor": { "NAME": "虚数回廊", "DESCRIPTION": "每当你施加 虚数 时获得 1 沙漏 。每回合最多 !M! 次。" },
+  "${ModID}:JjAltar": { "NAME": "祭坛沙漏", "DESCRIPTION": "每回合结束时获得 1 沙漏 。" },
+  "${ModID}:JjExecuteCut": { "NAME": "处决·断罪", "DESCRIPTION": "造成 !D! 点伤害。 NL 立即 处决 ：普通敌人死亡；精英与首领改为受到真实伤害 。" },
+  "${ModID}:JjNineTower": { "NAME": "九层妖塔", "DESCRIPTION": "获得 !B! 点格挡。获得 !M! 沙漏 。" },
+  "${ModID}:JjKunlunWood": { "NAME": "昆仑神木", "DESCRIPTION": "回复 !M! 点生命。给予所有敌人 1 层 眼印 。" },
+  "${ModID}:JjDapuBug": { "NAME": "达普鬼虫", "DESCRIPTION": "切换形态。 NL 业火 ： 溅射 伤害增加 50 % 。 NL 寒冰： 溅射 命中时给予 1 层虚弱。" },
+  "${ModID}:JjDreadForm": { "NAME": "惧魇形态", "DESCRIPTION": "打出时及每回合开始时， 消耗 抽牌堆顶 1 张牌。攻击则对随机敌人打出其伤害；技能则获得其格挡；能力则立刻获得该能力。 NL 将被烧掉的牌替换为 1 张同类型的随机牌，放入弃牌堆。 NL 每当一张牌被 消耗 ：获得 1 沙漏 ，给予所有敌人 1 层 眼印 。" },
+  "${ModID}:JjBeastGod": { "NAME": "精绝兽神", "DESCRIPTION": "造成 !D! 点伤害。 NL 溅射 ：对其他敌人造成 60 % 伤害 。", "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 溅射 ：对其他敌人造成 80 % 伤害 。" },
+  "${ModID}:JjStyxSpear": { "NAME": "冥河之矛", "DESCRIPTION": "对随机敌人造成 !D! 点伤害，重复 !M! 次，每次增加 2 点。" },
+  "${ModID}:JjJingjianRev": { "NAME": "净见阿含·逆", "DESCRIPTION": "造成 !D! 点伤害。若目标带有 虚数 ，改为给予 !M! 层 眼印 。" },
+  "${ModID}:JjGhostCopper": { "NAME": "鬼铜蚀", "DESCRIPTION": "给予所有敌人 !M! 层中毒与 1 层 眼印 。" },
+  "${ModID}:JjBloodGrudge": { "NAME": "血怨", "DESCRIPTION": "失去 4 点生命。造成 !D! 点伤害。 NL 溅射 ：对其他敌人造成 30 % 伤害 。", "UPGRADE_DESCRIPTION": "失去 4 点生命。造成 !D! 点伤害。 NL 溅射 ：对其他敌人造成 40 % 伤害 。" },
+  "${ModID}:JjThunderMount": { "NAME": "大黑天击雷山", "DESCRIPTION": "对所有敌人造成 !D! 点伤害。给予所有敌人 !M! 层 虚数 与 1 层易伤。" },
+  "${ModID}:JjTimeMissile": { "NAME": "时空导弹", "DESCRIPTION": "消耗 2 沙漏 ：对所有敌人造成「当前沙漏 × !M! 」点伤害。" },
+  "${ModID}:JjSkirmishStone": { "NAME": "斯格明石", "DESCRIPTION": "沙漏 上限增加 3 。每回合首次获得 沙漏 时额外获得 1 。" },
+  "${ModID}:JjWolfHead": { "NAME": "苍霆狼首", "DESCRIPTION": "造成 !D! 点伤害。给予 1 层易伤。若目标带有 眼印 ，伤害翻倍。" },
+  "${ModID}:JjIceSeal": { "NAME": "冰封·乃穷", "DESCRIPTION": "给予 !M! 层虚弱与 !hongwen:m2! 层易伤。" },
+  "${ModID}:JjBloodRite": { "NAME": "血印·祭", "DESCRIPTION": "将 !M! 张 血印 加入手牌。获得 !hongwen:m2! 沙漏 。 NL 血印 离手时获得 沙漏 。" },
+  "${ModID}:JjRavenSword": { "NAME": "渡鸦剑", "DESCRIPTION": "造成 !D! 点伤害。给予 1 层虚弱。抽 1 张牌。若本回合已 处决 ，再抽 1 张。" },
+  "${ModID}:JjSoulPestle": { "NAME": "魂杵", "DESCRIPTION": "造成 !D! 点伤害两次，每次给予 1 层 眼印 。给予 1 层易伤。" },
+  "${ModID}:JjCycleStop": { "NAME": "循环·止", "DESCRIPTION": "给予所有敌人 1 层 虚数 。已有 虚数 者再给予 1 层。" },
+  "${ModID}:JjRegenCool": { "NAME": "再生冷却", "DESCRIPTION": "获得 !B! 点格挡。本回合 溅射 比例增加 !M! % 。" },
+  "${ModID}:JjTimeHunt": { "NAME": "时空追猎", "DESCRIPTION": "每当你 处决 一名敌人，抽 1 张牌并获得 1 沙漏 。" },
+  "${ModID}:JjReverseProof": { "NAME": "逆行者之证", "DESCRIPTION": "每回合开始时获得 1 沙漏 ，失去 1 点生命。" },
+  "${ModID}:JjRealize": { "NAME": "行境·现实化", "DESCRIPTION": "移除所有敌人的 虚数 ，每层对其造成 !M! 点伤害。" },
+  "${ModID}:JjBloodMother": { "NAME": "血饵花·母株", "DESCRIPTION": "失去 5 点生命。对所有敌人造成 !D! 点伤害并给予 2 层 眼印 。" },
+  "${ModID}:JjDantian": { "NAME": "龙丹祭坛", "DESCRIPTION": "每回合结束时，将当前 沙漏 的一半 × 3 作为伤害打向所有敌人，然后清空 沙漏 。" },
+  "${ModID}:JjEyePool": { "NAME": "眼窝水池", "DESCRIPTION": "将手牌全部 虚化 1 回合 ，抽等量牌。 NL 这些牌 1 回合后以 0 费返回。" },
+  "${ModID}:JjSerpentForce": { "NAME": "蛇骨之力", "DESCRIPTION": "每当你一次 溅射 命中不少于 3 名敌人，获得 1 沙漏 。每回合最多 5 次。" },
+  "${ModID}:JjJingjianBite": { "NAME": "净见阿含·噬", "DESCRIPTION": "造成 !D! 点伤害。若目标处于 虚数 ，获得等同其 时空乱流 的格挡。" },
+  "${ModID}:JjTimeField": { "NAME": "时滞场", "DESCRIPTION": "每回合开始时获得 !M! 层 时滞 。 NL 下一张费用不少于 1 的牌费用减少 1 。" },
+  "${ModID}:JjTimeLoan": { "NAME": "时间借贷", "DESCRIPTION": "本回合所有牌费用减少 1 。下回合少抽 1 张牌。", "UPGRADE_DESCRIPTION": "本回合所有牌费用减少 1 。" },
+  "${ModID}:JjTimeAccel": { "NAME": "时序加速", "DESCRIPTION": "消耗 !M! 沙漏 ：本回合手牌费用全部减少 1 。" },
+  "${ModID}:JjCausalSketch": { "NAME": "因果速写", "DESCRIPTION": "抽 !M! 张牌，它们本回合费用减少 1 。 NL 消耗。" },
+  "${ModID}:JjShadowCity": { "NAME": "影子恶罗海城", "DESCRIPTION": "将弃牌堆中 1 张随机攻击牌 虚化 2 回合 。 NL 返回时费用为 0 。" },
+  "${ModID}:JjBoundlessEye": { "NAME": "无界妖瞳", "DESCRIPTION": "给予所有敌人 2 层 虚数 。每回合开始时再给予 1 层，上限 3 。 NL 被跳过的意图转为 时空乱流 。" },
+  "${ModID}:JjWorldlyPearl": { "NAME": "雮尘珠·现世", "DESCRIPTION": "处决线 增加 10 % 。每当你 处决 敌人，回复 4 点生命，并对其余敌人造成其最大生命 20 % 的伤害。" },
+  "${ModID}:JjPhoenixStrike": { "NAME": "凤凰胆", "DESCRIPTION": "造成 !D! 点伤害。 NL 溅射 ：对其他敌人造成 60 % 伤害 。 NL 若此次 处决 ，本场战斗 处决线 增加 3 % 。" },
+  "${ModID}:JjCrystalQuake": { "NAME": "大黑天·晶颤", "DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予 1 层 虚数 与 1 层虚弱。" },
+  "${ModID}:JjSnakeBone": { "NAME": "蛇神之骨", "DESCRIPTION": "每当敌人死于 处决 ，将其最大生命 !M! % 均分给其他敌人。 NL 你的 溅射 可以触发 处决 。" },
+  "${ModID}:JjDevour": { "NAME": "虚数吞噬", "DESCRIPTION": "将目标的 虚数 转化为等量 眼印 ，然后立即判定 处决 。" },
+  "${ModID}:JjBlackFace": { "NAME": "念凶黑颜", "DESCRIPTION": "移除虚弱与易伤。每回合开始获得 2 沙漏 并失去 2 点生命。" },
+  "${ModID}:JjTimeRewind": { "NAME": "时空回溯", "DESCRIPTION": "消耗。下回合开始时，将本回合受到的伤害转为治疗。" },
+  "${ModID}:JjFinalEye": { "NAME": "禁忌之瞳·终焉", "DESCRIPTION": "立即 处决 一名普通敌人。对精英或首领改为造成 !D! 点伤害并给予 !M! 层 眼印 。" },
+  "${ModID}:JjStoneLag": { "NAME": "斯格明石·时滞", "DESCRIPTION": "每回合开始给予所有敌人 1 层 虚数 。 沙漏 上限增加 5 。" },
+  "${ModID}:JjImmolateAll": { "NAME": "业火无量", "DESCRIPTION": "对所有敌人造成「当前 沙漏 × !M! 」点伤害，然后清空 沙漏 。" },
+  "${ModID}:JjIceFinale": { "NAME": "乃穷神冰·绝", "DESCRIPTION": "获得 !B! 点格挡。给予所有敌人 2 层虚弱与 1 层易伤。" },
+  "${ModID}:JjBloodCycle": { "NAME": "血祭·轮回", "DESCRIPTION": "最大生命减少 5 。获得 !M! 点力量与敏捷。", "UPGRADE_DESCRIPTION": "最大生命减少 3 。获得 !M! 点力量与敏捷。" },
+  "${ModID}:JjJingjianLord": { "NAME": "净见阿含·主", "DESCRIPTION": "造成 !D! 点伤害。目标每有 1 层 虚数 ，伤害增加 !M! 点。" },
+  "${ModID}:JjZagramma": { "NAME": "扎格拉玛之瞳", "DESCRIPTION": "眼印 不再衰减。每层提供的 处决线 由 5 % 改为 7 % 。" },
+  "${ModID}:JjTimeEnd": { "NAME": "时空终末", "DESCRIPTION": "对所有敌人造成 X 倍 9 点伤害。 NL 溅射 ：对其他敌人造成 X 倍 25 % 伤害 。 NL 消耗。", "UPGRADE_DESCRIPTION": "对所有敌人造成 X 倍 12 点伤害。 NL 溅射 ：对其他敌人造成 X 倍 25 % 伤害 。 NL 消耗。" },
+  "${ModID}:JjSnakeSword": { "NAME": "蛇神之剑", "DESCRIPTION": "造成 !D! 点伤害。给予 !M! 层 眼印 。 NL 溅射 ：对其他敌人造成 80 % 伤害 。 NL 若目标处于 虚数 ，伤害翻倍。" },
+  "${ModID}:JjSnakeSpear": { "NAME": "蛇神之矛", "DESCRIPTION": "造成 !D! 点伤害。每有 1 层 沙漏 ，伤害增加 2 点。 NL 溅射 ：对其他敌人造成 50 % 伤害 。 NL 消耗。" },
+  "${ModID}:JjThunderBeast": { "NAME": "巨兽·雷神", "DESCRIPTION": "对所有敌人造成 !D! 点伤害。给予所有敌人 3 层 虚数 。 NL 溅射 ：对其他敌人造成 100 % 伤害 。 NL 消耗。" },
+  "${ModID}:JjTimeDevour": { "NAME": "时间吞噬者", "DESCRIPTION": "每回合开始时获得 !M! 沙漏 ，失去 1 点生命。" },
+  "${ModID}:JjCausalBreak": { "NAME": "因果律·断", "DESCRIPTION": "消耗。立即 处决 普通敌人。对精英或首领造成最大生命 25 % 的真实伤害，并清空其 时空乱流 。" },
+  "${ModID}:JjImagFlood": { "NAME": "虚数洪流", "DESCRIPTION": "获得 X 倍 3 沙漏 ，将 X 张手牌 虚化 1 回合 。 NL 这些牌 1 回合后以 0 费返回。" },
+  "${ModID}:JjThunderVolley": { "NAME": "雷霆·万钧", "DESCRIPTION": "造成 !D! 点伤害 3 次。每次 溅射 ：对其他敌人造成 60 % 伤害 。" },
+  "${ModID}:JjTimeExpand": { "NAME": "时间膨胀", "DESCRIPTION": "每回合开始时获得 !M! 层 时滞 。" },
+  "${ModID}:JjTimeSand": { "NAME": "时之砂", "DESCRIPTION": "本回合接下来的 X 张牌费用减少 1 。 NL 消耗。", "UPGRADE_DESCRIPTION": "本回合接下来的 X 张牌费用减少 1 。" },
+  "${ModID}:JjTimePause": { "NAME": "暂停·凝滞", "DESCRIPTION": "消耗。本回合结束时保留未使用的能量与格挡。抽 2 张牌。" },
+  "${ModID}:JjSandTriple": { "NAME": "幻沙·三重", "DESCRIPTION": "获得 !B! 点格挡 3 次。" },
+  "${ModID}:JjCorpseWard": { "NAME": "尸香障壁", "DESCRIPTION": "获得 !B! 点格挡。给予 !M! 层 虚数 与 1 层虚弱。 NL 普通敌人本回合不执行意图。" },
+  "${ModID}:JjBoneWall": { "NAME": "蛇骨壁垒", "DESCRIPTION": "获得 !B! 点格挡。每有 1 层 沙漏 ，格挡增加 !M! 点。" },
+  "${ModID}:JjIceCoffin": { "NAME": "冰棺", "DESCRIPTION": "获得 !B! 点格挡。下回合开始时获得 !M! 点格挡。" },
+  "${ModID}:JjRealmWard": { "NAME": "行境结界", "DESCRIPTION": "获得 !B! 点格挡。场上每有 1 名带有 虚数 的敌人，格挡再增加 !M! 点。" },
+  "${ModID}:JjMy81": { "NAME": "我的81!", "DESCRIPTION": "保留。 NL 对所有敌人造成 !D! 点伤害。 NL 每被保留 1 次，费用永久减少 !M! 。可跨战斗成长。", "UPGRADE_DESCRIPTION": "保留。 NL 对所有敌人造成 !D! 点伤害。 NL 每被保留 1 次，费用永久减少 !M! 。可跨战斗成长。" }
+}

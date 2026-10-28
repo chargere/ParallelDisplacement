@@ -1,0 +1,86 @@
+{
+  "${ModID}:ModdedCharacter": {
+    "NAMES": [
+      "鸿文君主",
+      "鸿文君主",
+      "凯文·齐亚腾"
+    ],
+    "TEXT": [
+      "古老鸿文王国的君主。左手执焰，右手握雷，为终结荒疫而来到尖塔。",
+      "NL 凯文·齐亚腾举起炎雷双冠，誓要将荒疫焚尽。",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~鸿文之主,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+    ]
+  },
+  "${ModID}:DominicCharacter": {
+    "NAMES": [
+      "霜星旅者",
+      "霜星旅者",
+      "多米尼克·梅隆蒂科"
+    ],
+    "TEXT": [
+      "来自星空的旅者，本不打算进入尖塔。但他看见有人在死定了的时候还往前走，就顺手帮他们开了一段路。",
+      "NL 多米尼克抬起未完成的星锻剑，星霜在尖塔的夜色中无声铺开。",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~霜星旅者,~ ~and~ ~feel~ ~the~ ~cold~ ~of~ ~the~ ~stars.\"~"
+    ]
+  },
+  "${ModID}:ComingSoonWindCharacter": {
+    "NAMES": [
+      "敬请期待",
+      "敬请期待",
+      "风 光"
+    ],
+    "TEXT": [
+      "敬请期待",
+      "NL 敬请期待。",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~and~ ~wait.\"~"
+    ]
+  },
+  "${ModID}:ComingSoonTimeCharacter": {
+    "NAMES": [
+      "时间旅人",
+      "时间旅人",
+      "查x.xxx斯"
+    ],
+    "TEXT": [
+      "敬请期待",
+      "NL 敬请期待。",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~and~ ~wait.\"~"
+    ]
+  },
+  "${ModID}:FvvEggCharacter": {
+    "NAMES": [
+      "fvv蛋蛋",
+      "fvv蛋蛋",
+      "怒撸蛋"
+    ],
+    "TEXT": [
+      "没人知道他是从哪来的，大家都似乎都喜欢叫他“fvv蛋蛋”。",
+      "NL 怒撸蛋。",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~蛋蛋,~ ~and~ ~feel~ ~nothing.\"~"
+    ]
+  },
+  "${ModID}:JingjueCharacter": {
+    "NAMES": [
+      "精绝王者",
+      "精绝王者",
+      "诺克司·默里"
+    ],
+    "TEXT": [
+      "精绝女王的伴侣。为把她从 虚数 循环里捞出来，他成了这座塔上的王。",
+      "NL 诺克司·默里为女王抬起无界妖瞳。",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~精绝王者,~ ~and~ ~bring~ ~the~ ~queen~ ~home.\"~"
+    ]
+  },
+  "${ModID}:DamuhouCharacter": {
+    "NAMES": [
+      "战斗精英",
+      "战斗精英",
+      "伊卢德纳·达穆候"
+    ],
+    "TEXT": [
+      "贴身、开火、人已经不在原地。violetaurora 的枪口会压出一层浅紫极光——那不是焰，是被打出来的天空。",
+      "NL 伊卢德纳·达穆候把枪口那一点紫对准尖塔。太慢的，他不等。",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~达穆候,~ ~and~ ~feel~ ~the~ ~violet~ ~aurora.\"~"
+    ]
+  }
+}

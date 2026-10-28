@@ -1,0 +1,362 @@
+=== CARDS (85) ===
+
+[ATTACK] 打击  (id=DominicStrike)
+  cost=1 rarity=BASIC target=ENEMY frostpay=[] dmg=6 block= magic= flags=
+  DESC: 造成 !D! 点伤害。
+
+[ATTACK] 霜击  (id=FrostStrike)
+  cost=1 rarity=BASIC target=ENEMY frostpay=[2,FrostPayType.DELAY] dmg=9 block= magic=1 flags=
+  DESC: 造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 霜偿2：迟滞。
+
+[ATTACK] 冰棱散射  (id=IceShardScatter)
+  cost=1 rarity=COMMON target=ALL_ENEMY frostpay=[] dmg=4 block= magic=1 flags=
+  DESC: 对所有敌人造成 !D! 点伤害。 NL 获得 !M! 层霜寒。
+
+[ATTACK] 冰霜收割  (id=FrostHarvest)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[] dmg=6 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 若敌人生命低于50%，再造成 !hongwen:sd! 点伤害。
+
+[ATTACK] 双星  (id=TwinStars)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[] dmg=3 block= magic=2 flags=
+  DESC: 造成 !D! 点伤害 !M! 次。
+
+[ATTACK] 寒霜标记  (id=FrostMark)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[] dmg=6 block= magic=1 flags=
+  DESC: 造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 获得1层霜寒。
+
+[ATTACK] 星尘冲击  (id=StardustImpact)
+  cost=0 rarity=COMMON target=ENEMY frostpay=[2,FrostPayType.FREEZE_CRACK,2] dmg=2 block= magic=4 flags=
+  DESC: 造成 !D! 点伤害。 NL 本回合每打出过1张非攻击牌，伤害 +!M!。 NL 霜偿2：冻裂2。
+
+[ATTACK] 星璃碎屑  (id=StarGlassShards)
+  cost=2 rarity=COMMON target=ALL_ENEMY frostpay=[] dmg=6 block= magic=3 flags=
+  DESC: 对随机敌人造成 !D! 点伤害 !M! 次。 NL 每段获得1层霜寒。
+
+[ATTACK] 星轨穿刺  (id=StarTrackPierce)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[1,FrostPayType.DELAY] dmg=8 block= magic=1 flags=
+  DESC: 造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 霜偿1：迟滞。
+
+[ATTACK] 极光共振  (id=AuroraResonance)
+  cost=2 rarity=COMMON target=ENEMY frostpay=[2,FrostPayType.FREEZE_CRACK,3] dmg=8 block= magic=1 flags=exhaust,selfRetain
+  DESC: 保留。 NL 造成 !D! 点伤害。 NL 本回合每打出过1张牌，伤害 +!M!。 NL 消耗。 NL 霜偿2：冻裂3。
+
+[ATTACK] 极光裂斩  (id=AuroraCleave)
+  cost=2 rarity=COMMON target=ENEMY frostpay=[3,FrostPayType.DELAY] dmg=12 block= magic=2 flags=
+  DESC: 造成 !D! 点伤害。 NL 获得 !M! 层霜寒。 NL 霜偿3：迟滞。
+
+[ATTACK] 流星碎空  (id=MeteorShatter)
+  cost=1 rarity=COMMON target=ALL_ENEMY frostpay=[] dmg=6 block= magic=1 flags=exhaust
+  DESC: 对所有敌人造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 每有一名敌人，获得1层霜寒。 NL 消耗。
+
+[ATTACK] 碎冰斩  (id=IceBreakSlash)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[] dmg=5 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 若本回合受到过伤害，再造成 !hongwen:sd! 点伤害。
+
+[ATTACK] 雪上加霜  (id=WorseFrost)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[2,FrostPayType.FREEZE_CRACK,1] dmg=8 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 若目标带有虚弱，再造成 !hongwen:sd! 点伤害。 NL 霜偿2：冻裂1。
+
+[ATTACK] 霜路  (id=FrostPath)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[1,FrostPayType.DELAY] dmg=7 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 打出后：本回合下一张技能牌费用 -1（最低0）。 NL 霜偿1：迟滞。
+
+[ATTACK] 偿债斩  (id=DebtCleaver)
+  cost=1 rarity=RARE target=ENEMY frostpay=[] dmg=10 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 本回合每承受过1次霜偿代价，再造成 !hongwen:sd! 点伤害一次（最多3次）。
+
+[ATTACK] 冰尘引爆  (id=IceDustDetonate)
+  cost=1 rarity=RARE target=ENEMY frostpay=[2,FrostPayType.RETURN_TO_VOID,2] dmg=8 block= magic=7 flags=
+  DESC: 造成 !D! 点伤害。 NL 若目标带有星痕：消耗其全部星痕，每层再造成 !M! 点伤害。 NL 霜偿2：归墟2。
+
+[ATTACK] 开刃·终记  (id=FinalSheatheMark)
+  cost=2 rarity=RARE target=ENEMY frostpay=[5,FrostPayType.STAR_EXTINGUISH] dmg=26 block= magic=2 flags=exhaust
+  DESC: 造成 !D! 点伤害。 NL 若本回合你未打出过其他攻击牌：再造成 !hongwen:sd! 点伤害，并对目标施加 2 层虚弱。 NL 霜偿5：星灭。 NL 消耗。
+
+[ATTACK] 星瀑  (id=StarShardCascade)
+  cost=1 rarity=RARE target=ALL_ENEMY frostpay=[3,FrostPayType.FREEZE_CRACK,2] dmg=4 block= magic=4 flags=
+  DESC: 随机造成 !D! 点伤害 !M! 次。 NL 每段命中带星痕的敌人时，该段伤害 +4（不消耗星痕）。 NL 霜偿3：冻裂2。
+
+[ATTACK] 星锻·初鸣  (id=StarforgeFirstToll)
+  cost=2 rarity=RARE target=ENEMY frostpay=[5,FrostPayType.STAR_EXTINGUISH] dmg=28 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 霜偿5：星灭。 NL 若你取消了本次霜偿：再造成 !hongwen:sd! 点伤害，并施加2层星痕。
+
+[ATTACK] 星陨  (id=StarFall)
+  cost=2 rarity=RARE target=ALL_ENEMY frostpay=[3,FrostPayType.DELAY,1] dmg=14 block= magic= flags=
+  DESC: 对所有敌人造成 !D! 点伤害。 NL 每有一名带星痕的敌人，再对生命最低的敌人造成 !hongwen:sd! 点伤害。 NL 霜偿3：迟滞。
+
+[ATTACK] 空弦  (id=EmptyString)
+  cost=0 rarity=RARE target=ENEMY frostpay=[] dmg=3 block= magic=9 flags=selfRetain
+  DESC: 保留。 NL 造成 !D! 点伤害。 NL 本回合每取消过1次霜偿，再造成 !M! 点伤害一次。
+
+[ATTACK] 终焉·灭星斩  (id=FinalCut)
+  cost=3 rarity=RARE target=ALL_ENEMY frostpay=[6,FrostPayType.STAR_EXTINGUISH] dmg=36 block=12 magic= flags=exhaust
+  DESC: 对所有敌人造成 !D! 点伤害。若击败任何敌人，则再次释放，以此类推。 NL 霜偿6：星灭。 NL 打出后：若手牌中没有攻击牌，获得 !B! 点格挡。 NL 消耗。
+
+[ATTACK] 逆旅  (id=CounterJourney)
+  cost=2 rarity=RARE target=ENEMY frostpay=[3,FrostPayType.FREEZE_CRACK,3] dmg=23 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 本回合若你已失去过敏捷，改为造成 !hongwen:sd! 点伤害。 NL 霜偿3：冻裂3。
+
+[ATTACK] 双生星屑  (id=TwinStarDust)
+  cost=1 rarity=UNCOMMON target=ENEMY frostpay=[1,FrostPayType.DELAY,1] dmg=3 block= magic=2 flags=
+  DESC: 造成 !D! 点伤害 !M! 次。 NL 每段若目标有星痕：该段额外 +3（不消耗星痕）。 NL 霜偿1：迟滞。
+
+[ATTACK] 尚未出鞘  (id=StillSheathed)
+  cost=1 rarity=UNCOMMON target=ENEMY frostpay=[2,FrostPayType.STAR_EXTINGUISH] dmg=9 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 若本回合这是你打出的第一张攻击牌：再造成 !hongwen:sd! 点伤害。 NL 霜偿2：星灭。
+
+[ATTACK] 收剑  (id=SheatheForm)
+  cost=2 rarity=UNCOMMON target=ENEMY frostpay=[5,FrostPayType.STAR_EXTINGUISH] dmg=11 block=15 magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 霜偿5：星灭。
+
+[ATTACK] 星痕连珠  (id=StarMarkBarrage)
+  cost=1 rarity=UNCOMMON target=ENEMY frostpay=[2,FrostPayType.FREEZE_CRACK,2] dmg=7 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 若目标带有星痕：再造成 !D! 点伤害（不吃星痕加成）。 NL 霜偿2：冻裂2。
+
+[ATTACK] 星轨重踏  (id=StarTrackStomp)
+  cost=1 rarity=UNCOMMON target=ENEMY frostpay=[] dmg=8 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 获得1层霜寒（本回合由此最多1次）。 NL 若霜寒已满：改为施加1层星痕。
+
+[ATTACK] 未开刃  (id=Unsharpened)
+  cost=2 rarity=UNCOMMON target=ENEMY frostpay=[4,FrostPayType.STAR_EXTINGUISH] dmg=25 block= magic=3 flags=
+  DESC: 造成 !D! 点伤害。 NL 施加 !M! 层易伤。 NL 霜偿4：星灭。
+
+[ATTACK] 极光断锋  (id=AuroraSever)
+  cost=2 rarity=UNCOMMON target=ENEMY frostpay=[2,FrostPayType.FREEZE_CRACK,1] dmg=13 block= magic=7 flags=
+  DESC: 造成 !D! 点伤害。 NL 若本回合取消过霜偿：伤害 +!M!。 NL 霜偿2：冻裂1。
+
+[ATTACK] 碎星雨  (id=ShatteredStarRain)
+  cost=1 rarity=UNCOMMON target=ALL_ENEMY frostpay=[] dmg=5 block= magic= flags=
+  DESC: 对所有敌人造成 !D! 点伤害。 NL 每有一名带有星痕的敌人，抽1张牌。
+
+[ATTACK] 裂空一刺  (id=RiftPierce)
+  cost=0 rarity=UNCOMMON target=ENEMY frostpay=[2,FrostPayType.DELAY,1] dmg=7 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 霜偿2：迟滞。
+
+[ATTACK] 霜刃偏斜  (id=FrostBladeGlissade)
+  cost=1 rarity=UNCOMMON target=ENEMY frostpay=[] dmg=9 block= magic= flags=
+  DESC: 造成 !D! 点伤害。 NL 本回合若已承受过霜偿代价：再造成 !hongwen:sd! 点伤害，并获得2层霜寒。
+
+[ATTACK] 霜噬  (id=FrostBiteStrike)
+  cost=1 rarity=UNCOMMON target=ENEMY frostpay=[] dmg=6 block= magic=4 flags=
+  DESC: 造成 !D! 点伤害。 NL 可消耗最多3层霜寒：每层再造成 !hongwen:sd! 点伤害。
+
+[SKILL] 冬幕  (id=WinterCurtain)
+  cost=2 rarity=BASIC target=ENEMY frostpay=[2,FrostPayType.DELAY] dmg= block=15 magic=2 flags=
+  DESC: 获得 !B! 点格挡。 NL 对一名敌人施加 !M! 层虚弱。 NL 霜偿2：迟滞。
+
+[SKILL] 格挡  (id=DominicDefend)
+  cost=1 rarity=BASIC target=SELF frostpay=[] dmg= block=5 magic= flags=
+  DESC: 获得 !B! 点格挡。
+
+[SKILL] 观星  (id=Stargaze)
+  cost=0 rarity=BASIC target=SELF frostpay=[4,FrostPayType.RETURN_TO_VOID,2] dmg= block= magic=2 flags=
+  DESC: 获得 !M! 层霜寒。 NL 抽2张牌。 NL 获得2点能量。 NL 霜偿4：归墟2。
+
+[SKILL] 冰壁  (id=IceWall)
+  cost=1 rarity=COMMON target=SELF frostpay=[] dmg= block=6 magic=6 flags=
+  DESC: 获得 !B! 点格挡。 NL 若霜寒不少于2，额外获得 !M! 点格挡。
+
+[SKILL] 冰霜新星  (id=FrostNova)
+  cost=1 rarity=COMMON target=ALL_ENEMY frostpay=[2,FrostPayType.FREEZE_CRACK,2] dmg=8 block=10 magic= flags=
+  DESC: 对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 霜偿2：冻裂2。
+
+[SKILL] 寒影傀儡  (id=FrostPuppet)
+  cost=2 rarity=COMMON target=SELF frostpay=[2,FrostPayType.RETURN_TO_VOID,3] dmg= block=19 magic=3 flags=
+  DESC: 获得 !B! 点格挡。 NL 获得 !M! 点临时力量。 NL 霜偿2：归墟3。
+
+[SKILL] 星屑拾遗  (id=StarAshScavenge)
+  cost=0 rarity=COMMON target=SELF frostpay=[] dmg= block= magic=1 flags=selfRetain
+  DESC: 保留。 NL 获得 !M! 层霜寒。 NL 若本回合已成功取消过霜偿，抽 1 张牌。
+
+[SKILL] 极光帷幕  (id=AuroraVeil)
+  cost=1 rarity=COMMON target=SELF frostpay=[] dmg= block=5 magic=2 flags=
+  DESC: 获得 !B! 点格挡。 NL 本回合每获得1层霜寒，额外获得 !M! 点格挡。
+
+[SKILL] 融雪  (id=MeltSnow)
+  cost=1 rarity=COMMON target=SELF frostpay=[] dmg= block= magic=5 flags=exhaust
+  DESC: 消耗3层霜寒，回复 !M! 点生命。 NL 若霜寒不足，改为失去3点生命。 NL 消耗。
+
+[SKILL] 霜寒涌动  (id=FrostSurge)
+  cost=1 rarity=COMMON target=SELF frostpay=[] dmg= block=2 magic= flags=
+  DESC: 获得 !B! 点格挡。 NL 若霜寒不少于4，获得2点能量。
+
+[SKILL] 霜风  (id=FrostWind)
+  cost=1 rarity=COMMON target=ENEMY frostpay=[] dmg= block=6 magic=1 flags=
+  DESC: 获得 !B! 点格挡。 NL 施加 !M! 层虚弱。 NL 获得1层霜寒。
+
+[SKILL] 万象霜寂  (id=MyriadFrostStillness)
+  cost=2 rarity=RARE target=SELF frostpay=[4,FrostPayType.STAR_EXTINGUISH] dmg= block=20 magic=1 flags=selfRetain
+  DESC: 保留。 NL 获得 !B! 点格挡。对所有敌人施加 !M! 层虚弱。 NL 霜偿4：星灭。 NL 若你承受了霜偿代价：再获得冻裂2。
+
+[SKILL] 冰尘风暴  (id=IceDustStorm)
+  cost=1 rarity=RARE target=ENEMY frostpay=[3,FrostPayType.FREEZE_CRACK,3] dmg= block= magic=5 flags=exhaust
+  DESC: 本回合：冰尘倍率变为 ×!M!，且冰尘改为指定一名敌人。 NL 霜偿3：冻裂3。 NL 消耗。
+
+[SKILL] 星图合上  (id=CloseStarChart)
+  cost=0 rarity=RARE target=ENEMY frostpay=[] dmg= block=2 magic=4 flags=exhaust
+  DESC: 消耗全部霜寒。 NL 每消耗1层：对目标造成 !M! 点伤害，获得 !B! 点格挡。 NL 消耗。
+
+[SKILL] 极光帷幄  (id=AuroraCommand)
+  cost=1 rarity=RARE target=SELF frostpay=[3,FrostPayType.RETURN_TO_VOID,2] dmg= block= magic=3 flags=
+  DESC: 抽 !M! 张牌。 NL 本回合你的霜偿取消消耗 -1（最低1），可触发最多 !hongwen:m2! 次。 NL 霜偿3：归墟2。
+
+[SKILL] 记忆燃尽  (id=MemoryBurnout)
+  cost=0 rarity=RARE target=SELF frostpay=[2,FrostPayType.RETURN_TO_VOID,2] dmg= block= magic= flags=exhaust
+  DESC: 固有。 NL 本回合因归墟消耗的牌进入星灰。 NL 下回合开始：星灰中的牌以0费、虚无、消耗的复制加入手牌。 NL 霜偿2：归墟2。 NL 消耗。
+
+[SKILL] 霜海沉  (id=FrostSeaSink)
+  cost=2 rarity=RARE target=SELF frostpay=[] dmg= block= magic=2 flags=
+  DESC: 获得格挡 = 10 + 当前霜寒 ×!M!。 NL 然后失去一半霜寒（向下取整，主动耗霜）。
+
+[SKILL] 冷核  (id=ColdCore)
+  cost=2 rarity=UNCOMMON target=SELF frostpay=[2,FrostPayType.FREEZE_CRACK,2] dmg= block=12 magic=2 flags=selfRetain
+  DESC: 保留。 NL 获得 !B! 点格挡。 NL 下回合开始时获得 !M! 层霜寒。 NL 霜偿2：冻裂2。
+
+[SKILL] 冻幕重张  (id=RefrozenVeil)
+  cost=2 rarity=UNCOMMON target=SELF frostpay=[2,FrostPayType.DELAY,2] dmg= block=14 magic= flags=
+  DESC: 获得 !B! 点格挡。 NL 若本回合曾失去过敏捷，再获得 !hongwen:m2! 点格挡。 NL 霜偿2：迟滞2。
+
+[SKILL] 半霜护甲  (id=HalfFrostArmor)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[2,FrostPayType.FREEZE_CRACK,2] dmg= block=0 magic=2 flags=
+  DESC: 获得格挡 = 当前霜寒 ×!M!。 NL 霜偿2：冻裂2。
+
+[SKILL] 同路余温  (id=SharedWarmth)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block=8 magic=3 flags=
+  DESC: 获得 !B! 点格挡。 NL 本回合每打出 1 张带霜偿的牌，再获得 !M! 点格挡。
+
+[SKILL] 帮一段路  (id=ClearAPath)
+  cost=1 rarity=UNCOMMON target=ENEMY frostpay=[2,FrostPayType.RETURN_TO_VOID,1] dmg= block=10 magic=2 flags=
+  DESC: 获得 !B! 点格挡。对一名敌人施加 !M! 层星痕。 NL 霜偿2：归墟1。
+
+[SKILL] 弃笔  (id=AbandonedQuill)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[2,FrostPayType.RETURN_TO_VOID,1] dmg= block= magic=4 flags=exhaust
+  DESC: 预见 !M!。 NL 本牌因预见弃掉的牌中，每有 1 张带霜偿的牌，获得 1 层霜寒（本牌最多因此获得 3 层）。 NL 霜偿2：归墟1。 NL 消耗。
+
+[SKILL] 旅者记事  (id=TravelerChronicle)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[3,FrostPayType.RETURN_TO_VOID,1] dmg= block= magic=1 flags=exhaust
+  DESC: 将一张本回合进入消耗堆的牌返回手牌，本回合费用 -!M!。 NL 霜偿3：归墟1。 NL 消耗。
+
+[SKILL] 星图残页  (id=StarChartFragment)
+  cost=0 rarity=UNCOMMON target=SELF frostpay=[3,FrostPayType.RETURN_TO_VOID,2] dmg= block= magic=5 flags=selfRetain
+  DESC: 保留。 NL 预见 !M!。 NL 本牌弃掉的每张攻击：获得1层霜寒。 NL 霜偿3：归墟2。
+
+[SKILL] 星灰筛  (id=StarAshSieve)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[2,FrostPayType.RETURN_TO_VOID,1] dmg= block= magic=2 flags=
+  DESC: 弃1张牌。 NL 若弃掉的是攻击：获得 !M! 点能量。 NL 若弃掉的是技能：获得 !M! 层霜寒（本回合由此最多 !M!）。 NL 霜偿2：归墟1。
+
+[SKILL] 极光回声  (id=AuroraEcho)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=2 flags=
+  DESC: 抽 !M! 张牌。 NL 本回合每成功取消1次霜偿，再抽1张牌。
+
+[SKILL] 让路  (id=MakeWay)
+  cost=0 rarity=UNCOMMON target=SELF frostpay=[2,FrostPayType.DELAY,1] dmg= block= magic= flags=exhaust
+  DESC: 获得1点能量，抽1张牌。 NL 霜偿2：迟滞。 NL 若你取消了霜偿：再抽1张牌。 NL 消耗。
+
+[SKILL] 霜债清算  (id=FrostDebtSettle)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=3 flags=exhaust
+  DESC: 选择一项： NL · 失去 !M! 层霜寒，清除手牌因迟滞增加的费用； NL · 获得 !hongwen:m2! 层霜寒。 NL 消耗。
+
+[SKILL] 霜息  (id=FrostBreath)
+  cost=1 rarity=UNCOMMON target=ALL_ENEMY frostpay=[] dmg= block=8 magic=6 flags=
+  DESC: 获得 !B! 点格挡。 NL 对所有敌人施加1层虚弱。 NL 若霜寒不少于6：再获得 !M! 点格挡。
+
+[POWER] 你怎么知道赢不了  (id=HowDoYouKnow)
+  cost=2 rarity=RARE target=SELF frostpay=[] dmg= block=8 magic=5 flags=
+  DESC: 每当你首次在本场战斗中降至 50% 最大生命以下：获得 !M! 层霜寒，抽 2 张牌，并获得 !B! 点格挡（每场限 1 次）。
+
+[POWER] 债主  (id=Creditor)
+  cost=1 rarity=RARE target=SELF frostpay=[] dmg= block= magic=1 flags=
+  DESC: 每当你承受霜偿代价：获得 !M! 点临时力量。 NL 每当你取消霜偿：获得 !hongwen:m2! 点格挡。
+
+[POWER] 开刃宗法  (id=BladeDoctrine)
+  cost=2 rarity=RARE target=SELF frostpay=[] dmg= block= magic=10 flags=
+  DESC: 带星灭霜偿的攻击牌伤害 +!M!。 NL 每当你触发星灭：下回合开始时获得1点能量。
+
+[POWER] 星图最后一行  (id=LastLineOfChart)
+  cost=1 rarity=RARE target=SELF frostpay=[] dmg= block= magic=5 flags=
+  DESC: 虚无。 NL 本场战斗中，归墟改为：被消耗的牌进入弃牌堆而非消耗堆（仍算「被归墟」，最多 !M! 次）。
+
+[POWER] 星尘沉淀  (id=StardustSettle)
+  cost=1 rarity=RARE target=SELF frostpay=[] dmg= block= magic=1 flags=
+  DESC: 虚无。 NL 每当冰尘造成伤害：对所有敌人施加 !M! 层星痕（每回合最多 !hongwen:m2! 次）。
+
+[POWER] 永夜极光  (id=EternalAurora)
+  cost=3 rarity=RARE target=SELF frostpay=[] dmg= block= magic=3 flags=
+  DESC: 若霜寒少于6，获得归墟 !M!（强制）。 NL 此后：回合开始转化后，霜寒改为固定失去2层（不再减半）。
+
+[POWER] 精灰形态  (id=RefinedAshForm)
+  cost=3 rarity=RARE target=SELF frostpay=[] dmg= block= magic=3 flags=
+  DESC: 进入精灰形态。获得 !M! 精灰（上限10）。 NL 霜寒减半时，失去的层数变为精灰。攻击伤害 +精灰。牌被消耗时获得1精灰（每回合最多3）。 NL 精灰达到10：将「星灰绽放」加入手牌（每场一张，造成 !hongwen:m2! 点全体伤害）。
+
+[POWER] 霜裂  (id=FrostCapRift)
+  cost=2 rarity=RARE target=SELF frostpay=[] dmg= block= magic=8 flags=
+  DESC: 霜寒上限变为15。 NL 每回合首次叠至上限时，对所有敌人造成 !M! 点伤害。
+
+[POWER] 顺路一剑  (id=SwordAlongTheWay)
+  cost=1 rarity=RARE target=SELF frostpay=[] dmg= block= magic=6 flags=
+  DESC: 每回合第一张攻击额外 +!M!。 NL 若该攻击带霜偿且你承受代价：再 +!M!。
+
+[POWER] 余温  (id=AfterSheatheWarmth)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=10 flags=
+  DESC: 每当你触发星灭时，获得 !M! 点格挡。
+
+[POWER] 债册  (id=DebtLedger)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=2 flags=
+  DESC: 每当你承受霜偿代价，在下回合开始时抽 !M! 张牌（每回合最多触发 !hongwen:m2! 次）。
+
+[POWER] 偿金优惠  (id=FrostPayDiscount)
+  cost=2 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=1 flags=
+  DESC: 每回合第一次取消霜偿时，霜寒消耗 -!M!（最低消耗1）。
+
+[POWER] 冰尘回响  (id=IceDustEcho)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=3 flags=
+  DESC: 每当冰尘造成伤害时，获得 !M! 点格挡。
+
+[POWER] 开刃预备  (id=BladeReady)
+  cost=2 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=8 flags=
+  DESC: 每回合你打出的第一张带星灭霜偿的攻击牌，伤害 +!M!。
+
+[POWER] 星痕感应  (id=StarMarkSense)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=1 flags=
+  DESC: 每当星痕因攻击被消耗时，获得 !M! 点临时力量。
+
+[POWER] 薄霜纪律  (id=ThinFrostDiscipline)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=4 flags=
+  DESC: 在你的回合结束时：若本回合未获得过霜寒，获得 !M! 点格挡。
+
+[POWER] 霜噬印记  (id=FrostBiteMark)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=2 flags=
+  DESC: 每当你主动消耗霜寒时，对随机敌人施加1层星痕。 NL 每回合最多触发 !M! 次。
+
+[POWER] 霜脊  (id=FrostRidge)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=5 flags=
+  DESC: 每当你因取消霜偿而消耗霜寒时，获得 !M! 点格挡。
+
+[POWER] 静观星象  (id=QuietStargaze)
+  cost=1 rarity=UNCOMMON target=SELF frostpay=[] dmg= block= magic=2 flags=
+  DESC: 回合开始霜寒转化并减半之后：若霜寒不多于3，抽 !M! 张牌。
+
+[?] 星灰绽放  (id=StarAshBloom)
+  cost=? rarity=? target=? frostpay=[] dmg=36 block=16 magic=2 flags=exhaust
+  DESC: 清空精灰并离开精灰形态。 NL 对所有敌人造成 !D! 点伤害并各施加 !M! 层星痕。 NL 获得 !B! 点格挡。 NL 消耗。
+
+
+=== RELICS (6) ===
+
+[AuroraPocketWatch] 极光怀表  (tier=STARTER color=Dominic)
+  DESC: 战斗开始时，获得 #b4 层 #y霜寒。每回合打出的第一张牌，获得与其费用相同层数的 #y霜寒。
+
+[ClosedStarChart] 合上的星图  (tier=UNCOMMON color=Dominic)
+  DESC: 每场战斗首次成功消耗 #y霜寒 取消 #y霜偿 时，抽 #b2 张牌。
+
+[HatchFrost] 舱门上的霜  (tier=UNCOMMON color=Dominic)
+  DESC: 战斗开始时，获得 #b2 层 #y霜寒。每当你承受 #y霜偿 代价：回复 #b2 点生命（每场战斗最多 #b2 次）。
+
+[MirrorPocketWatch] 倒影怀表  (tier=BOSS color=Dominic)
+  DESC: 替换 #y极光怀表。战斗开始时，获得 #b4 层 #y霜寒。每回合打出的第一张牌，获得与其费用相同层数的 #y霜寒；若该牌带 #y霜偿，再获得 #b2 层 #y霜寒。每回合一次：取消 #y霜偿 时，霜寒消耗 #b-1（最低 #b1）。
+
+[ThreeDayHatch] 三天的舱门  (tier=RARE color=Dominic)
+  DESC: 每场战斗的前 #b3 个回合：你的回合结束时，可选择 #b1 张手牌 #y保留（无需「保留」关键字）。
+
+[UnfinishedStarforge] 星锻未完成稿  (tier=RARE color=Dominic)
+  DESC: 带「星灭」 #y霜偿 的攻击牌伤害 #b+8。本场战斗你第一次触发 #y星灭 时：下回合开始获得 #b1 点能量。

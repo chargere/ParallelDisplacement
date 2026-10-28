@@ -1,0 +1,149 @@
+  "${ModID}:Useless": {
+    "NAME": "没用",
+    "DESCRIPTIONS": [
+      "你有 #b",
+      " 层 #y没用。战斗结束清空。"
+    ]
+  },
+  "${ModID}:LateAwareness": {
+    "NAME": "迟到觉悟",
+    "DESCRIPTIONS": [
+      "回合结束时，若本回合未造成伤害，获得 #b",
+      " 层 #y没用。"
+    ]
+  },
+  "${ModID}:AdmitCommittee": {
+    "NAME": "承认委员",
+    "DESCRIPTIONS": [
+      "每当获得 #y没用，获得 #b1 点力量（每回合最多 #b",
+      " 次）。"
+    ]
+  },
+  "${ModID}:PassiveAggression": {
+    "NAME": "被动攻击",
+    "DESCRIPTIONS": [
+      "弃牌时有 #b50% 概率获得 #b1 层 #y没用（每回合最多 #b",
+      " 次）。"
+    ]
+  },
+  "${ModID}:Afk": {
+    "NAME": "挂机",
+    "DESCRIPTIONS": [
+      "连续 #b2 个回合每回合打牌不超过 #b",
+      " 张：下一回合开始获得 #b2 能量与 #b3 层 #y没用。"
+    ]
+  },
+  "${ModID}:ChatMute": {
+    "NAME": "群聊屏蔽",
+    "DESCRIPTIONS": [
+      "本回合受到的攻击伤害减少 #b",
+      " 点。"
+    ]
+  },
+  "${ModID}:UselessEconomy": {
+    "NAME": "废物经济",
+    "DESCRIPTIONS": [
+      "每层 #y没用 使打击类攻击伤害 +1（不消耗）。",
+      "每层 #y没用 使所有攻击伤害 +1（不消耗）。"
+    ]
+  },
+  "${ModID}:JustLikeThis": {
+    "NAME": "我就这样",
+    "DESCRIPTIONS": [
+      "回合开始时获得 #b",
+      " 层 #y没用。每回合第一张牌费用 -1。"
+    ]
+  },
+  "${ModID}:BornWithIt": {
+    "NAME": "胎里带来",
+    "DESCRIPTIONS": [
+      "无「胎没用了呀」时开战获得 #b5 层 #y没用。有该遗物时，每回合一次可将获得 #y没用 改为抽 #b1。"
+    ]
+  },
+  "${ModID}:WasteCrown": {
+    "NAME": "废物王冠",
+    "DESCRIPTIONS": [
+      "#y没用 结算时有效下限按至少 #b10。回合结束若 #y没用 ≥ #b5：抽 #b1 并获得 #b5 点格挡。"
+    ]
+  },
+  "${ModID}:FamousEffect": {
+    "NAME": "名人效应",
+    "DESCRIPTIONS": [
+      "打出名称含「废 / 没用 / 毛」的牌时抽 #b1（每回合限 #b",
+      " 次）。"
+    ]
+  },
+  "${ModID}:FetalFail": {
+    "NAME": "胎教失败",
+    "DESCRIPTIONS": [
+      "每回合第一次获得 #y没用 时额外 +#b",
+      "。每回合第一次失去生命时获得 #b1 层 #y没用。"
+    ]
+  },
+  "${ModID}:UselessAscend": {
+    "NAME": "毛用飞升",
+    "DESCRIPTIONS": [
+      "剩余 #b",
+      " 回合：打牌费用 -1。回合结束清空 #y没用 并抽 #b2。"
+    ]
+  },
+  "${ModID}:NoSkills": {
+    "NAME": "已读不回",
+    "DESCRIPTIONS": [
+      "本回合不能再打出技能牌。",
+      "本回合不能打出技能牌。"
+    ]
+  },
+  "${ModID}:NextTurnEnergyLoss": {
+    "NAME": "能量透支",
+    "DESCRIPTIONS": [
+      "下回合开始时失去 #b",
+      " 点能量。"
+    ]
+  },
+  "${ModID}:EnergyFraudDebt": {
+    "NAME": "诈骗账单",
+    "DESCRIPTIONS": [
+      "下回合开始时失去 #b",
+      " 点能量。"
+    ]
+  },
+  "${ModID}:NextCardBoost": {
+    "NAME": "今日停更",
+    "DESCRIPTIONS": [
+      "下一张牌的伤害与格挡 +50%。",
+      "本回合牌的伤害与格挡 +50%。"
+    ]
+  },
+  "${ModID}:BalanceHeal": {
+    "NAME": "平衡调整",
+    "DESCRIPTIONS": [
+      "本场战斗中，你对自己造成的生命损失改为回复等量生命。"
+    ]
+  },
+  "${ModID}:IAmEgg": {
+    "NAME": "我是蛋蛋",
+    "DESCRIPTIONS": [
+      "每回合第一张费用 ≥ #b2 的牌退回 #b1 点能量，并获得 #b1 层 #y没用。"
+    ]
+  },
+  "${ModID}:SkipNextTurn": {
+    "NAME": "跳过回合",
+    "DESCRIPTIONS": [
+      "下回合开始时立刻结束你的回合。"
+    ]
+  },
+  "${ModID}:SkipNextDraw": {
+    "NAME": "跳过抽牌",
+    "DESCRIPTIONS": [
+      "跳过下一次抽牌。"
+    ]
+  },
+  "${ModID}:NextTurnDrawUseless": {
+    "NAME": "说明书收益",
+    "DESCRIPTIONS": [
+      "下回合开始时抽 #b",
+      " 张牌，并获得等量 #y没用。"
+    ]
+  }
+}
