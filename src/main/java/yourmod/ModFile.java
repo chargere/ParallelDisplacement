@@ -11,6 +11,12 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import yourmod.util.TexLoader;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -163,6 +169,39 @@ public class ModFile implements
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
+
+        // 预热「卡牌能量球图标」：ExtendedUI 卡牌图鉴点角色色标签时才按需取，
+        // 一旦那时贴图查不到（例如 jar 在运行中被替换），BaseMod 会返回 null 导致 NPE 闪退。
+        warmCardEnergyOrbRegions();
+    }
+
+    /** 把能量球贴图区域提前塞进 BaseMod 缓存，避免运行时按需加载失败导致空指针。 */
+    private static void warmCardEnergyOrbRegions() {
+        AbstractCard.CardColor[] colors = new AbstractCard.CardColor[] {
+                CharacterFile.Enums.TODO_COLOR,
+                DominicCharacter.Enums.DOMINIC_COLOR,
+                ComingSoonWindCharacter.Enums.WIND_COLOR,
+                ComingSoonTimeCharacter.Enums.TIME_COLOR,
+                FvvEggCharacter.Enums.FVV_COLOR,
+                DamuhouCharacter.Enums.DAMUHOU_COLOR,
+                JingjueCharacter.Enums.JINGJUE_COLOR
+        };
+        try {
+            Texture t = (Texture) TexLoader.getTexture(TEXT_ENERGY);
+            if (t == null) return;
+            TextureAtlas.AtlasRegion region =
+                    new TextureAtlas.AtlasRegion(t, 0, 0, t.getWidth(), t.getHeight());
+            Field f = BaseMod.class.getDeclaredField("colorCardEnergyOrbAtlasRegionMap");
+            f.setAccessible(true);
+            @SuppressWarnings("unchecked")
+            HashMap<AbstractCard.CardColor, TextureAtlas.AtlasRegion> map =
+                    (HashMap<AbstractCard.CardColor, TextureAtlas.AtlasRegion>) f.get(null);
+            for (AbstractCard.CardColor c : colors) {
+                if (c != null) map.put(c, region);
+            }
+        } catch (Throwable ignored) {
+            // 预热失败不影响主流程，最多回到按需加载
+        }
     }
 
     // —— 拼资源路径的小工具 ——

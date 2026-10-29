@@ -60,7 +60,7 @@ public class ComingSoonTimeCharacter extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                70, 70, 0, 99, 5, this, getStartingRelics(),
+                21, 21, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -109,7 +109,8 @@ public class ComingSoonTimeCharacter extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 8;
+        // 存在力上限本就只有 21，再按进阶扣血会过于致命，故不扣。
+        return 0;
     }
 
     @Override

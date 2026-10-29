@@ -51,6 +51,8 @@ public final class HongwenNameFx {
     public static final Color TIME_CYAN = new Color(0.18f, 0.98f, 1f, 1f);
     public static final Color TIME_MAGENTA = new Color(1f, 0.16f, 0.78f, 1f);
     public static final Color TIME_WHITE = new Color(0.95f, 0.98f, 1f, 1f);
+    /** 时间旅人第二层特效：常驻流动灯带（亮青白），叠在乱码霓虹之上 */
+    public static final Color TIME_BAND = new Color(0.88f, 1f, 1f, 1f);
 
     private static final Color TMP = new Color();
     private static final Color BAND_TMP = new Color();
@@ -220,17 +222,26 @@ public final class HongwenNameFx {
         try {
             boolean pair = inPairWindow();
             float split = (pair ? 1.8f : 2.6f) * Settings.scale * scale;
-            drawTimeLayer(sb, font, shown, x - split, y, TIME_SPLIT_CYAN);
-            drawTimeLayer(sb, font, shown, x + split, y, TIME_SPLIT_MAGENTA);
-            drawTimeLayer(sb, font, shown, x, y, TIME_WHITE);
+            // 三层错位叠字共用一个灯带原点，光带扫过时三层一起亮，位置才对得上
+            drawTimeLayer(sb, font, shown, x - split, y, TIME_SPLIT_CYAN, x);
+            drawTimeLayer(sb, font, shown, x + split, y, TIME_SPLIT_MAGENTA, x);
+            drawTimeLayer(sb, font, shown, x, y, TIME_WHITE, x);
         } finally {
             font.setColor(oldColor);
             font.getData().setScale(oldScale);
         }
     }
 
+    /**
+     * 青/品红错位叠字，始终霓虹，不再整词发白。
+     * 第二层：常驻流动灯带 + 整体呼吸——灯带扫过处泛亮青白，扫过瞬间错位层也更实。
+     * {@code originX} 为灯带原点（主文字左缘），三层共用。
+     */
     private static void drawTimeLayer(SpriteBatch sb, BitmapFont font, String text,
-                                      float x, float y, Color tint) {
+                                      float x, float y, Color tint, float originX) {
+        if (sb == null || font == null || text == null || text.isEmpty() || tint == null) {
+            return;
+        }
         BitmapFontCache cache = font.getCache();
         cache.clear();
         cache.setText(text, x, y);
@@ -238,17 +249,49 @@ public final class HongwenNameFx {
         float flickerSpeed = inPairWindow() ? 140f : 90f;
 
         int pages = font.getRegions().size;
+        // 先扫一遍求文字横向范围，灯带才能按文字宽度定位
+        float minX = Float.MAX_VALUE;
+        float maxX = -Float.MAX_VALUE;
         for (int page = 0; page < pages; page++) {
             float[] v = cache.getVertices(page);
             int n = cache.getVertexCount(page);
             for (int i = 0; i < n; i += 5) {
+                if (v[i] < minX) {
+                    minX = v[i];
+                }
+                if (v[i] > maxX) {
+                    maxX = v[i];
+                }
+            }
+        }
+        float totalW = Math.max(1f, maxX - minX);
+        float bandHalf = bandHalf(totalW, BAND_HALF_RATIO, BAND_HALF_MIN_PX);
+        float bandC = originX + bandCenter(totalW, BAND_HALF_RATIO, BAND_HALF_MIN_PX);
+        float breath = 0.86f + 0.14f * MathUtils.sin(now / 700f);
+
+        for (int page = 0; page < pages; page++) {
+            float[] v = cache.getVertices(page);
+            int n = cache.getVertexCount(page);
+            for (int i = 0; i < n; i += 5) {
+                // 灯带强度：按像素插值，字内左右可不同色
+                float localX = v[i] - originX;
+                float dist = Math.abs(localX - bandC);
+                float t = MathUtils.clamp(1f - dist / bandHalf, 0f, 1f);
+                t = t * t * (3f - 2f * t);
+
                 if (tint.a < 0.99f) {
                     TIME_GLYPH_TMP.set(tint);
+                    TIME_GLYPH_TMP.lerp(TIME_BAND, t * 0.9f);
+                    TIME_GLYPH_TMP.a = Math.min(1f, tint.a * (0.8f + 0.85f * t) * breath);
                 } else {
                     float flicker = 0.5f + 0.5f * MathUtils.sin(now / flickerSpeed + v[i] * 0.04f);
                     TIME_GLYPH_TMP.set(TIME_CYAN).lerp(TIME_MAGENTA, flicker);
+                    TIME_GLYPH_TMP.lerp(TIME_BAND, t * 0.85f);
+                    TIME_GLYPH_TMP.a = tint.a;
+                    TIME_GLYPH_TMP.r *= breath;
+                    TIME_GLYPH_TMP.g *= breath;
+                    TIME_GLYPH_TMP.b *= breath;
                 }
-                TIME_GLYPH_TMP.a = tint.a;
                 v[i + 2] = TIME_GLYPH_TMP.toFloatBits();
             }
         }
