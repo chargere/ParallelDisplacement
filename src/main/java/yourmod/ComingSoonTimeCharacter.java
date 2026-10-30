@@ -18,8 +18,10 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import yourmod.cards.comingsoon.TimeDefend;
-import yourmod.cards.comingsoon.TimeStrike;
+import yourmod.cards.comingsoon.NingNian;
+import yourmod.cards.comingsoon.XiShou;
+import yourmod.cards.comingsoon.YiNian;
+import yourmod.cards.comingsoon.YiWei;
 import yourmod.relics.WindHueMeteorFall;
 
 import java.util.ArrayList;
@@ -67,12 +69,14 @@ public class ComingSoonTimeCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            retVal.add(TimeStrike.ID);
+        for (int i = 0; i < 4; i++) {
+            retVal.add(YiNian.ID);
         }
         for (int i = 0; i < 4; i++) {
-            retVal.add(TimeDefend.ID);
+            retVal.add(YiWei.ID);
         }
+        retVal.add(XiShou.ID);
+        retVal.add(NingNian.ID);
         return retVal;
     }
 
@@ -135,7 +139,7 @@ public class ComingSoonTimeCharacter extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new TimeStrike();
+        return new YiNian();
     }
 
     @Override

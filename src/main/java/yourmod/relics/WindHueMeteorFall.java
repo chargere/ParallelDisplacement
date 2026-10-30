@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import yourmod.ComingSoonTimeCharacter;
 import yourmod.ModFile;
 import yourmod.powers.FourthExistencePower;
+import yourmod.powers.XingNianPower;
 import yourmod.util.TexLoader;
 
 import static yourmod.ModFile.makeID;
@@ -61,13 +62,22 @@ public class WindHueMeteorFall extends AbstractEasyRelic {
     private void applyFourthExistence() {
         try {
             AbstractPlayer p = AbstractDungeon.player;
-            if (p == null || p.hasPower(FourthExistencePower.POWER_ID)) return;
-            FourthExistencePower pow = new FourthExistencePower(p);
-            // 战斗外用 actionManager 会空指针，这里直接挂上；战斗内走标准行动队列
-            if (AbstractDungeon.actionManager != null) {
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, pow));
-            } else {
-                p.powers.add(pow);
+            if (p == null) return;
+            if (!p.hasPower(FourthExistencePower.POWER_ID)) {
+                FourthExistencePower pow = new FourthExistencePower(p);
+                if (AbstractDungeon.actionManager != null) {
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, pow));
+                } else {
+                    p.powers.add(pow);
+                }
+            }
+            if (!p.hasPower(XingNianPower.POWER_ID)) {
+                XingNianPower xk = new XingNianPower(p, 0);
+                if (AbstractDungeon.actionManager != null) {
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, xk));
+                } else {
+                    p.powers.add(xk);
+                }
             }
             swapHpIcon();
         } catch (Exception ignored) { }
