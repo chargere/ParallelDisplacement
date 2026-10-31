@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import yourmod.ComingSoonTimeCharacter;
 import yourmod.cards.AbstractEasyCard;
 import yourmod.powers.XingNianPower;
-import yourmod.util.TimeComboTracker;
+import yourmod.util.ComboSystem;
 import yourmod.util.Wiz;
 
 import static yourmod.ModFile.makeID;
@@ -25,7 +25,7 @@ public class NingNian extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int gain = upgraded ? 3 : 2;
         Wiz.applyToSelf(new XingNianPower(p, gain));
-        TimeComboTracker.recordSkill();
+        ComboSystem.record(p, this); // 把「技」推进全局连携队列
     }
 
     @Override
