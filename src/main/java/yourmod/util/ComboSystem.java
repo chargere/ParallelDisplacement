@@ -42,6 +42,7 @@ public class ComboSystem {
 
     /** 跨战斗累计的出牌序列（同一战斗内跨回合不清） */
     private static final LinkedList<CType> queue = new LinkedList<>();
+    private static ComboQueueEffect queueDisplay;
 
     // ===== 效果接口与模式定义 =====
     private interface ComboEffect { void apply(AbstractPlayer p, int form); }
@@ -65,75 +66,59 @@ public class ComboSystem {
      */
     private static final List<ComboPattern> PATTERNS = new ArrayList<>();
     static {
-        // ===== 攻 / 技 系 6 条 =====
-        PATTERNS.add(new ComboPattern("回环", seq(G, G, J), (p, f) -> {
-            if (f == FormUtil.SU)  { addXingNian(p, 1); gainBlock(p, 6); }
-            else if (f == FormUtil.ZHU) { addXingNian(p, 3); gainEnergy(p, 2); }
-            else if (f == FormUtil.LUO) { addXingNian(p, 2); gainEnergy(p, 1); damageRandom(p, 4); }
-            else { addXingNian(p, 2); gainEnergy(p, 1); }
-        }));
+        // ===== 七条核心连携：基础效果清晰，形态只做统一的小幅偏转 =====
         PATTERNS.add(new ComboPattern("连星", seq(G, G, G), (p, f) -> {
-            if (f == FormUtil.SU)  { damageAll(p, 4); gainBlock(p, 4); }
-            else if (f == FormUtil.ZHU) { damageAll(p, 9); addXingNian(p, 2); }
-            else if (f == FormUtil.LUO) { damageAll(p, 6); tempStr(p, 1); addXingNian(p, 1); }
-            else { damageAll(p, 6); addXingNian(p, 1); }
+            damageAll(p, 5);
+            addXingNian(p, 1);
+            formBonus(p, f, 0, 0, 3);
         }));
-        PATTERNS.add(new ComboPattern("错位", seq(J, G, J), (p, f) -> {
-            if (f == FormUtil.SU)  { debuffFirst(p, 1, 1); gainBlock(p, 6); }
-            else if (f == FormUtil.ZHU) { debuffFirst(p, 2, 2); addXingNian(p, 2); }
-            else if (f == FormUtil.LUO) { debuffFirst(p, 1, 1); tempStr(p, 1); }
-            else { debuffFirst(p, 1, 1); addXingNian(p, 1); }
-        }));
-        PATTERNS.add(new ComboPattern("并流", seq(J, J, G), (p, f) -> {
-            if (f == FormUtil.SU)  { addXingNian(p, 1); gainBlock(p, 6); draw(p, 1); }
-            else if (f == FormUtil.ZHU) { addXingNian(p, 3); draw(p, 1); }
-            else if (f == FormUtil.LUO) { addXingNian(p, 2); draw(p, 1); tempStr(p, 2); }
-            else { addXingNian(p, 2); draw(p, 1); }
+        PATTERNS.add(new ComboPattern("回环", seq(G, G, J), (p, f) -> {
+            gainEnergy(p, 1);
+            addXingNian(p, 2);
+            formBonus(p, f, 5, 0, 0);
         }));
         PATTERNS.add(new ComboPattern("溯流", seq(G, J, G), (p, f) -> {
-            if (f == FormUtil.SU)  { gainBlock(p, 9); }
-            else if (f == FormUtil.ZHU) { gainBlock(p, 5); damageFirst(p, 8); addXingNian(p, 2); }
-            else if (f == FormUtil.LUO) { gainBlock(p, 5); damageFirst(p, 5); tempStr(p, 1); }
-            else { gainBlock(p, 5); damageFirst(p, 5); addXingNian(p, 1); }
+            gainBlock(p, 6);
+            damageFirst(p, 5);
+            formBonus(p, f, 5, 0, 0);
+        }));
+        PATTERNS.add(new ComboPattern("错位", seq(J, G, J), (p, f) -> {
+            debuffFirst(p, 1, 1);
+            addXingNian(p, 1);
+            formBonus(p, f, 5, 0, 3);
         }));
         PATTERNS.add(new ComboPattern("凝滞", seq(J, J, J), (p, f) -> {
-            if (f == FormUtil.SU)  { addXingNian(p, 2); gainBlock(p, 8); }
-            else if (f == FormUtil.ZHU) { addXingNian(p, 4); gainEnergy(p, 1); }
-            else if (f == FormUtil.LUO) { addXingNian(p, 3); gainEnergy(p, 1); tempStr(p, 1); }
-            else { addXingNian(p, 3); gainEnergy(p, 1); }
+            addXingNian(p, 3);
+            draw(p, 1);
+            formBonus(p, f, 5, 0, 3);
         }));
-
-        // ===== 能 系 4 条（需能力卡进队列） =====
+        PATTERNS.add(new ComboPattern("并流", seq(J, J, G), (p, f) -> {
+            gainBlock(p, 5);
+            addXingNian(p, 2);
+            formBonus(p, f, 5, 0, 3);
+        }));
         PATTERNS.add(new ComboPattern("相续", seq(G, N, G), (p, f) -> {
-            if (f == FormUtil.SU)  { damageFirst(p, 6); gainBlock(p, 4); }
-            else if (f == FormUtil.ZHU) { damageFirst(p, 11); addXingNian(p, 2); }
-            else if (f == FormUtil.LUO) { damageFirst(p, 8); tempStr(p, 1); }
-            else { damageFirst(p, 8); addXingNian(p, 1); }
-        }));
-        PATTERNS.add(new ComboPattern("环抱", seq(J, N, J), (p, f) -> {
-            if (f == FormUtil.SU)  { gainBlock(p, 8); addXingNian(p, 1); }
-            else if (f == FormUtil.ZHU) { gainBlock(p, 9); draw(p, 1); addXingNian(p, 2); }
-            else if (f == FormUtil.LUO) { gainBlock(p, 6); draw(p, 1); tempStr(p, 1); }
-            else { gainBlock(p, 6); draw(p, 1); addXingNian(p, 1); }
-        }));
-        PATTERNS.add(new ComboPattern("双星", seq(N, N, G), (p, f) -> {
-            if (f == FormUtil.SU)  { gainEnergy(p, 1); damageAll(p, 4); gainBlock(p, 4); }
-            else if (f == FormUtil.ZHU) { gainEnergy(p, 2); damageAll(p, 7); addXingNian(p, 2); }
-            else if (f == FormUtil.LUO) { gainEnergy(p, 1); damageAll(p, 5); tempStr(p, 1); }
-            else { gainEnergy(p, 1); damageAll(p, 5); addXingNian(p, 1); }
-        }));
-        PATTERNS.add(new ComboPattern("收势", seq(G, G, N), (p, f) -> {
-            // 收势原设计喂「时序」层数；时序 Power 尚未实现，暂以等价星念收益替代（见代码库待办）
-            if (f == FormUtil.SU)  { addXingNian(p, 1); gainBlock(p, 6); }
-            else if (f == FormUtil.ZHU) { addXingNian(p, 2); }
-            else if (f == FormUtil.LUO) { addXingNian(p, 1); tempStr(p, 1); }
-            else { addXingNian(p, 1); }
+            damageFirst(p, 8);
+            addXingNian(p, 1);
+            formBonus(p, f, 0, 0, 3);
         }));
     }
 
+    /** 连携触发反馈：自绘流光、标题和效果摘要。 */
+    private static void showComboFeedback(String name, int form, List<CType> playedTypes) {
+        AbstractDungeon.effectList.add(new ComboFeedbackEffect(name, form, playedTypes));
+    }
+    /** 形态统一追加：溯额外格挡 5，驻额外星念 1，落额外伤害 3。 */
+    private static void formBonus(AbstractPlayer p, int form, int suBlock, int zhuXingNian, int luoDamage) {
+        if (form == FormUtil.SU && suBlock > 0) gainBlock(p, suBlock);
+        else if (form == FormUtil.ZHU) addXingNian(p, zhuXingNian > 0 ? zhuXingNian : 1);
+        else if (form == FormUtil.LUO && luoDamage > 0) damageFirst(p, luoDamage);
+    }
     /** 新战斗开始时清空队列（避免上场残留） */
     public static void reset() {
         queue.clear();
+        if (queueDisplay != null) queueDisplay.clear();
+        queueDisplay = null;
     }
 
     /** 打出一张牌时调用：推进牌型 → 落形态临时力量 → 结算连携 */
@@ -149,6 +134,7 @@ public class ComboSystem {
         }
 
         resolve(p);
+        refreshQueueDisplay();
     }
 
     private static CType toType(AbstractCard c) {
@@ -168,6 +154,7 @@ public class ComboSystem {
             for (ComboPattern pat : PATTERNS) {
                 if (endsWith(pat.seq)) {
                     int form = FormUtil.getForm(FormUtil.getXingNian(p));
+                    showComboFeedback(pat.name, form, Arrays.asList(pat.seq));
                     pat.effect.apply(p, form);
                     for (int i = 0; i < pat.seq.length; i++) queue.pollLast();
                     again = true; // 可能连锁触发下一个模式
@@ -184,6 +171,15 @@ public class ComboSystem {
             if (queue.get(start + i) != pat[i]) return false;
         }
         return true;
+    }
+
+    /** 刷新战斗中的牌型队列可视化；连携消费后的剩余牌会自然留下。 */
+    private static void refreshQueueDisplay() {
+        if (queueDisplay == null || queueDisplay.isDone) {
+            queueDisplay = new ComboQueueEffect();
+            AbstractDungeon.effectList.add(queueDisplay);
+        }
+        queueDisplay.setQueue(queue);
     }
 
     /** 只读预测：若再追加 攻/技/能 任一牌型，结尾会命中哪些法则。供未来连携可视化 UI 使用。 */
@@ -284,3 +280,4 @@ public class ComboSystem {
         return a.isEmpty() ? null : a.get(0);
     }
 }
+

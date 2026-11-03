@@ -12,7 +12,7 @@ public class TimeStrike extends AbstractEasyCard {
     public static final String ID = makeID("TimeStrike");
 
     public TimeStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY, ComingSoonTimeCharacter.Enums.TIME_COLOR);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, ComingSoonTimeCharacter.Enums.TIME_COLOR);
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);

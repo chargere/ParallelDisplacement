@@ -18,7 +18,7 @@ public class NingNian extends AbstractEasyCard {
     public static final String ID = makeID("NingNian");
 
     public NingNian() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF, ComingSoonTimeCharacter.Enums.TIME_COLOR);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, ComingSoonTimeCharacter.Enums.TIME_COLOR);
     }
 
     @Override

@@ -11,7 +11,7 @@ public class TimeDefend extends AbstractEasyCard {
     public static final String ID = makeID("TimeDefend");
 
     public TimeDefend() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF, ComingSoonTimeCharacter.Enums.TIME_COLOR);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, ComingSoonTimeCharacter.Enums.TIME_COLOR);
         baseBlock = 5;
         tags.add(CardTags.STARTER_DEFEND);
     }
