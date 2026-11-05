@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import yourmod.util.ComboSystem;
 import yourmod.util.FormUtil;
+import yourmod.util.DayNightSystem;
 import yourmod.util.Wiz;
 
 import static yourmod.ModFile.makeID;
@@ -53,6 +54,7 @@ public class XingNianPower extends AbstractEasyPower {
     @Override
     public void onInitialApplication() {
         ComboSystem.reset();
+        DayNightSystem.reset();
     }
 
     /** 每回合开始（抽牌后）星念 +1，封顶 */

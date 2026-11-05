@@ -2018,5 +2018,25 @@
     "NAME": "凝念",
     "DESCRIPTION": "获得 2 点星念。",
     "UPGRADE_DESCRIPTION": "获得 3 点星念。"
+  },
+  "${ModID}:DawnEdge": {
+    "NAME": "曙锋",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:SunGuard": {
+    "NAME": "日守",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:SolarPierce": {
+    "NAME": "日轮贯",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:DawnBell": {
+    "NAME": "晨钟",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${ModID}:MorningRest": {
+    "NAME": "晨息",
+    "DESCRIPTION": "获得 !B! 点格挡。"
   }
 }

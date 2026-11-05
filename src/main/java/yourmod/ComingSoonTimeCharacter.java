@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import yourmod.cards.comingsoon.NingNian;
+import yourmod.cards.comingsoon.MorningRest;
 import yourmod.cards.comingsoon.XiShou;
 import yourmod.cards.comingsoon.YiNian;
 import yourmod.cards.comingsoon.YiWei;
@@ -72,9 +73,10 @@ public class ComingSoonTimeCharacter extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(YiNian.ID);
         }
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             retVal.add(YiWei.ID);
         }
+        retVal.add(MorningRest.ID);
         retVal.add(XiShou.ID);
         retVal.add(NingNian.ID);
         return retVal;

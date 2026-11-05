@@ -67,19 +67,22 @@ public final class ComboRulesUI {
 
     private static void layoutButton() {
         float scale = Settings.scale;
-        float x = Settings.WIDTH * 0.5F + 205.0F * scale;
-        float y = Settings.HEIGHT * 0.61F;
+        // 能量球默认中心约为 (198, 190)，把按钮再抬高，避免覆盖原版能量面板的鼠标区域。
+        float x = 198.0F * Settings.xScale;
+        float y = 330.0F * Settings.yScale;
         buttonHb.move(x, y);
     }
 
     private static void renderButton(SpriteBatch sb) {
         float scale = Settings.scale;
-        float alpha = buttonHb.hovered ? 0.92F : 0.72F;
-        sb.setColor(new Color(0.08F, 0.16F, 0.28F, alpha));
-        sb.draw(PIXEL, buttonHb.x, buttonHb.y, buttonHb.width, buttonHb.height);
+        float alpha = buttonHb.hovered ? 0.95F : 0.78F;
         FontHelper.renderFontCentered(sb, FontHelper.tipBodyFont, "法则",
                 buttonHb.cX, buttonHb.cY + 2.0F * scale,
-                new Color(0.82F, 0.95F, 1.0F, 1.0F));
+                new Color(0.82F, 0.95F, 1.0F, alpha));
+        // 只保留一条细下划线，避免按钮看起来像调试框或浮动面板。
+        sb.setColor(new Color(0.42F, 0.82F, 1.0F, alpha * 0.8F));
+        sb.draw(PIXEL, buttonHb.x + 28.0F * scale, buttonHb.y + 5.0F * scale,
+                buttonHb.width - 56.0F * scale, 2.0F * scale);
         sb.setColor(Color.WHITE);
     }
 
