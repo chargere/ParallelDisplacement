@@ -308,6 +308,31 @@ public class ModFile implements
         BaseMod.addCard(new yourmod.cards.fvv.ReadReceipt());
         BaseMod.addCard(new yourmod.cards.fvv.PlacentaShard());
         BaseMod.addCard(new yourmod.cards.jingjue.JjBloodMark());
+        // 时间旅人普通白卡：显式注册嵌套卡类，避免与初始卡和能力卡混淆。
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.YiShun());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.DuanXu());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.ChongDie());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.ZheFan());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.CuoPai());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.ZhuiPai());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.YuKe());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.HuiXiangRen());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.XianShou());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.JieShi());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.ZhongKe());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.PianKeFangYu());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.CuoBu());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.HuanShi());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.LiuHen());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.HuiKan());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.XiaoZhun());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.JieShiSkill());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.TingZhi());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.HuanWei());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.ZhouHen());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.RiXi());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.ChenMuQiDao());
+        BaseMod.addCard(new yourmod.cards.comingsoon.TimeCommonCards.YeMu());
         HongwenUnlocks.enforceLocks();
         DominicUnlocks.enforceLocks();
     }

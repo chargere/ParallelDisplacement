@@ -64,40 +64,89 @@ public final class DayNightSystem {
         renderAmbientParticles(sb, scale);
         renderEnergyAura(sb);
 
-        float x = Settings.WIDTH - 194.0F * scale;
-        float y = Settings.HEIGHT - 112.0F * scale;
-        float w = 166.0F * scale;
-        float h = 58.0F * scale;
+        // 向左留出完整的文字与流光边距，避免观测仪贴住屏幕右缘。
+        float x = Settings.WIDTH - 382.0F * scale;
+        float y = Settings.HEIGHT - 190.0F * scale;
+        float w = 250.0F * scale;
+        float h = 132.0F * scale;
+        float cx = x + 62.0F * scale;
+        float cy = y + 66.0F * scale;
+        float r = 45.0F * scale;
 
-        sb.setColor(new Color(0.015F, 0.035F, 0.09F, 0.86F));
+        // 观测仪主体：比普通时钟更大，像悬在战场上的时间法则核心。
+        sb.setColor(new Color(0.008F, 0.018F, 0.055F, 0.92F));
         sb.draw(PIXEL, x, y, w, h);
-        sb.setColor(day ? new Color(0.92F, 0.95F, 1.0F, 0.9F)
-                : new Color(0.53F, 0.42F, 0.80F, 0.9F));
-        sb.draw(PIXEL, x, y, 3.0F * scale, h);
-
-        // 小钟：外框、十二点标记和随时间转动的指针。
-        float cx = x + 29.0F * scale;
-        float cy = y + 29.0F * scale;
-        float r = 17.0F * scale;
-        sb.setColor(day ? new Color(0.78F, 0.90F, 1.0F, 0.88F)
-                : new Color(0.66F, 0.57F, 0.92F, 0.88F));
-        sb.draw(PIXEL, cx - r, cy + r, 2.0F * r, 2.0F * scale);
-        sb.draw(PIXEL, cx - r, cy - r, 2.0F * r, 2.0F * scale);
-        sb.draw(PIXEL, cx - r, cy - r, 2.0F * scale, 2.0F * r);
-        sb.draw(PIXEL, cx + r - 2.0F * scale, cy - r, 2.0F * scale, 2.0F * r);
+        Color phase = day ? new Color(0.52F, 0.94F, 1.0F, 0.95F)
+                : new Color(0.72F, 0.48F, 1.0F, 0.95F);
+        sb.setColor(phase);
+        sb.draw(PIXEL, x, y, 4.0F * scale, h);
+        drawRing(sb, cx, cy, r, phase, 32, 2.0F * scale);
+        drawRing(sb, cx, cy, r - 8.0F * scale,
+                day ? new Color(1.0F, 0.80F, 0.42F, 0.68F) : new Color(0.30F, 0.40F, 0.90F, 0.72F),
+                24, 1.0F * scale);
+        renderObserverFlow(sb, cx, cy, r, scale);
         float angle = (elapsed / CYCLE_SECONDS) * 6.2831855F - 1.5707963F;
-        float handX = cx + (float) Math.cos(angle) * 12.0F * scale;
-        float handY = cy + (float) Math.sin(angle) * 12.0F * scale;
-        drawLine(sb, cx, cy, handX, handY, 2.0F * scale);
+        float handX = cx + (float) Math.cos(angle) * 35.0F * scale;
+        float handY = cy + (float) Math.sin(angle) * 35.0F * scale;
+        drawLine(sb, cx, cy, handX, handY, 3.0F * scale);
+        sb.setColor(phase);
+        sb.draw(PIXEL, cx - 4.0F * scale, cy - 4.0F * scale, 8.0F * scale, 8.0F * scale);
 
-        Color textColor = day ? new Color(0.90F, 0.97F, 1.0F, 1.0F)
-                : new Color(0.82F, 0.74F, 1.0F, 1.0F);
-        FontHelper.renderFontLeft(sb, FontHelper.tipBodyFont, day ? "昼相" : "夜相",
-                x + 56.0F * scale, y + 36.0F * scale, textColor);
+        Color textColor = day ? new Color(0.92F, 0.98F, 1.0F, 1.0F)
+                : new Color(0.88F, 0.78F, 1.0F, 1.0F);
+        FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, day ? "观测相 · 昼" : "观测相 · 夜",
+                x + 122.0F * scale, y + 91.0F * scale, textColor);
+        FontHelper.renderFontLeft(sb, FontHelper.tipBodyFont, "时间观测仪",
+                x + 122.0F * scale, y + 68.0F * scale,
+                new Color(0.56F, 0.72F, 0.92F, 1.0F));
         FontHelper.renderFontLeft(sb, FontHelper.tipBodyFont,
-                String.format("%02d 秒后切换", (int) Math.ceil(secondsRemaining())),
-                x + 56.0F * scale, y + 14.0F * scale,
-                new Color(0.66F, 0.78F, 0.92F, 1.0F));
+                String.format("%02d 秒后相变", (int) Math.ceil(secondsRemaining())),
+                x + 122.0F * scale, y + 39.0F * scale,
+                new Color(0.76F, 0.86F, 0.98F, 1.0F));
+        FontHelper.renderFontLeft(sb, FontHelper.tipBodyFont, "观测者权限 · ACTIVE",
+                x + 122.0F * scale, y + 17.0F * scale,
+                new Color(0.42F, 0.56F, 0.76F, 1.0F));
+        sb.setColor(Color.WHITE);
+    }
+
+    private static void drawRing(SpriteBatch sb, float cx, float cy, float radius, Color color,
+                                 int segments, float width) {
+        sb.setColor(color);
+        for (int i = 0; i < segments; i++) {
+            float a1 = (i / (float) segments) * 6.2831855F;
+            float a2 = ((i + 1) / (float) segments) * 6.2831855F;
+            drawLine(sb, cx + (float) Math.cos(a1) * radius, cy + (float) Math.sin(a1) * radius,
+                    cx + (float) Math.cos(a2) * radius, cy + (float) Math.sin(a2) * radius, width);
+        }
+    }
+
+    private static void renderObserverFlow(SpriteBatch sb, float cx, float cy, float radius, float scale) {
+        float t = elapsed * (day ? 1.15F : -0.92F);
+        Color flow = day ? new Color(0.48F, 0.96F, 1.0F, 0.82F)
+                : new Color(0.86F, 0.42F, 1.0F, 0.88F);
+        // 三段不同速度的流光，绕着观测盘持续追逐。
+        for (int i = 0; i < 3; i++) {
+            float a = t + i * 2.0943952F;
+            float a2 = a - (day ? 0.42F : 0.34F);
+            float outer = radius + (7.0F + i * 2.0F) * scale;
+            sb.setColor(new Color(flow.r, flow.g, flow.b, 0.16F));
+            drawLine(sb, cx + (float) Math.cos(a2) * outer, cy + (float) Math.sin(a2) * outer,
+                    cx + (float) Math.cos(a) * outer, cy + (float) Math.sin(a) * outer, 6.0F * scale);
+            sb.setColor(new Color(flow.r, flow.g, flow.b, 0.78F));
+            drawLine(sb, cx + (float) Math.cos(a2 + 0.08F) * outer, cy + (float) Math.sin(a2 + 0.08F) * outer,
+                    cx + (float) Math.cos(a) * outer, cy + (float) Math.sin(a) * outer, 2.0F * scale);
+        }
+        // 刻度脉冲：每隔几格亮起，制造观测仪正在读取时间的感觉。
+        float pulse = 0.5F + 0.5F * (float) Math.sin(elapsed * 4.0F);
+        for (int i = 0; i < 12; i++) {
+            float a = i * 0.5235988F - 1.5707963F;
+            float inner = radius - 5.0F * scale;
+            float outer = radius + (2.0F + pulse * 3.0F) * scale;
+            sb.setColor(new Color(flow.r, flow.g, flow.b, (i % 3 == 0 ? 0.65F : 0.22F) + pulse * 0.18F));
+            drawLine(sb, cx + (float) Math.cos(a) * inner, cy + (float) Math.sin(a) * inner,
+                    cx + (float) Math.cos(a) * outer, cy + (float) Math.sin(a) * outer,
+                    (i % 3 == 0 ? 2.2F : 1.0F) * scale);
+        }
         sb.setColor(Color.WHITE);
     }
 
