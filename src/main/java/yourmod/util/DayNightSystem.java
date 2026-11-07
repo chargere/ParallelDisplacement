@@ -65,17 +65,20 @@ public final class DayNightSystem {
         renderEnergyAura(sb);
 
         // 向左留出完整的文字与流光边距，避免观测仪贴住屏幕右缘。
-        float x = Settings.WIDTH - 382.0F * scale;
-        float y = Settings.HEIGHT - 190.0F * scale;
-        float w = 250.0F * scale;
-        float h = 132.0F * scale;
+        float x = Settings.WIDTH - 520.0F * scale;
+        float y = Settings.HEIGHT - 198.0F * scale;
+        // 底板延伸到屏幕右缘，完整遮住右上角的调试信息。
+        float w = 520.0F * scale;
+        float h = 158.0F * scale;
         float cx = x + 62.0F * scale;
-        float cy = y + 66.0F * scale;
-        float r = 45.0F * scale;
+        float cy = y + 78.0F * scale;
+        float breathe = 1.0F + 0.025F * (float) Math.sin(elapsed * 3.0F);
+        float r = 45.0F * scale * breathe;
 
         // 观测仪主体：比普通时钟更大，像悬在战场上的时间法则核心。
         sb.setColor(new Color(0.008F, 0.018F, 0.055F, 0.92F));
         sb.draw(PIXEL, x, y, w, h);
+        renderObserverStarfield(sb, x, y, w, h, scale);
         Color phase = day ? new Color(0.52F, 0.94F, 1.0F, 0.95F)
                 : new Color(0.72F, 0.48F, 1.0F, 0.95F);
         sb.setColor(phase);
@@ -84,6 +87,9 @@ public final class DayNightSystem {
         drawRing(sb, cx, cy, r - 8.0F * scale,
                 day ? new Color(1.0F, 0.80F, 0.42F, 0.68F) : new Color(0.30F, 0.40F, 0.90F, 0.72F),
                 24, 1.0F * scale);
+        drawOrbit(sb, cx, cy, r + 10.0F * scale, elapsed * 0.8F, 0.62F, phase, 2.0F * scale);
+        drawOrbit(sb, cx, cy, r + 16.0F * scale, -elapsed * 0.55F, 0.38F,
+                day ? new Color(1.0F, 0.70F, 0.34F, 0.8F) : new Color(0.42F, 0.30F, 1.0F, 0.82F), 1.5F * scale);
         renderObserverFlow(sb, cx, cy, r, scale);
         float angle = (elapsed / CYCLE_SECONDS) * 6.2831855F - 1.5707963F;
         float handX = cx + (float) Math.cos(angle) * 35.0F * scale;
@@ -117,6 +123,44 @@ public final class DayNightSystem {
             float a2 = ((i + 1) / (float) segments) * 6.2831855F;
             drawLine(sb, cx + (float) Math.cos(a1) * radius, cy + (float) Math.sin(a1) * radius,
                     cx + (float) Math.cos(a2) * radius, cy + (float) Math.sin(a2) * radius, width);
+        }
+    }
+
+    private static void renderObserverStarfield(SpriteBatch sb, float x, float y, float w, float h, float scale) {
+        float drift = elapsed * 2.2F;
+        Color star = day ? new Color(0.42F, 0.78F, 1.0F, 0.24F)
+                : new Color(0.72F, 0.46F, 1.0F, 0.28F);
+        sb.setColor(star);
+        for (int i = 0; i < 26; i++) {
+            float px = x + 12.0F * scale + ((i * 67.0F + drift * (1.0F + i % 3 * 0.35F)) % Math.max(1.0F, w - 24.0F * scale));
+            float py = y + 10.0F * scale + ((i * 37.0F + (i % 5) * 9.0F) % Math.max(1.0F, h - 20.0F * scale));
+            float size = (i % 5 == 0 ? 2.0F : 1.0F) * scale;
+            sb.draw(PIXEL, px, py, size, size);
+        }
+        // 极淡的星座连线，让黑色底板有空间结构。
+        Color line = day ? new Color(0.25F, 0.62F, 0.86F, 0.12F)
+                : new Color(0.58F, 0.34F, 0.88F, 0.14F);
+        sb.setColor(line);
+        drawLine(sb, x + 188.0F * scale, y + 28.0F * scale,
+                x + 250.0F * scale, y + 52.0F * scale, 1.0F * scale);
+        drawLine(sb, x + 250.0F * scale, y + 52.0F * scale,
+                x + 330.0F * scale, y + 26.0F * scale, 1.0F * scale);
+        drawLine(sb, x + 330.0F * scale, y + 26.0F * scale,
+                x + 410.0F * scale, y + 83.0F * scale, 1.0F * scale);
+        drawLine(sb, x + 238.0F * scale, y + 118.0F * scale,
+                x + 318.0F * scale, y + 92.0F * scale, 1.0F * scale);
+        sb.setColor(Color.WHITE);
+    }
+
+    private static void drawOrbit(SpriteBatch sb, float cx, float cy, float radius, float rotation,
+                                  float tilt, Color color, float width) {
+        sb.setColor(color);
+        int segments = 28;
+        for (int i = 0; i < segments; i++) {
+            float a1 = rotation + i / (float) segments * 6.2831855F;
+            float a2 = rotation + (i + 1) / (float) segments * 6.2831855F;
+            drawLine(sb, cx + (float) Math.cos(a1) * radius, cy + (float) Math.sin(a1) * radius * tilt,
+                    cx + (float) Math.cos(a2) * radius, cy + (float) Math.sin(a2) * radius * tilt, width);
         }
     }
 
