@@ -1,7 +1,6 @@
 package yourmod.util;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -45,7 +44,8 @@ public final class HongwenCharacterVfx {
     public static void render(AbstractPlayer player, SpriteBatch sb) {
         if (!(player instanceof CharacterFile) || !CardCrawlGame.isInARun()) return;
 
-        time += com.badlogic.gdx.Gdx.graphics.getDeltaTime();
+        // 计时只在 updatePose() 每帧推进一次；render 可能被多个绘制入口调用，
+        // 此处绝不能再累加 deltaTime，否则动画会按调用次数成倍加速。
         float s = Settings.scale;
         float x = player.hb.cX;
         float y = player.hb.cY;
@@ -78,14 +78,5 @@ public final class HongwenCharacterVfx {
         float r = (17.0F + pulse * 4.0F) * s;
         sb.draw(PIXEL, x - r, y + 62.0F * s, r * 2.0F, 2.0F * s);
         sb.setColor(Color.WHITE);
-    }
-
-    private static void drawLine(SpriteBatch sb, float x1, float y1, float x2, float y2, float width) {
-        float dx = x2 - x1;
-        float dy = y2 - y1;
-        float length = (float) Math.sqrt(dx * dx + dy * dy);
-        float angle = (float) Math.toDegrees(Math.atan2(dy, dx));
-        sb.draw(PIXEL, x1, y1 - width * 0.5F, 0.0F, width * 0.5F,
-                length, width, 1.0F, 1.0F, angle);
     }
 }

@@ -25,13 +25,11 @@ public class ComboRulesUIPatch {
         public static void Postfix(TopPanel __instance, SpriteBatch sb) {
             DayNightSystem.render(sb);
             ComboRulesUI.render(sb);
-            if (AbstractDungeon.player instanceof AbstractPlayer) {
-                HongwenCharacterVfx.render((AbstractPlayer) AbstractDungeon.player, sb);
-            }
         }
     }
 
-    /** 地牢完整渲染结束后再绘制角色特效，避免被场景、角色动画或顶部面板覆盖。 */
+    /** 地牢完整渲染结束后再绘制角色特效，避免被场景、角色动画或顶部面板覆盖。
+     *  角色 VFX 只在此处绘制一次；TopPanel.render 的重复调用已移除，避免每帧画两遍。 */
     @SpirePatch(clz = AbstractDungeon.class, method = "render", paramtypez = {SpriteBatch.class})
     public static class DungeonRender {
         public static void Postfix(AbstractDungeon __instance, SpriteBatch sb) {
